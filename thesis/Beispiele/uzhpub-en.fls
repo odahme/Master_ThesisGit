@@ -1,0 +1,7 @@
+PWD /home/oliver/Master_Thesis/thesis/Vorlagen_UZH_LaTeX_Publikationen/Beispiele
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/oliver/Master_Thesis/thesis/Vorlagen_UZH_LaTeX_Publikationen/Beispiele/uzhpub-en.tex
+OUTPUT /home/oliver/Master_Thesis/thesis/Vorlagen_UZH_LaTeX_Publikationen/Beispiele/uzhpub-en.log
