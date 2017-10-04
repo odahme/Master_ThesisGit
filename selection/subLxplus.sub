@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+executable            = evalfold.sh $(ProcId)
+arguments             = $(ClusterID) $(ProcId)
+output                = output/fold.$(ClusterId).$(ProcId).out
+error                 = error/fold.$(ClusterId).$(ProcId).err
+log                   = log/fold.$(ClusterId).log
+queue 10
