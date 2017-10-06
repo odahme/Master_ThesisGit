@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  4 OCT 2017 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  5 OCT 2017 20:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **slides.tex
-(/home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/slides.tex
+(/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasercs.sty
@@ -676,7 +676,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 101.
 
-(/home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/slides.aux)
+(/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.aux)
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
@@ -764,7 +764,7 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 101.
 LaTeX Info: Redefining \pageref on input line 101.
 LaTeX Info: Redefining \nameref on input line 101.
- (/home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/slides.out) (/home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/slides.out)
+ (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.out) (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
@@ -834,7 +834,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 LaTeX Info: Redefining \includegraphics on input line 101.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (/home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/slides.nav)
+ (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.nav)
 LaTeX Font Info:    Try loading font information for U+msa on input line 101.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -856,70 +856,70 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 {/home/oliver/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}] <KstarFeynman.png, id=66, 384.96297pt x 206.07683pt>
 File: KstarFeynman.png Graphic file (type png)
  <use KstarFeynman.png>
-Package pdftex.def Info: KstarFeynman.png used on input line 135.
+Package pdftex.def Info: KstarFeynman.png used on input line 138.
 (pdftex.def)             Requested size: 273.83728pt x 146.59857pt.
 
-Overfull \vbox (9.85164pt too high) detected at line 135
+Overfull \vbox (9.85164pt too high) detected at line 138
  []
 
 [2
 
- </home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/KstarFeynman.png>] <angels.png, id=97, 277.63129pt x 196.0592pt>
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/KstarFeynman.png>] <angels.png, id=97, 277.63129pt x 196.0592pt>
 File: angels.png Graphic file (type png)
  <use angels.png>
-Package pdftex.def Info: angels.png used on input line 151.
+Package pdftex.def Info: angels.png used on input line 154.
 (pdftex.def)             Requested size: 205.37926pt x 145.03665pt.
 
-Overfull \vbox (4.28972pt too high) detected at line 151
+Overfull \vbox (4.28972pt too high) detected at line 154
  []
 
 [3
 
- </home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/angels.png>] [4
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/angels.png>] [4
 
 ] <beforeCutPlot.png, id=151, 433.62pt x 289.08pt>
 File: beforeCutPlot.png Graphic file (type png)
  <use beforeCutPlot.png>
-Package pdftex.def Info: beforeCutPlot.png used on input line 186.
+Package pdftex.def Info: beforeCutPlot.png used on input line 189.
 (pdftex.def)             Requested size: 171.14764pt x 114.09932pt.
  <cutPlot.png, id=153, 433.62pt x 289.08pt>
 File: cutPlot.png Graphic file (type png)
  <use cutPlot.png>
-Package pdftex.def Info: cutPlot.png used on input line 186.
+Package pdftex.def Info: cutPlot.png used on input line 189.
 (pdftex.def)             Requested size: 171.14764pt x 114.09932pt.
  [5
 
- </home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/beforeCutPlot.png> </home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/cutPlot.png>] [6
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/beforeCutPlot.png> </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/cutPlot.png>] [6
 
 ] <plots/corPlot_bdt_vs_B0_M.pdf, id=208, 569.12625pt x 312.16624pt>
 File: plots/corPlot_bdt_vs_B0_M.pdf Graphic file (type pdf)
  <use plots/corPlot_bdt_vs_B0_M.pdf>
-Package pdftex.def Info: plots/corPlot_bdt_vs_B0_M.pdf used on input line 219.
+Package pdftex.def Info: plots/corPlot_bdt_vs_B0_M.pdf used on input line 222.
 (pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
  [7
 
- </home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_M.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_ThetaK.pdf, id=280, 569.12625pt x 312.16624pt>
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_M.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_ThetaK.pdf, id=280, 569.12625pt x 312.16624pt>
 File: plots/corPlot_bdt_vs_B0_ThetaK.pdf Graphic file (type pdf)
  <use plots/corPlot_bdt_vs_B0_ThetaK.pdf>
-Package pdftex.def Info: plots/corPlot_bdt_vs_B0_ThetaK.pdf used on input line 228.
+Package pdftex.def Info: plots/corPlot_bdt_vs_B0_ThetaK.pdf used on input line 231.
 (pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
  [8
 
- </home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_ThetaK.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_ThetaL.pdf, id=350, 569.12625pt x 312.16624pt>
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_ThetaK.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_ThetaL.pdf, id=350, 569.12625pt x 312.16624pt>
 File: plots/corPlot_bdt_vs_B0_ThetaL.pdf Graphic file (type pdf)
  <use plots/corPlot_bdt_vs_B0_ThetaL.pdf>
-Package pdftex.def Info: plots/corPlot_bdt_vs_B0_ThetaL.pdf used on input line 237.
+Package pdftex.def Info: plots/corPlot_bdt_vs_B0_ThetaL.pdf used on input line 240.
 (pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
  [9
 
- </home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_ThetaL.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_Phi.pdf, id=419, 569.12625pt x 312.16624pt>
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_ThetaL.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_Phi.pdf, id=419, 569.12625pt x 312.16624pt>
 File: plots/corPlot_bdt_vs_B0_Phi.pdf Graphic file (type pdf)
  <use plots/corPlot_bdt_vs_B0_Phi.pdf>
-Package pdftex.def Info: plots/corPlot_bdt_vs_B0_Phi.pdf used on input line 246.
+Package pdftex.def Info: plots/corPlot_bdt_vs_B0_Phi.pdf used on input line 249.
 (pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
  [10
 
- </home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_Phi.pdf, page is rotated 90 degrees>]
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_Phi.pdf, page is rotated 90 degrees>]
 \tf@nav=\write6
 \openout6 = `slides.nav'.
 
@@ -929,11 +929,11 @@ Package pdftex.def Info: plots/corPlot_bdt_vs_B0_Phi.pdf used on input line 246.
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
- (/home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 254.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
+ (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: 4CA0FF56E3EE124326A4720E136735D1;47.
 
@@ -941,11 +941,11 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 254.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
  ) 
 Here is how much of TeX's memory you used:
  17974 strings out of 493029
- 345891 string characters out of 6136234
+ 345936 string characters out of 6136234
  413891 words of memory out of 5000000
  21062 multiletter control sequences out of 15000+600000
  15885 words of font info for 58 fonts, out of 8000000 for 9000
@@ -953,7 +953,7 @@ Here is how much of TeX's memory you used:
  56i,18n,57p,386b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb>
-Output written on /home/oliver/Master_Thesis/meetings/LHCb_MC_meeting_09_10_17/slides.pdf (10 pages, 234117 bytes).
+Output written on /home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.pdf (10 pages, 234243 bytes).
 PDF statistics:
  542 PDF objects out of 1000 (max. 8388607)
  391 compressed objects within 4 object streams
