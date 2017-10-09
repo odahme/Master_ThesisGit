@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  5 OCT 2017 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  9 OCT 2017 11:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,84 +615,92 @@ Package caption Info: Hyperref support is turned off
 Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@subfigure=\count158
 \c@subtable=\count159
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grffile.sty
+Package: grffile 2012/04/05 v1.16 Extended file name support for graphics (HO)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO)
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 101.
+(hyperref)                removing `superscript' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rightarrow' on input line 101.
+(hyperref)                removing `\rightarrow' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 101.
+(hyperref)                removing `superscript' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 101.
+(hyperref)                removing `\mu' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 101.
+(hyperref)                removing `\mu' on input line 111.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 101.
+(hyperref)                removing `math shift' on input line 111.
 
 (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.aux)
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -753,7 +761,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 101.
+Package hyperref Info: Link coloring OFF on input line 111.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -761,62 +769,62 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count166
 )
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+LaTeX Info: Redefining \ref on input line 111.
+LaTeX Info: Redefining \pageref on input line 111.
+LaTeX Info: Redefining \nameref on input line 111.
  (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.out) (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 101.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 111.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 101.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 111.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 101.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 101.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 101.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 101.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 111.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 101.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 101.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 101.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 111.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 101.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 101.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 101.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 111.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 101.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 101.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 111.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 101.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 111.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 101.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 101.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 101.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 101.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 101.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 101.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 101.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 111.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 111.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 101.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 111.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 101.
+(Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 111.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 101.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 111.
  (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-basic-dictionary/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bibliography-dictionary/translator-bibliography-dictionary-English.dict
@@ -831,35 +839,39 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 101.
+LaTeX Info: Redefining \includegraphics on input line 111.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.nav)
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
+LaTeX Font Info:    Try loading font information for U+msa on input line 111.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
+LaTeX Font Info:    Try loading font information for U+msb on input line 111.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input line 101.
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input line 111.
  (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 105.
+(Font)              size <5> substituted on input line 115.
 
 [1
 
-{/home/oliver/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}] <KstarFeynman.png, id=66, 384.96297pt x 206.07683pt>
+{/home/oliver/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-iso-8859-1.def
+File: se-iso-8859-1.def 2011/12/02 v1.10 stringenc: ISO-8859-1
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-utf8.def
+File: se-utf8.def 2011/12/02 v1.10 stringenc: UTF-8
+) <KstarFeynman.png, id=66, 384.96297pt x 206.07683pt>
 File: KstarFeynman.png Graphic file (type png)
  <use KstarFeynman.png>
-Package pdftex.def Info: KstarFeynman.png used on input line 138.
+Package pdftex.def Info: KstarFeynman.png used on input line 148.
 (pdftex.def)             Requested size: 273.83728pt x 146.59857pt.
 
-Overfull \vbox (9.85164pt too high) detected at line 138
+Overfull \vbox (9.85164pt too high) detected at line 148
  []
 
 [2
@@ -867,10 +879,10 @@ Overfull \vbox (9.85164pt too high) detected at line 138
  </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/KstarFeynman.png>] <angels.png, id=97, 277.63129pt x 196.0592pt>
 File: angels.png Graphic file (type png)
  <use angels.png>
-Package pdftex.def Info: angels.png used on input line 154.
+Package pdftex.def Info: angels.png used on input line 164.
 (pdftex.def)             Requested size: 205.37926pt x 145.03665pt.
 
-Overfull \vbox (4.28972pt too high) detected at line 154
+Overfull \vbox (4.28972pt too high) detected at line 164
  []
 
 [3
@@ -880,46 +892,95 @@ Overfull \vbox (4.28972pt too high) detected at line 154
 ] <beforeCutPlot.png, id=151, 433.62pt x 289.08pt>
 File: beforeCutPlot.png Graphic file (type png)
  <use beforeCutPlot.png>
-Package pdftex.def Info: beforeCutPlot.png used on input line 189.
+Package pdftex.def Info: beforeCutPlot.png used on input line 201.
 (pdftex.def)             Requested size: 171.14764pt x 114.09932pt.
  <cutPlot.png, id=153, 433.62pt x 289.08pt>
 File: cutPlot.png Graphic file (type png)
  <use cutPlot.png>
-Package pdftex.def Info: cutPlot.png used on input line 189.
+Package pdftex.def Info: cutPlot.png used on input line 201.
 (pdftex.def)             Requested size: 171.14764pt x 114.09932pt.
- [5
+
+Overfull \vbox (2.23709pt too high) detected at line 201
+ []
+
+[5
 
  </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/beforeCutPlot.png> </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/cutPlot.png>] [6
 
-] <plots/corPlot_bdt_vs_B0_M.pdf, id=208, 569.12625pt x 312.16624pt>
-File: plots/corPlot_bdt_vs_B0_M.pdf Graphic file (type pdf)
- <use plots/corPlot_bdt_vs_B0_M.pdf>
-Package pdftex.def Info: plots/corPlot_bdt_vs_B0_M.pdf used on input line 222.
-(pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
+] <plots/corPlot_sk_bdt(<1.0)_vs_B0_M.pdf, id=208, 569.12625pt x 312.16624pt>
+File: plots/corPlot_sk_bdt(<1.0)_vs_B0_M.pdf Graphic file (type pdf)
+ <use plots/corPlot_sk_bdt(<1.0)_vs_B0_M.pdf>
+Package pdftex.def Info: plots/corPlot_sk_bdt(<1.0)_vs_B0_M.pdf used on input line 271.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
+ <plots/corPlot_uBoost(<1.0)_vs_B0_M.pdf, id=209, 569.12625pt x 312.16624pt>
+File: plots/corPlot_uBoost(<1.0)_vs_B0_M.pdf Graphic file (type pdf)
+ <use plots/corPlot_uBoost(<1.0)_vs_B0_M.pdf>
+Package pdftex.def Info: plots/corPlot_uBoost(<1.0)_vs_B0_M.pdf used on input line 271.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
  [7
 
- </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_M.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_ThetaK.pdf, id=280, 569.12625pt x 312.16624pt>
-File: plots/corPlot_bdt_vs_B0_ThetaK.pdf Graphic file (type pdf)
- <use plots/corPlot_bdt_vs_B0_ThetaK.pdf>
-Package pdftex.def Info: plots/corPlot_bdt_vs_B0_ThetaK.pdf used on input line 231.
-(pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_sk_bdt(<1.0)_vs_B0_M.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_uBoost(<1.0)_vs_B0_M.pdf, page is rotated 90 degrees>] <plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaK.pdf, id=324, 569.12625pt x 312.16624pt>
+File: plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaK.pdf Graphic file (type pdf)
+ <use plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaK.pdf>
+Package pdftex.def Info: plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaK.pdf used on input line 289.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
+ <plots/corPlot_uBoost(<1.0)_vs_B0_ThetaK.pdf, id=325, 569.12625pt x 312.16624pt>
+File: plots/corPlot_uBoost(<1.0)_vs_B0_ThetaK.pdf Graphic file (type pdf)
+ <use plots/corPlot_uBoost(<1.0)_vs_B0_ThetaK.pdf>
+Package pdftex.def Info: plots/corPlot_uBoost(<1.0)_vs_B0_ThetaK.pdf used on input line 289.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
  [8
 
- </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_ThetaK.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_ThetaL.pdf, id=350, 569.12625pt x 312.16624pt>
-File: plots/corPlot_bdt_vs_B0_ThetaL.pdf Graphic file (type pdf)
- <use plots/corPlot_bdt_vs_B0_ThetaL.pdf>
-Package pdftex.def Info: plots/corPlot_bdt_vs_B0_ThetaL.pdf used on input line 240.
-(pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaK.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_uBoost(<1.0)_vs_B0_ThetaK.pdf, page is rotated 90 degrees>] <plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaL.pdf, id=438, 569.12625pt x 312.16624pt>
+File: plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaL.pdf Graphic file (type pdf)
+ <use plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaL.pdf>
+Package pdftex.def Info: plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaL.pdf used on input line 307.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
+ <plots/corPlot_uBoost(<1.0)_vs_B0_ThetaL.pdf, id=439, 569.12625pt x 312.16624pt>
+File: plots/corPlot_uBoost(<1.0)_vs_B0_ThetaL.pdf Graphic file (type pdf)
+ <use plots/corPlot_uBoost(<1.0)_vs_B0_ThetaL.pdf>
+Package pdftex.def Info: plots/corPlot_uBoost(<1.0)_vs_B0_ThetaL.pdf used on input line 307.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
  [9
 
- </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_ThetaL.pdf, page is rotated 90 degrees>] <plots/corPlot_bdt_vs_B0_Phi.pdf, id=419, 569.12625pt x 312.16624pt>
-File: plots/corPlot_bdt_vs_B0_Phi.pdf Graphic file (type pdf)
- <use plots/corPlot_bdt_vs_B0_Phi.pdf>
-Package pdftex.def Info: plots/corPlot_bdt_vs_B0_Phi.pdf used on input line 249.
-(pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaL.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_uBoost(<1.0)_vs_B0_ThetaL.pdf, page is rotated 90 degrees>] <plots/corPlot_sk_bdt(<1.0)_vs_B0_Phi.pdf, id=553, 569.12625pt x 312.16624pt>
+File: plots/corPlot_sk_bdt(<1.0)_vs_B0_Phi.pdf Graphic file (type pdf)
+ <use plots/corPlot_sk_bdt(<1.0)_vs_B0_Phi.pdf>
+Package pdftex.def Info: plots/corPlot_sk_bdt(<1.0)_vs_B0_Phi.pdf used on input line 325.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
+ <plots/corPlot_uBoost(<1.0)_vs_B0_Phi.pdf, id=554, 569.12625pt x 312.16624pt>
+File: plots/corPlot_uBoost(<1.0)_vs_B0_Phi.pdf Graphic file (type pdf)
+
+<use plots/corPlot_uBoost(<1.0)_vs_B0_Phi.pdf>
+Package pdftex.def Info: plots/corPlot_uBoost(<1.0)_vs_B0_Phi.pdf used on input line 325.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
  [10
 
- </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_bdt_vs_B0_Phi.pdf, page is rotated 90 degrees>]
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_sk_bdt(<1.0)_vs_B0_Phi.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/corPlot_uBoost(<1.0)_vs_B0_Phi.pdf, page is rotated 90 degrees>] <roc/fold0_roc.pdf, id=668, 569.12625pt x 312.16624pt>
+File: roc/fold0_roc.pdf Graphic file (type pdf)
+ <use roc/fold0_roc.pdf>
+Package pdftex.def Info: roc/fold0_roc.pdf used on input line 354.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
+ <roc/fold5_roc.pdf, id=669, 569.12625pt x 312.16624pt>
+File: roc/fold5_roc.pdf Graphic file (type pdf)
+ <use roc/fold5_roc.pdf>
+Package pdftex.def Info: roc/fold5_roc.pdf used on input line 354.
+(pdftex.def)             Requested size: 171.14764pt x 93.87447pt.
+ [11
+
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/roc/fold0_roc.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/roc/fold5_roc.pdf, page is rotated 90 degrees>] <plots/sk_bdtHist_fold0.png, id=781, 578.16pt x 433.62pt>
+File: plots/sk_bdtHist_fold0.png Graphic file (type png)
+ <use plots/sk_bdtHist_fold0.png>
+Package pdftex.def Info: plots/sk_bdtHist_fold0.png used on input line 374.
+(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+ <plots/uBoostHist_fold0.png, id=782, 578.16pt x 433.62pt>
+File: plots/uBoostHist_fold0.png Graphic file (type png)
+ <use plots/uBoostHist_fold0.png>
+Package pdftex.def Info: plots/uBoostHist_fold0.png used on input line 374.
+(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+ [12
+
+ </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/sk_bdtHist_fold0.png> </home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/plots/uBoostHist_fold0.png>]
 \tf@nav=\write6
 \openout6 = `slides.nav'.
 
@@ -929,11 +990,11 @@ Package pdftex.def Info: plots/corPlot_bdt_vs_B0_Phi.pdf used on input line 249.
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 381.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 381.
  (/home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 381.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 381.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: 4CA0FF56E3EE124326A4720E136735D1;47.
 
@@ -941,22 +1002,22 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 381.
  ) 
 Here is how much of TeX's memory you used:
- 17974 strings out of 493029
- 345936 string characters out of 6136234
- 413891 words of memory out of 5000000
- 21062 multiletter control sequences out of 15000+600000
+ 18234 strings out of 493029
+ 351427 string characters out of 6136234
+ 418401 words of memory out of 5000000
+ 21316 multiletter control sequences out of 15000+600000
  15885 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,18n,57p,386b,595s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb>
-Output written on /home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.pdf (10 pages, 234243 bytes).
+Output written on /home/oliver/Master_ThesisGit/meetings/LHCb_MC_meeting_09_10_17/slides.pdf (12 pages, 741907 bytes).
 PDF statistics:
- 542 PDF objects out of 1000 (max. 8388607)
- 391 compressed objects within 4 object streams
- 22 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 865 PDF objects out of 1000 (max. 8388607)
+ 550 compressed objects within 6 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 

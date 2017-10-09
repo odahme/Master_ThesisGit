@@ -76,12 +76,22 @@
 %\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
 
+
+
 \usepackage{graphicx} % Allows including images
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[skip = 2pt, font=scriptsize]{caption}
 \usepackage{subcaption}
 %\usepackage{subfigure}
+\usepackage{grffile}
+\grffilesetup{
+encoding,
+inputencoding=latin1,
+filenameencoding=utf8,
+}
+
+
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -125,7 +135,7 @@ University of Zurich \\ % Your institution for the title page
 
 \begin{itemize}
   \item Decay is a FCNC
-  \item four charged particles in final state:
+  \item with four charged particles in final state:
   \item $K^+$ and $\pi^-$ from the $K^{*0}$ decay
   \item two leptons from loop or box diagrams:
 \end{itemize}
@@ -158,10 +168,10 @@ three angels define the kinematics of the decay:
   \frametitle{classification with Machine Learning (BDT)}
   \begin{itemize}
     \item to eliminate combinatorial background, Boost Decision Trees are used as a black box to classify data into signal and background.
-    \item They assign a 'probability' to each event
-    \item sk bdt from the scikit-learn package is used, and uBoost from the hep ml package
-    \item average of both gives the BDT response
-    \item training has been performed on the Linux Cluster in Zurich
+    \item They assign a 'probability' to each event.
+    \item sk bdt from the scikit-learn package is used, and uBoost from the hep ml package.
+    \item both responses are saved sepratly as one root file.
+    \item training is performed on the Linux Cluster in Zurich
   \end{itemize}
 \end{frame}
 
@@ -170,6 +180,8 @@ three angels define the kinematics of the decay:
   \begin{itemize}
     \item you want the bdt to train in the background region
     \item J/Psi has two resonance which will be cut off
+    \item since a bdt needs real data for training the data is Kfolded. That means that data is splitted into parts to train and to classify.
+    \item 10 runs are performed in each 90\% are used for training to classify 10\% in the end all the data is classified. One run is called a fold.
   \end{itemize}
 
   \begin{figure}
@@ -208,46 +220,158 @@ three angels define the kinematics of the decay:
     \item B0 ThetaL
     \item B0 Phi
   \end{itemize}
-  uniform parameters have to be uncorrelated since we know that from physics.
+  uniform parameters have to be uncorrelated. \\
   But BDT might find a correlation which is bad.
 \end{frame}
 
-\begin{frame}
-  \frametitle{BDT correlation check}
+% \begin{frame}
+%   \frametitle{BDT correlation check}
+%
+%   \begin{figure}
+%   \includegraphics[width=1.0\linewidth]{plots/corPlot_bdt_vs_B0_M.pdf}
+%   \end{figure}
+%
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{BDT correlation check}
 
-  \begin{figure}
-  \includegraphics[width=1.0\linewidth]{plots/corPlot_bdt_vs_B0_M.pdf}
-  \end{figure}
+%   \begin{figure}
+%   \includegraphics[width=1.0\linewidth]{plots/corPlot_bdt_vs_B0_ThetaK.pdf}
+%   \end{figure}
+%
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{BDT correlation check}
+%
+%   \begin{figure}
+%   \includegraphics[width=1.0\linewidth]{plots/corPlot_bdt_vs_B0_ThetaL.pdf}
+%   \end{figure}
+%
+% \end{frame}
+
+\begin{frame}
+\frametitle{BDT correlation check}
+If there is no correlation this plot, between the bdt response and one of the uniform parameters, is flat.
+Therefore is no correlation between the sk bdt and the B0 mass. There is just a very small correlation between uBoost and the B0 mass.
+ \begin{figure}
+ \centering
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=1.0\linewidth]{plots/corPlot_sk_bdt(<1.0)_vs_B0_M.pdf}
+ \caption{Correlation sk bdt VS B0 M}
+ \end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=1.0\linewidth]{plots/corPlot_uBoost(<1.0)_vs_B0_M.pdf}
+\caption{Correlation uBoost VS B0 M}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{BDT correlation check}
+There is no correlation between the bdts and the cosine of the ThetaK angle.
+ \begin{figure}
+ \centering
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=1.0\linewidth]{plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaK.pdf}
+ \caption{Correlation sk bdt VS B0 ThetaK}
+ \end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=1.0\linewidth]{plots/corPlot_uBoost(<1.0)_vs_B0_ThetaK.pdf}
+\caption{Correlation uBoost VS B0 ThetaK}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{BDT correlation check}
+There is no correlation between the bdts and the cosine of the ThetaL angle.
+ \begin{figure}
+ \centering
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=1.0\linewidth]{plots/corPlot_sk_bdt(<1.0)_vs_B0_ThetaL.pdf}
+ \caption{Correlation sk bdt VS B0 ThetaL}
+ \end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=1.0\linewidth]{plots/corPlot_uBoost(<1.0)_vs_B0_ThetaL.pdf}
+\caption{Correlation uBoost VS B0 ThetaL}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{BDT correlation check}
+There is no correlation between the bdts and Phi angle.
+ \begin{figure}
+ \centering
+ \begin{subfigure}{0.5\textwidth}
+ \centering
+ \includegraphics[width=1.0\linewidth]{plots/corPlot_sk_bdt(<1.0)_vs_B0_Phi.pdf}
+ \caption{Correlation sk bdt VS B0 Phi}
+ \end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=1.0\linewidth]{plots/corPlot_uBoost(<1.0)_vs_B0_Phi.pdf}
+\caption{Correlation uBoost VS B0 Phi}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+% \begin{frame}
+%   \frametitle{BDT correlation check}
+%
+%   \begin{figure}
+%   \includegraphics[width=1.0\linewidth]{plots/corPlot_bdt_vs_B0_Phi.pdf}
+%   \end{figure}
+%
+% \end{frame}
+
+\begin{frame}
+\frametitle{Roc curves}
+The ROC curve gives an estimate how good a bdt performed. There is a roc curve for each of the 10 folds. This is just an example but all the others look similar.
+You can see that already at 0.6 true positive rate there is a 0.2 false positive rate. That means that if the bdt got 60\% classified correctly there are already 20\% classified wrongly. This is very bad I am looking into it.
+    \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{roc/fold0_roc}
+    \caption{ROC curve of fold 0}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{roc/fold5_roc}
+    \caption{ROC curve of fold 5}
+    \end{subfigure}
+    \end{figure}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{BDT correlation check}
-
-  \begin{figure}
-  \includegraphics[width=1.0\linewidth]{plots/corPlot_bdt_vs_B0_ThetaK.pdf}
-  \end{figure}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{BDT correlation check}
-
-  \begin{figure}
-  \includegraphics[width=1.0\linewidth]{plots/corPlot_bdt_vs_B0_ThetaL.pdf}
-  \end{figure}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{BDT correlation check}
-
-  \begin{figure}
-  \includegraphics[width=1.0\linewidth]{plots/corPlot_bdt_vs_B0_Phi.pdf}
-  \end{figure}
+  \frametitle{BDT response histogram}
+This are examples of histograms of the bdt responses for one fold.
+You can see clearly that most of the data is classified with a 0.5 probability to be signal. There is no information at all in that, this is connected to the bad roc curves above. At the moment I have no idea how to solve that problem. If you have one just write me.
+    \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{plots/sk_bdtHist_fold0}
+    \caption{sk bdt response of fold 0}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{plots/uBoostHist_fold0}
+    \caption{uBoost response of fold 0}
+    \end{subfigure}
+    \end{figure}
 
 \end{frame}
-
 
 
 %----------------------------------------------------------------------------------------
