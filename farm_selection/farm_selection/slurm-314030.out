@@ -1,9 +1,0 @@
-bash: /disk/users/odahme/anaconda3/envs/Py3Root6/lib/libreadline.so.6: no version information available (required by bash)
-bash: relocation error: bash: symbol rl_filename_stat_hook, version READLINE_6.3 not defined in file libreadline.so.6 with link time reference
-Activate: ROOT has been sourced. Environment settings are ready. 
-ROOTSYS=/disk/users/odahme/anaconda3/envs/Py3Root6
-my username is  odahme
-start classifying fold 0, with 4 threads
-slurmstepd: error: Job 314030 exceeded memory limit (42563344 > 32768000), being killed
-slurmstepd: error: *** JOB 314030 ON farm-wn11 CANCELLED AT 2017-09-25T11:25:14 ***
-slurmstepd: error: Exceeded job memory limit

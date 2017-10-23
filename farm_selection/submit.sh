@@ -5,7 +5,7 @@ cd /disk/users/odahme/farm_output
 
 for i in {0..9..1}
     do
-        sbatch -p long --nodes=1-1 --ntasks=1 --cpus-per-task=4 --mem=32000 /home/uzh/odahme/Master_Thesis/selection/submit.slurm $i
+        sbatch -p standard --nodes=1-1 --ntasks=1 --cpus-per-task=24 --mem=60000 /home/uzh/odahme/Master_Thesis/farm_selection/submit.slurm $i 24
     done
 
 cd -

@@ -36,7 +36,7 @@ print('root imported')
 foldnameList = []
 
 print('reading root files')
-foldList = [0,1,2,3,6,7,8,9]
+foldList = [0,1,2,3,4,5,6,7,8,9]
 for n in foldList:
 
     foldnameList.append('/disk/users/odahme/KstarSelection/folds/fold'+ str(n) +'/clas_fold'+ str(n) +'.root')

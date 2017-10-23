@@ -9,9 +9,13 @@ print("start importing")
 import os
 import sys
 
+import matplotlib as mpl
+mpl.use('Agg')
+
+import matplotlib.pyplot as plt
+
 from pylab import *
 import pandas, numpy
-import matplotlib.pyplot as plt
 from scipy import stats
 
 from sklearn.tree import DecisionTreeClassifier
@@ -34,6 +38,7 @@ print('root imported')
 print("importing completed")
 
 primFoldnumber = int(sys.argv[1])
+n_threads = int(sys.argv[2])
 
 foldnameList = []
 
@@ -94,7 +99,7 @@ classifiers = ClassifiersFactory()
 uboost_clf = uboost.uBoostClassifier(uniform_features=uniform_features, uniform_label=1,
                                         base_estimator=base_estimator,
                                         n_estimators=n_estimators, train_features=train_features,
-                                        efficiency_steps=12, n_threads=4)
+                                        efficiency_steps=12, n_threads=n_threads)
 
 classifiers['uBoost'] = SklearnClassifier(uboost_clf)
 
@@ -106,14 +111,18 @@ clasNameList = ['uBoost','sk_bdt']
 
 
 print('start training')
-classifiers.fit(trainX, trainY, parallel_profile='threads-2')
-report = classifiers.test_on(testX, testY)
+classifiers.fit(trainX, trainY)
 sig_prob = classifiers.predict_proba(testX)
-pred = zeros(len(testX))
+report = classifiers.test_on(testX, testY)
+n_fig = 1
 for clasN in clasNameList:
-    pred += sig_prob[clasN][:,1]
-pred = pred/len(clasNameList)
-testX.insert(len(testX.iloc[0]),'bdt',pred)
+    pred = sig_prob[clasN][:,1]
+    testX.insert(len(testX.iloc[0]),clasN,pred)
+    bdtHist = plt.figure(n_fig)
+    plt.hist(pred, bins=100, label=clasN, range=[0.0,1.0])
+    bdtHist.savefig('/disk/users/odahme/KstarSelection/folds/fold'+ str(primFoldnumber) +'/'+clasN+'Hist_fold'+ str(primFoldnumber) +'.png')
+    del bdtHist
+    n_fig+=1
 
 testX.to_root('/disk/users/odahme/KstarSelection/folds/fold'+ str(primFoldnumber) +'/clas_fold'+ str(primFoldnumber) +'.root')
 
