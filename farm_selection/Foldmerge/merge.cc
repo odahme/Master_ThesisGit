@@ -1,6 +1,9 @@
 
 
 
+#include <iostream>
+#include <sstream>
+
 #include <TFile.h>
 #include <TTree.h>
 #include <TChain.h>
@@ -14,7 +17,7 @@
 
 
 
-
+using namespace std;
 
 
 
@@ -54,15 +57,17 @@ int main(int argc, char const *argv[]) {
 
   TChain *foldCh = new TChain();
   //Adding folds
-  for (size_t i = 0; i < 10; i++) {
-    folds->Add("/disk/users/odahme/KstarSelection/folds/fold"<<i<<"/clas_fold"<<i<<"/root/default");
+  for (int i = 0; i < 10; i++) {
+    stringstream ss;
+    ss<<"/disk/users/odahme/KstarSelection/folds/fold"<<i<<"/clas_fold"<<i<<".root/default";
+    foldCh->Add(ss.str().c_str());
   }
   std::cout << "Entries: " <<foldCh->GetEntries()<< '\n';
   foldCh->SetBranchStatus("*",0);
   foldCh->SetBranchStatus("uBoost",1);
   foldCh->SetBranchStatus("sk_bdt",1);
 
-  TFile *f = new TFile("/disk/users/odahme/KstarSelection/class_data.root","recreate");
+  TFile *f = new TFile("/disk/users/odahme/KstarSelection/bdts.root","recreate");
   TTree *t = foldCh->CloneTree();
   t->Write();
   f->Close();
