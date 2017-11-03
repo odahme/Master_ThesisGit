@@ -3,12 +3,12 @@
 #----------------------------------------------------------------------
 .SUFFIXES:  .o .c .cxx .cpp .C .f .l  .s  .sh  .h  .a .cc
 #======================================================================
-# Biblioteki ROOTa dla linkera 
+# Biblioteki ROOTa dla linkera
 # 1) Jawnie:
-##  Sciezka to systemu ROOT - nalezy ja ustawic odpowiednio 
+##  Sciezka to systemu ROOT - nalezy ja ustawic odpowiednio
 RPATH = $(ROOTSYS)
 RLIB=   -L$(RPATH)lib -lCore -lHist -lGraf -lGraf3d -lGpad -lTree -lRooFitCore -lRooFit -lRooStats -lTreePlayer  \
-	-lRint -lPostscript -lMatrix -lPhysics -lm -ldl -lpthread -rdynamic -Wl,--no-as-needed $(ROOTGLIBS)
+	-lRint -lPostscript -lMatrix -lPhysics -lm -ldl -fopenmp -rdynamic -Wl,--no-as-needed $(ROOTGLIBS)
 #2) Niejawnie, przy uzyciu root-config
 #RLIB= `root-config --libs`
 #======================================================================
@@ -22,18 +22,18 @@ NAME3 = usefulFunctions
 NAME4 = Reweight_apply
 # Pliki objectowe (po kompilacji)
 OBJT1 = $(NAME1).o
-OBJT2 = $(NAME2).o   
-OBJT3 = $(NAME3).o 
+OBJT2 = $(NAME2).o
+OBJT3 = $(NAME3).o
 OBJT4 = $(NAME4).o
 # Pliki wykonawcze (po linkowaniu)
 EXEC1 = $(NAME1).x
-EXEC2 = $(NAME4).x 
+EXEC2 = $(NAME4).x
 # Nazwa i opcje kompilatora
 CXX = g++
 # 1) Jawnie
 #CXXFLAGS = -O -Wall -pthread -I$(RPATH)include
 # 2) Przy uzyciu root-config
-CXXFLAGS = -O2 -Wall -std=c++11  `root-config --cflags`
+CXXFLAGS = -O2 -Wall -std=c++11 -fopenmp  `root-config --cflags`
 # Nazwa i opcje linkera
 LD = $(CXX)
 LDFLAGS = `root-config --ldflags`
@@ -41,7 +41,7 @@ LDFLAGS = `root-config --ldflags`
 
 CXXFLAGS += $(shell $(ROOTSYS)/bin/root-config --cflags)
 #EXTRALIBS += $(shell $(ROOTSYS)/bin/root-config --libs)
-LDFLAGS += $(shell $(ROOTSYS)/bin/root-config --libs) 
+LDFLAGS += $(shell $(ROOTSYS)/bin/root-config --libs)
 RLIB += $(shell $(ROOTSYS)/bin/root-config --libs)
 
 #==============================================================================
@@ -58,8 +58,8 @@ all: ${EXEC1} ${EXEC2}
 # Linkowanie
 ${EXEC1}: ${OBJT1} ${OBJT2} ${OBJT3}
 	$(LD) -o $@  $(LDFLAGS) $^ $(RLIB)
-${EXEC2}: ${OBJT4} ${OBJT2} ${OBJT3}       
-	$(LD) -o $@  $(LDFLAGS) $^ $(RLIB) 
+${EXEC2}: ${OBJT4} ${OBJT2} ${OBJT3}
+	$(LD) -o $@  $(LDFLAGS) $^ $(RLIB)
 
 #==============================================================================
 # Uruchamianie
@@ -76,4 +76,3 @@ tar: clean
 test: run
 	@echo 'Test run finished'
 #==============================================================================
-

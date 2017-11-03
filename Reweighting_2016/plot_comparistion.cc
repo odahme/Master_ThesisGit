@@ -147,7 +147,7 @@ void plot_comparistion()
 
       //saving
       stringstream ss11;
-      ss11<<"plots/"<<names[i]<<".root";
+      ss11<<"plots/root_files/"<<names[i]<<".root";
       c1->SaveAs(ss11.str().c_str());
 
 

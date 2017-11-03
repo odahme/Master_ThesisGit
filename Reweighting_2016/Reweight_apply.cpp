@@ -81,11 +81,11 @@ int main(int argc, char *argv[])
   int bins=100;
   string dataWeightName="sigB0_sw";
 
-  string selection_MC  ="J_psi_M>(3097-60) && J_psi_M<(3097+60)";
+  string selection_MC  = "B0_M>4960&&B0_M<5700&&J_psi_M>(3097-60)&&J_psi_M<(3097+60) && Kstar_M>795.9 && Kstar_M < 995.9";
   string selection_DATA="1";
 
 
-
+#pragma omp parallel for
   for(int i=1;i<5;++i)
     {
       stringstream fileHistoName;
