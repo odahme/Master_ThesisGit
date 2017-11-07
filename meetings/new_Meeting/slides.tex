@@ -86,7 +86,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Kstar to mumu]{LHCb MC group meeting: Kstar to mumu} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[RooMCMC]{MCMC fitter for Root} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Oliver Dahme} % Your name
 \institute[UZH] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -122,12 +122,36 @@ A Markov Chain is a random process which undergoes several states. \\
 From each state there is a probability distribution to change into another state or to stay. \\
 Most important is the asumption that every next step just depends on the current state.
 \begin{figure}
-\includegraphics[width=0.3\linewidth]{MCMC_chain}
+\includegraphics[width=0.3\linewidth]{figures/MCMC_Chain}
 \caption{By Joxemai4 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=10284158}
 \end{figure}
-
-
 \end{frame}
+
+%--------------------------------------------------------------
+
+\begin{frame}
+\frametitle{The algorithm}
+\begin{figure}
+\includegraphics[width=1.0\linewidth]{figures/Metropolis}
+\caption{arXiv: 1011.4381v2}
+\end{figure}
+Here $Y_n$ is the next state and $X_{n-1}$ is the current state. \\
+The $S$-maxtrix determs the direction of the next step. \\
+It basically depends on the gradient of the function, which leads the walk towards the minimum.
+\end{frame}
+
+%---------------------------------------------------------------
+\begin{frame}
+\frametitle{The algorithm}
+Proof of concept: A Metropolis walk (b) has been performed for the Gaus points in (a).\\
+\begin{figure}
+  \subfigure[1000 Simulated Gaus points, with real mean at 3 and real sigma at 1.5]{\includegraphics[width=0.49\textwidth]{figures/gauspoints}}
+  \subfigure[One Toy of the Metropolis walk]{\includegraphics[width=0.49\textwidth]{figures/muprofile}}
+\end{figure}
+The walk converges towards the minimum. \\
+Than the walk starts jumping arround the true value.
+\end{frame}
+
 
 %----------------------------------------------------------------------------------------
 

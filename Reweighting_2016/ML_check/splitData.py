@@ -71,9 +71,15 @@ Sdata.insert(len(used_columns_sig),'label',1)
 Bdata.insert(len(used_columns_bkg),'label',0)
 print('Labels added')
 
+
+print(Bdata.head(5))
+print('applying weights----------------------------------------')
 for var_name in used_columns_sig:
     Bdata[var_name] = Bdata[var_name] * Bdata['DATAMC_weight_1']
     pass
+print('weights applied-----------------------------------------')
+Bdata = Bdata.drop('DATAMC_weight_1',axis=1)
+print(Bdata.head(5))
 
 raw_data = pandas.concat([Sdata,Bdata],ignore_index=True)
 data = raw_data.reset_index()
