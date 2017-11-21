@@ -127,12 +127,9 @@ for clasN in clasNameList:
 testX.to_root('/disk/users/odahme/KstarSelection/folds/fold'+ str(primFoldnumber) +'/clas_fold'+ str(primFoldnumber) +'.root')
 
 
-c1 = TCanvas('c1','fold_'+str(primFoldnumber)+'_roc',1920,1080)
-c1.cd()
-multiGr, leg = report.roc()._plot_tmva()
-multiGr.GetXaxis().SetTitle('false positive rate')
-multiGr.GetYaxis().SetTitle('true positive rate')
-multiGr.SetTitle('ROC curves')
-multiGr.Draw()
-leg.Draw()
-c1.SaveAs('/disk/users/odahme/KstarSelection/folds/fold'+ str(primFoldnumber) +'/fold'+ str(primFoldnumber) +'_roc.pdf')
+
+c1 = report.roc().canvas(name='c1',size=(1902,1080))
+c1.SaveAs('/home/uzh/odahme/Master_Thesis/farm_selection/roc/fold'+ str(primFoldnumber) +'_roc.pdf')
+
+c2= report.learning_curve().canvas(name='c2',size=(1902,1080))
+c2.SaveAs('/home/uzh/odahme/Master_Thesis/farm_selection/learningCurves/fold'+ str(primFoldnumber) +'_learningCurve.pdf')

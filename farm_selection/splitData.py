@@ -28,7 +28,7 @@ used_columns = ["B0_M","J_psi_M","B0_ENDVERTEX_CHI2","B0_IP_OWNPV","B0_IPCHI2_OW
                 "B0_ThetaK", "B0_ThetaL", "B0_Phi" ]
 
 
-path_mc='/disk/lhcb_data/mchrzasz/Kstarmumu/MC/Run2_S28/'
+path_mc='/disk/lhcb_data/mchrzasz/Kstarmumu/MC/Run2_S28_TISTOSFIX/'
 
 signal_MC_names = [
     path_mc+'B2KstarMuMu_SM_MC_2016_MagUp_Pythia8_Sim09b_Filtered_11114001.root',
@@ -38,32 +38,33 @@ signal_MC_names = [
 #path_dataRun1='/disk/lhcb_data/mchrzasz/Kstarmumu/data/Run1/'
 #path_dataRun2_S26='/disk/lhcb_data/mchrzasz/Kstarmumu/data/Run2_S26/'
 #path_dataRun2_S28='/disk/lhcb_data/mchrzasz/Kstarmumu/data/'
-# path_dataRun2_S28_TISTOSFIX='/disk/lhcb_data/mchrzasz/Kstarmumu/data/Run2_S28_TISTOSFIX/'
-#
-# bck_names= [
-#     #path_dataRun1+'Kstarmumu_Data_2011_MagDown.root',
-#     #path_dataRun1+'Kstarmumu_Data_2011_MagUp.root',
-#     #path_dataRun1+'Kstarmumu_Data_2012_MagDown.root',
-#     #path_dataRun1+'Kstarmumu_Data_2012_MagUp.root',
-#
-#     #path_dataRun2_S26+'Kstarmumu_Data_2015_MagDown.root',
-#     #path_dataRun2_S26+'Kstarmumu_Data_2015_MagUp.root',
-#     #path_dataRun2_S26+'Kstarmumu_Data_2016_MagDown.root',
-#     #path_dataRun2_S26+'Kstarmumu_Data_2016_MagUp.root',
-#
-#     #path_dataRun2_S28+'Kstarmumu_Data_2015_MagDown.root',
-#     #path_dataRun2_S28+'Kstarmumu_Data_2015_MagUp.root',
-#     #path_dataRun2_S28+'Kstarmumu_Data_2016_MagDown.root',
-#     #path_dataRun2_S28+'Kstarmumu_Data_2016_MagUp.root'
-#
-#     path_dataRun2_S28_TISTOSFIX+'Kstarmumu_Data_2015_MagDown.root',
-#     path_dataRun2_S28_TISTOSFIX+'Kstarmumu_Data_2015_MagUp.root',
-#     path_dataRun2_S28_TISTOSFIX+'Kstarmumu_Data_2016_MagDown.root',
-#     path_dataRun2_S28_TISTOSFIX+'Kstarmumu_Data_2016_MagUp.root'
-# ]
+path_dataRun2_S28_TISTOSFIX='/disk/lhcb_data/mchrzasz/Kstarmumu/data/Run2_S28_TISTOSFIX/'
+
+
+bck_names= [
+    #path_dataRun1+'Kstarmumu_Data_2011_MagDown.root',
+    #path_dataRun1+'Kstarmumu_Data_2011_MagUp.root',
+    #path_dataRun1+'Kstarmumu_Data_2012_MagDown.root',
+    #path_dataRun1+'Kstarmumu_Data_2012_MagUp.root',
+
+    #path_dataRun2_S26+'Kstarmumu_Data_2015_MagDown.root',
+    #path_dataRun2_S26+'Kstarmumu_Data_2015_MagUp.root',
+    #path_dataRun2_S26+'Kstarmumu_Data_2016_MagDown.root',
+    #path_dataRun2_S26+'Kstarmumu_Data_2016_MagUp.root',
+
+    #path_dataRun2_S28+'Kstarmumu_Data_2015_MagDown.root',
+    #path_dataRun2_S28+'Kstarmumu_Data_2015_MagUp.root',
+    #path_dataRun2_S28+'Kstarmumu_Data_2016_MagDown.root',
+    #path_dataRun2_S28+'Kstarmumu_Data_2016_MagUp.root'
+    
+    #path_dataRun2_S28_TISTOSFIX+'Kstarmumu_Data_2015_MagDown.root',
+    #path_dataRun2_S28_TISTOSFIX+'Kstarmumu_Data_2015_MagUp.root',
+    path_dataRun2_S28_TISTOSFIX+'Kstarmumu_Data_2016_MagDown.root',
+    path_dataRun2_S28_TISTOSFIX+'Kstarmumu_Data_2016_MagUp.root'
+]
 
 Sdata = read_root(signal_MC_names,'B2XMuMu_Line_Tuple/DecayTree',columns=used_columns)
-Bdata = read_root("/disk/users/odahme/KstarSelection/reducedData2015.root",,columns=used_columns)
+Bdata = read_root(bck_names,'B2XMuMu_Line_Tuple/DecayTree',columns=used_columns)
 print('Data reading finished')
 #Bdata = Bdata.iloc[range(0,30000)]
 #Sdata = Sdata.iloc[range(0,10000)]

@@ -8,6 +8,17 @@
     list-units  = repeat,       % \SIlist soll die Einheit wiederholen
 }
 
+
+%% erlaubt Listen einfacher zu formatieren (bietet nosep für kompakte Listen)
+\usepackage{enumitem}
+%% erlaubt hübsche Tabellen über mehrere Seiten, beinhaltet booktabs (\toprule, \midrule, ...)
+\usepackage{ctable}
+%% ermöglicht farbigen Text ({\color{red} ...})
+\usepackage{xcolor}
+
+%% erweiterte Funktionalität für Formeln (Pakete der American Mathematical Society)
+\usepackage{amsfonts,amsmath,amsthm,amssymb}
+
 \usepackage{graphicx}
 %% ermöglicht Bilder und Tabellen am eingegebenen Ort zu platzieren ([H])
 \usepackage{float}
@@ -67,6 +78,24 @@
 
 \addpart{Introduction}
 
+\section{$B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
+The Decay is a flavor changing neutral current (FCNC) with four charged particles in the final state: \\
+The $K^+$ and $\pi^-$ from the $K^{*}$ decay and two leptons from the loop or box digrams:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{KstarFeynman}
+  \caption{Feynman diagrams for decay $B_d$ $\rightarrow$ $\mu^+$ $\mu^-$ at lowest order}
+  \label{fig:Feynman}
+\end{figure}
+The kinematics of the decay are defined by the three angels $\theta_K$, $\theta_L$ and $\phi$:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{angels}
+  \caption{kinematic variables of the decay $B^0$ $\rightarrow$ $K^{*0}$ $\mu$ $\mu$}
+  \label{fig:angels}
+\end{figure}
+
+
 \section{The LHCb Experiment}
 The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based at the CERN laboratory near Geneva in Switzerland. It is part of the Large Hadron Collider (LHC), a proton-proton accelerator and collider located in a vast unterground tunnel with 26.7 km circumference beneath the Swiss-French countryside.
 The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefor very large detectors. ALICE investigates quark-gluon plasma and therefor needs geavy ion collisions, instead of proton collisions. \\
@@ -107,6 +136,44 @@ The \textbf{Level Zero (L0)} trigger reduces the beginning $\SI{40}{MHz}$ to $\S
 In addition the L0 trigger performs a simplified vertex reconstruction with the signal of two silicon layers of the VELO to identifie events with multple proton-proton collisions. They are rejected because for this kind of events its much more difiicult to reconstruct B meson decays, since it is harder to distinguish primary and secondary vertex of the B decay. \\
 The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 1000 16-core computers. It has two stages: HLT1 which reduces the event rate to a few tens of kHz and HLT2 which reduces the rate to the $\SI{2}{kHz}$ which are recorded. HLT1 gets all the candidates of the L0 trigger and uses the full detector information on them to search for particles with a high impact parameter with respect the proton-proton collision. These particles are most likly decay products from B mesons, because of its relatively long life-time. They typically fly 1 cm away from the collision before decaying resulting in a high impact parameter for the decay products. HLT2 does a complete reconstruction of the events. It starts with the track of the VELO and connects them to the tracks in the other sub-detectors. Most important are displaced vertices, since they are strong indicator for B decays. The selection is devided into two parts. The inclusive selection searches for resonance decays like $D^*$ or $J/ \psi$. The exclusive selection is desigened to provide the highest possible efficiency to fully reconstruct B decays of interest. It therfor uses all information available such as mass and vertex quality and intermediate resonances.
 
+\section{Analysis}
+
+\subsection{Classification}
+
+\subsubsection{Introduction}
+
+To eliminate combinatorial background Machine Learning algorithms called classifiers are used. They can seperate data into two or more parts, depending on certain parameters.For example sperating colors depending on their share of magenta, cian and yellow. But first they need to be trained on so called labeled data. In a labeled data set it is known which entrie corresponds to which category, like colors. While training the algorithm will learn so sperate data into the pre defined categories. That is the reason it is called Machine learning. In this thesis the classfication should seperate signal from combinatorial background. \\
+To do so Monte Carlo data which contains only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays is labeled with probability $1$ to be signal. Then it is merged with real data and used to train the classifiers. But since the classification becomes naturally biased if the data to classify is the same as the training data, a technique called K-folding is used. K-folding seperates the data Monte Carlo mix into several parts called folds. To classify one fold all the other folds are used for training. After iterating over all the folds one has a complety classified data set without any bias. \\
+
+\subsubsection{classifiers test}
+In this thesis the classifiers themselves are used as a black box and are not explained further.
+First the following list of classifers where tested and compared in terms of perfomance:
+\begin{itemize}
+  \item Ada Boost
+  \item uGB + knnAda
+  \item uBoost
+  \item uGB + Fl
+  \item xgb
+  \item sk\_bdtg
+  \item sk\_bdt
+\end{itemize}
+The test was performed with 30000 events from the 2016 LHCb $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data and 10000 events from the Monte Carlo simulation. The following list of parameters are used in brackets are the names of the parameters in the root files.
+\begin{itemize}
+  \item Decay vertex location for reconstructed particles (ENDVERTEX)
+  \item Primary vertex location (OWNPV)
+  \item Impact parameter (IP\_OWNPV)
+  \item Flight distance (FD\_OWNPV)
+  \item The cosine of the angle between primary vertex and decay vertex and recorded momentum (DIRA\_OWNPV)
+\end{itemize}
+To compare the different classifiers the ROC curves and the correlations to the kinematic variabels of the decay (see \ref{fig:angels}) are used. Since the curves for the different folds all look alike only one is presented here. One can find the other in the appendix \ref{app:roc} \ref{app:corr}.
+
+\subsection{SPlot}
+SPlot is a tecnique to subtract the exponatial background from the signal.
+
+
+
+\subsection{Reweighting}
+
 
 
 
@@ -141,6 +208,18 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
 
 \end{thebibliography}
 
+\begin{appendix}
+  \section{ROC curves}
+  \label{app:roc}
 
+  \section{Learning Curves}
+  \label{app:lc}
+
+  \section{Correlation plots}
+  \label{app:corr}
+
+
+
+\end{appendix}
 
 \end{document}

@@ -1,6 +1,16 @@
 \BOOKMARK [0][-]{section*.1}{Abstract}{}% 1
 \BOOKMARK [0][-]{section*.4}{Introduction}{}% 2
-\BOOKMARK [1][-]{section.1}{The LHCb Experiment}{section*.4}% 3
-\BOOKMARK [2][-]{subsection.1.1}{The LHCb Detector}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.2}{The LHCb trigger system}{section.1}% 5
-\BOOKMARK [1][-]{section*.9}{Bibliography}{section*.4}% 6
+\BOOKMARK [1][-]{section.1}{B \040K* \040 decay}{section*.4}% 3
+\BOOKMARK [1][-]{section.2}{The LHCb Experiment}{section*.4}% 4
+\BOOKMARK [2][-]{subsection.2.1}{The LHCb Detector}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.2}{The LHCb trigger system}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Analysis}{section*.4}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Classification}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Introduction}{subsection.3.1}% 9
+\BOOKMARK [3][-]{subsubsection.3.1.2}{classifiers test}{subsection.3.1}% 10
+\BOOKMARK [2][-]{subsection.3.2}{SPlot}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Reweighting}{section.3}% 12
+\BOOKMARK [1][-]{section*.11}{Bibliography}{section*.4}% 13
+\BOOKMARK [1][-]{appendix.A}{ROC curves}{section*.4}% 14
+\BOOKMARK [1][-]{appendix.B}{Learning Curves}{section*.4}% 15
+\BOOKMARK [1][-]{appendix.C}{Correlation plots}{section*.4}% 16
