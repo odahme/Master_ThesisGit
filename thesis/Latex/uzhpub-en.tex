@@ -19,6 +19,8 @@
 %% erweiterte Funktionalität für Formeln (Pakete der American Mathematical Society)
 \usepackage{amsfonts,amsmath,amsthm,amssymb}
 
+\usepackage{pdfpages}
+
 \usepackage{graphicx}
 %% ermöglicht Bilder und Tabellen am eingegebenen Ort zu platzieren ([H])
 \usepackage{float}
@@ -165,7 +167,51 @@ The test was performed with 30000 events from the 2016 LHCb $B$ $\rightarrow$ $K
   \item Flight distance (FD\_OWNPV)
   \item The cosine of the angle between primary vertex and decay vertex and recorded momentum (DIRA\_OWNPV)
 \end{itemize}
-To compare the different classifiers the ROC curves and the correlations to the kinematic variabels of the decay (see \ref{fig:angels}) are used. Since the curves for the different folds all look alike only one is presented here. One can find the other in the appendix \ref{app:roc} \ref{app:corr}.
+To compare the different classifiers the ROC curves and the correlations to the kinematic variabels of the decay (see \ref{fig:angels}) are used. First lets inspect the ROC curve. Since the curves for the different folds all look alike only one is presented here \ref{fig:roc}. One can find the other nine curves in the appendix \ref{app:roc}.
+It turns out that all the classifiers classify the data correctly with just some minor variances. The ROC curve is in that case not a good tool to compare the different classifiers.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{roc/fold_0_roc.pdf}
+  \caption{ROC curve of the first fold. One can see that all the classifiers competetive in terms of classifing correctly}
+  \label{fig:roc}
+\end{figure}
+So now lets look at the correlations plots, only the correlations with the mass are shown here. The others can be found in appendix \ref{app:corr}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/AdaBoost_plot_bdt_vs_B0_M}
+  \caption{This plot shows the correltation between the bdt decision of the AdaBoost classifier and the $B_0$ mass.}
+  \label{fig:AdaB0M}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/sk_bdtg_plot_bdt_vs_B0_M}
+  \caption{This plot shows the correltation between the bdt decision of the sk_bdtg classifier and the $B_0$ mass.}
+  \label{fig:sk_bdtgB0M}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/uGB+FL_plot_bdt_vs_B0_M}
+  \caption{This plot shows the correltation between the bdt decision of the uGB+FL classifier and the $B_0$ mass.}
+  \label{fig:uGB+FLB0M}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/uGB+knnAda_plot_bdt_vs_B0_M}
+  \caption{This plot shows the correltation between the bdt decision of the uGB+knnAda classifier and the $B_0$ mass.}
+  \label{fig:uGB+knnAdaB0M}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/xgb_plot_bdt_vs_B0_M}
+  \caption{This plot shows the correltation between the bdt decision of the xgb classifier and the $B_0$ mass.}
+  \label{fig:xgbB0M}
+\end{figure}
+
+The two classifers with the least correlation are the sk_bdt and the uBoost classifers. Therfore they were used to do the seperation between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data.
 
 \subsection{SPlot}
 SPlot is a tecnique to subtract the exponatial background from the signal.
@@ -211,13 +257,14 @@ SPlot is a tecnique to subtract the exponatial background from the signal.
 \begin{appendix}
   \section{ROC curves}
   \label{app:roc}
+  \includepdf[pages={-}]{roc.pdf}
 
   \section{Learning Curves}
   \label{app:lc}
 
   \section{Correlation plots}
   \label{app:corr}
-
+  \includepdf[pages={-}]{Corplots.pdf}
 
 
 \end{appendix}
