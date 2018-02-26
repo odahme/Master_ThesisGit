@@ -70,7 +70,7 @@
 
 
 %% Addpart entspricht dem "Kapiteltitel"
-\addpart{Abstract}
+%\addpart{Abstract}
 
 \begin{abstract}
   Here comes the abstract
@@ -78,9 +78,9 @@
 
 %\addpart{Introduction}
 
-\addpart{Introduction}
+\section{Introduction}
 
-\section{$B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
+\subsection{$B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
 The Decay is a flavor changing neutral current (FCNC) with four charged particles in the final state: \\
 The $K^+$ and $\pi^-$ from the $K^{*}$ decay and two leptons from the loop or box digrams:
 \begin{figure}[H]
@@ -98,7 +98,7 @@ The kinematics of the decay are defined by the three angels $\theta_K$, $\theta_
 \end{figure}
 
 
-\section{The LHCb Experiment}
+\subsection{The LHCb Experiment}
 The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based at the CERN laboratory near Geneva in Switzerland. It is part of the Large Hadron Collider (LHC), a proton-proton accelerator and collider located in a vast unterground tunnel with 26.7 km circumference beneath the Swiss-French countryside.
 The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefor very large detectors. ALICE investigates quark-gluon plasma and therefor needs geavy ion collisions, instead of proton collisions. \\
 The protons in the LHC have a kinetic energy of 7 TeV, which allows a collision energy, in the LHCb detector, of 13 TeV. In the year 2016 the LHCb had a recorded luminosity of $\SI{1906}{pb^{-1}}$. For this thesis $\SI{2280}{pb^{-1}}$ of data, collected at LHCb during the years 2011 to 2016 are used.
@@ -113,7 +113,7 @@ LHCb is dedicated to falvour physics. It therefor investigates rare decays and C
 
 
 
-\subsection{The LHCb Detector}
+\subsubsection{The LHCb Detector}
 The LHCb Detector has a fix target geometry, because beauty hadrons are manily produced at small angeles with respect to the beam pipe.
 
 \begin{figure}[H]
@@ -132,7 +132,7 @@ The LHCb Detector has a fix target geometry, because beauty hadrons are manily p
 \textbf{Muon System \cite{bib:muonSys} :} The muon system consistes of 5 rectangular stations, which cover an area of $\SI{435}{m^2}$. Each station has chambers filled with three gases: carbon dioxide, argon and tetrafluoromethane. Passing muons react with the mixture and electrodes detect the result.
 
 
-\subsection{The LHCb trigger system}
+\subsubsection{The LHCb trigger system}
 The rate of events at the LHCb interaction point is $\SI{40}{MHz}$. But the rate to have a B meson contained in the detector is $\SI{15}{kHz}$. But the offline computing power just allows $\SI{2}{kHz}$ to be recorded. The LHCb trigger system aims to 'fill' this $\SI{2}{kHz}$ with intresting B decays and important control decays like $J/ \psi$ decays. The trigger has two levels: \\
 The \textbf{Level Zero (L0)} trigger reduces the beginning $\SI{40}{MHz}$ to $\SI{1}{MHz}$. To get this high rate it can only rely on fast sub-detectors as the calorimeters and the muon system. The L0 trigger looks for events with high transverse momentum with respect to the patrticle beam axis (pT), because particles from a B decay have this attribute, since B Mesons are always produced almost parallel to the beam axis.
 In addition the L0 trigger performs a simplified vertex reconstruction with the signal of two silicon layers of the VELO to identifie events with multple proton-proton collisions. They are rejected because for this kind of events its much more difiicult to reconstruct B meson decays, since it is harder to distinguish primary and secondary vertex of the B decay. \\
@@ -172,10 +172,10 @@ It turns out that all the classifiers classify the data correctly with just some
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{roc/fold_0_roc.pdf}
-  \caption{ROC curve of the first fold. One can see that all the classifiers competetive in terms of classifing correctly}
+  \caption{ROC curve of the first fold. One can see that all the classifiers are competetive in terms of classifing correctly}
   \label{fig:roc}
 \end{figure}
-So now lets look at the correlations plots, only the correlations with the mass are shown here. The others can be found in appendix \ref{app:corr}.
+The next step is to check for unwanted correlations, only the correlations with the mass are shown here. The others can be found in appendix \ref{app:corr}.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/AdaBoost_plot_bdt_vs_B0_M}
@@ -185,9 +185,23 @@ So now lets look at the correlations plots, only the correlations with the mass 
 
 \begin{figure}[H]
   \centering
+  \includegraphics[width=0.5\textwidth]{plots/sk_bdt_plot_bdt_vs_B0_M}
+  \caption{This plot shows the correltation between the bdt decision of the sk\_bdt classifier and the $B_0$ mass.}
+  \label{fig:skbdtB0M}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
   \includegraphics[width=0.5\textwidth]{plots/sk_bdtg_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correltation between the bdt decision of the sk_bdtg classifier and the $B_0$ mass.}
-  \label{fig:sk_bdtgB0M}
+  \caption{This plot shows the correltation between the bdt decision of the sk\_bdtg classifier and the $B_0$ mass.}
+  \label{fig:skbdtgB0M}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{plots/uBoost_plot_bdt_vs_B0_M}
+  \caption{This plot shows the correltation between the bdt decision of the uBoost classifier and the $B_0$ mass.}
+  \label{fig:uBoostB0M}
 \end{figure}
 
 \begin{figure}[H]
@@ -211,10 +225,57 @@ So now lets look at the correlations plots, only the correlations with the mass 
   \label{fig:xgbB0M}
 \end{figure}
 
-The two classifers with the least correlation are the sk_bdt and the uBoost classifers. Therfore they were used to do the seperation between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data.
+The two classifers with the least correlation are the sk\_bdt and the uBoost classifers. Therfore they were used to do the seperation between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data.
 
 \subsection{SPlot}
-SPlot is a tecnique to subtract the exponatial background from the signal.
+SPlot is a technique to seperate probabillity density functions short PDF. \\
+
+\subsubsection{Likelihood method}
+Consider an analysis of a data sample, which consists of several types of events. These types represent signal components and background components, for example from different experiments. The log-liklihood of such a data sample is expressed as:
+\begin{align}
+  L = \sum_{i=1}^{N} \ln \left[ \sum_{j=1}^{N_S} N_j f_j (y_i) \right] - \sum_{i=j}^{N_S} N_j \label{eq:L}
+\end{align}
+
+\begin{itemize}
+  \item $N$ = total number of events \\
+  \item $N_S$ = number of types \\
+  \item $N_i$ = expected average number of events for type $i$ \\
+  \item $y$ = set of diciminating variables \\
+  \item $f_j$ = PDF of the $i$th type \\
+  \item $f_j(y_i)$ = value of PDF for event $y_i$ \\
+  \item $x$ = control variable, not a part of $L$ by construction
+\end{itemize}
+The yields $N_i$ and the free parameters of the PDF are obtained by maximizing the above log-likelihood (eq \ref{eq:L}).
+
+\subsubsection{$_{in} Plot$ technique}
+Consider a varibale x which can be expressed as a function of the dicriminating variables y used in the fit. Furthermore a fit has been performed to determine the yields $N_i$ for all types. From the knowledge of the PDF and the values of $N_i$ a naive weight can be defined as:
+\begin{align}
+  P_n(y_i) = \frac{N_n f_n(y_i)}{\sum_{k=1}^{N_s} N_k f_k(y_i)} \label{eq:P_n}
+\end{align}
+which will leed to the x-distribution $\tilde{M}_n$ defined by:
+\begin{align}
+  N_n \tilde{M}_n (\bar{x}) = \sum_{i \subset \delta x} P_n (y_i) \label{eq:Mn}
+\end{align}
+where sum $\sum_{i \subset \delta x}$ contains alle events for which $x_i$ lies in the interval centered on $\bar{x}$ and of total width $\delta x$.
+Therefor $N_n \tilde{M}_n (\bar{x}) \delta x$ is the x-distribution of the histogrammed events, using the weights of eq \ref{eq:P_n}.
+With this procedure one can on average reproduce the true distribution $\textbf{M}_n(x)$. One can even replace the sum in eq \ref{eq:Mn} by an integral:
+\begin{align}
+  \left \langle \sum_{i \subset \delta x} \right \rangle \rightarrow \int dy \sum_{j=1}^{N_s} N_j f_j (y) \delta (x(y) - \bar{x}) \delta x
+\end{align}
+Furthermore through identifying the number of events $N_i$ from the fit one gets:
+\begin{align}
+  \langle N_n \rangle \tilde{M}_n (\bar{x}) & = \int dy \sum_{j=1}^{N_s} N_j f_j (y) \delta (x(y) - \bar{x}) P_n (y) \\
+  & = \int dy \sum_{j=1}^{N_s} N_j f_j (y) \delta (x(y)- \bar{x}) \cdot \frac{N_n f_n (y)}{\sum_{k=1}^{N_s} N_k f_k (y)} \\
+  & = N_n \int dy \delta (x(y) - \bar{x}) f_n (y) \\
+  & = N_n \textbf{M}_n(\bar{x})
+\end{align}
+One can see that the sum over enents of the daive weight $P_n$ provides a direct estimate of the x-distribution for the nth type.
+But this procedure has a major drawback, since x is correlated to y, the PDFs of x enter implicity in the definition of the naive weight. Therfor the $\tilde{M}_n$ distributions are a bad estimate for the quality of the fit, since the these distributions are biased in a difficult way, when the PDFs $f_i(y)$ are not accurate. \\
+Consider for example a data sample where one of the types has events on the tail of the x-distribution. Such events require the true ditribution to account for the tail. But since the events are averaged the weights on the tail are going to be very small missing those events in the extimated true distribution. Only the core of the x-distribution can be examined with $_{in} Plots$.
+
+
+\subsubsection{$_{S} Plot$ technique}
+Consider two sets of varibales $x$ and $y$ which are uncorrelated, hence the total PDFs $f_i (x,y)$ all factorize into products $\textbf{M}_i (x) f_i(y)$.
 
 
 

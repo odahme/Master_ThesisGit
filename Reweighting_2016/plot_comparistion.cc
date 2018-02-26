@@ -65,18 +65,26 @@ using namespace std;
 void plot_comparistion()
 {
 
-  vector<string> names={"nTracks", "B0_PT", "B0_ENDVERTEX_CHI2", "B0_DIRA_OWNPV", "B0_IP_OWNPV", "B0_FD_OWNPV", "B0_FDCHI2_OWNPV", "B0_IPCHI2_OWNPV"};
-  vector<string> names_nice={"nTracks", "B0_PT", "B0_ENDVERTEX_CHI2" , "B0_DIRA_OWNPV", "B0_IP_OWNPV", "B0_FD_OWNPV", "B0_FDCHI2_OWNPV", "B0_IPCHI2_OWNPV"};
-  vector<string>  ranges={"(100,0,600)", "(100,0,30000)", "(25,0,25)", "(50,0.9999,1)", "(100,0,0.15)", "(100,0,50)", "(100,0,10000)",        "(40,0,20)"};
+  // vector<string> names={"nTracks", "B0_PT", "B0_ENDVERTEX_CHI2", "B0_DIRA_OWNPV", "B0_IP_OWNPV", "B0_FD_OWNPV", "B0_FDCHI2_OWNPV", "B0_IPCHI2_OWNPV"};
+  // vector<string> names_nice={"nTracks", "B0_PT", "B0_ENDVERTEX_CHI2" , "B0_DIRA_OWNPV", "B0_IP_OWNPV", "B0_FD_OWNPV", "B0_FDCHI2_OWNPV", "B0_IPCHI2_OWNPV"};
+  // vector<string>  ranges={"(100,0,600)", "(100,0,30000)", "(25,0,25)", "(50,0.9999,1)", "(100,0,0.15)", "(100,0,50)", "(100,0,10000)",        "(40,0,20)"};
 
-  TFile *fmc = new TFile("/media/oliver/USB-HDD/ntupels/MC/Run2_S28_TISTOSFIX/B2KstarJpsi_MC_2016.root");
+  vector<string> names={"nTracks", "B0_PT", "B0_ENDVERTEX_CHI2"};
+  vector<string> names_nice={"nTracks", "B0_PT", "B0_ENDVERTEX_CHI2"};
+  vector<string>  ranges={"(100,0,600)", "(100,0,30000)", "(25,0,25)"};
 
-  TFile *fd =  new TFile("/media/oliver/USB-HDD/ntupels/Splot/KstarJpsi_2016_Splot.root");
 
-  TTree *tmc = (TTree*)fmc->Get("DecayTree");
+  TFile *fmc = new TFile("/home/oliver/Master_Thesis/storage/data_reduced/MC/B2KstarJpsi_MC_2016.root");
+
+  TFile *fd =  new TFile("/home/oliver/Master_Thesis/storage/data_reduced/Splot/KstarJpsi_2016_Splot.root");
+
+  TTree *tmc = (TTree*)fmc->Get("Reduced");
   TTree *td= (TTree*)fd->Get("data");
 
   string weight_name="DATAMC_weight_1";
+
+  string selection_MC  ="B0_M>4960 && B0_M<5700 && J_psi_M>(3097-60) && J_psi_M<(3097+60) && Kstar_M>795.9 && Kstar_M < 995.9 && (B0_BKGCAT==0 || B0_BKGCAT==50)";
+  string selection_DATA="1";
 
   TCanvas *c1 = new TCanvas("c1","c1", 600,400);
 
@@ -142,7 +150,7 @@ void plot_comparistion()
 
       //saving
       stringstream ss10;
-      ss10<<"plots/"<<names[i]<<".png";
+      ss10<<"plots/comparistion/"<<names[i]<<".png";
       c1->SaveAs(ss10.str().c_str());
 
       //saving

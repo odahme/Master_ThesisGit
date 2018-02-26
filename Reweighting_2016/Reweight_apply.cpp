@@ -58,22 +58,22 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-  // if(argc != 2)
-  //   {
-  //
-  //     cout<<"Wrong number of arguments"<<endl;
-  //     cout<<"Usage: ./Reweight_apply.x <STRING>  "<<endl;
-  //     return -1;
-  //
-  //   }
+  if(argc != 2)
+    {
+
+      cout<<"Wrong number of arguments"<<endl;
+      cout<<"Usage: ./Reweight_apply.x <STRING>  "<<endl;
+      return -1;
+
+    }
 
 
 
-  // string MC_path=string(argv[1]);
-  string MC_path = "/media/oliver/USB-HDD/ntupels/MC/Run2_S28_TISTOSFIX/B2KstarJpsi_MC_2016.root";
+  string MC_path=string(argv[1]);
+  // string MC_path = "/media/oliver/USB-HDD/ntupels/MC/Run2_S28_TISTOSFIX/B2KstarJpsi_MC_2016.root";
   //string MCKmumu_path="/storage1/ntuples/lhcb/B2KLL/Selection/MC/Kmumu/Kmumu_2012.root";
 
-  //  string data_path_splot="/storage1/ntuples/lhcb//B2Kemu/Kmumu_Run1_Splot.root";
+   string data_path_splot="/home/oliver/Master_Thesis/storage/data_reduced/Splot/KstarJpsi_2016_Splot.root";
 
 
   vector<string> names={"nTracks", "B0_PT", "B0_ENDVERTEX_CHI2"};
@@ -81,11 +81,12 @@ int main(int argc, char *argv[])
   int bins=100;
   string dataWeightName="sigB0_sw";
 
-  string selection_MC  = "B0_M>4960&&B0_M<5700&&J_psi_M>(3097-60)&&J_psi_M<(3097+60) && Kstar_M>795.9 && Kstar_M < 995.9";
+  string selection_MC  = "B0_M>4960 && B0_M<5700 && J_psi_M>(3097-60) && J_psi_M<(3097+60) && Kstar_M>795.9 && Kstar_M < 995.9 && (B0_BKGCAT==0 || B0_BKGCAT==50)";
+  // string selection_MC  = "B0_M>6000 && B0_M<5380 && J_psi_M>(3097-60) && J_psi_M<(3097+60) && Kstar_M>795.9 && Kstar_M<995.9";
   string selection_DATA="1";
 
 
-#pragma omp parallel for
+// #pragma omp parallel for
   for(int i=1;i<5;++i)
     {
       stringstream fileHistoName;
@@ -94,11 +95,11 @@ int main(int argc, char *argv[])
       stringstream weight_name;
       weight_name<<"DATAMC_weight_"<<i;
       cout<<"Doing: "<<MC_path<<endl;
-      applyWeightsToTree(MC_path,  "DecayTree", names, i , fileHistoName.str(), cut, weight_name.str(), "");
+      applyWeightsToTree(MC_path,  "Reduced", names, i , fileHistoName.str(), cut, weight_name.str(), "");
       //cout<<"Doing: "<<MCKmumu_path<<endl;
       // applyWeightsToTree(MCKmumu_path,  "DecayTree", names, i, fileHistoName.str(), cut, weight_name.str(), "");
-      // cout<<"Doing: "<<data_path_splot<<endl;
-      //applyWeightsToTree(data_path_splot, "data", names, i, fileHistoName.str(), cut, weight_name.str(), "");
+      cout<<"Doing: "<<data_path_splot<<endl;
+      applyWeightsToTree(data_path_splot, "data", names, i, fileHistoName.str(), cut, weight_name.str(), "");
 
 
     }

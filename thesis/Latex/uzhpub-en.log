@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  21 NOV 2017 09:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  23 FEB 2018 10:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1018,46 +1018,19 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 15.0049pt on input line 69.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 12.50409pt on input line 69.
-LaTeX Font Info:    Try loading font information for T1+ua1 on input line 73.
+LaTeX Font Info:    Try loading font information for T1+ua1 on input line 81.
  (/home/oliver/texmf/tex/latex/ua1/t1ua1.fd
 File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
 )
 LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <10> not available
-(Font)              Font shape `T1/ua1/b/n' tried instead on input line 73.
+(Font)              Font shape `T1/ua1/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <15> not available
-(Font)              Font shape `T1/ua1/b/n' tried instead on input line 73.
+(Font)              Font shape `T1/ua1/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <15> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 73.
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 73.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 81.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 83.
 
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 73.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <11.39992> not available
-(Font)              size <10.95> substituted on input line 73.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 73.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <11.39992> not available
-(Font)              size <10.95> substituted on input line 73.
-
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.63011pt on input line 73.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.87878pt on input line 73.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37816pt on input line 73.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.63011pt on input line 73.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.87878pt on input line 73.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37816pt on input line 73.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 83.
@@ -1114,17 +1087,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 83.
 
-<img/KstarFeynman.png, id=68, 384.96297pt x 206.07683pt>
+<img/KstarFeynman.png, id=76, 384.96297pt x 206.07683pt>
 File: img/KstarFeynman.png Graphic file (type png)
  <use img/KstarFeynman.png>
 Package pdftex.def Info: img/KstarFeynman.png used on input line 88.
 (pdftex.def)             Requested size: 361.92044pt x 193.75311pt.
- <img/angels.png, id=69, 277.63129pt x 196.0592pt>
+ <img/angels.png, id=77, 277.63129pt x 196.0592pt>
 File: img/angels.png Graphic file (type png)
  <use img/angels.png>
 Package pdftex.def Info: img/angels.png used on input line 95.
 (pdftex.def)             Requested size: 271.44205pt x 191.69095pt.
- <uzh_logo_e_pos.pdf, id=70, 154.5775pt x 49.18375pt>
+ <uzh_logo_e_pos.pdf, id=78, 154.5775pt x 49.18375pt>
 File: uzh_logo_e_pos.pdf Graphic file (type pdf)
  <use uzh_logo_e_pos.pdf>
 Package pdftex.def Info: uzh_logo_e_pos.pdf used on input line 99.
@@ -1140,7 +1113,7 @@ Overfull \vbox (189.82466pt too high) has occurred while \output is active []
  [1{/home/oliver/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
- </etc/texmf/tex/latex/uzh/uzh_logo_e_pos.pdf> </home/oliver/Master_ThesisGit/thesis/Latex/img/KstarFeynman.png>] <img/LHC_default.jpg, id=91, 2125.9425pt x 1619.04875pt>
+ </etc/texmf/tex/latex/uzh/uzh_logo_e_pos.pdf> </home/oliver/Master_ThesisGit/thesis/Latex/img/KstarFeynman.png>] <img/LHC_default.jpg, id=95, 2125.9425pt x 1619.04875pt>
 File: img/LHC_default.jpg Graphic file (type jpg)
  <use img/LHC_default.jpg>
 Package pdftex.def Info: img/LHC_default.jpg used on input line 109.
@@ -1176,18 +1149,15 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 4.68907pt on input line 113.
 
-Overfull \vbox (11.59337pt too high) has occurred while \output is active []
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
- [2 </home/oliver/Master_ThesisGit/thesis/Latex/img/angels.png>]
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 116.
- <img/lhcb_detector.jpg, id=99, 566.115pt x 317.5062pt>
+ [2 </home/oliver/Master_ThesisGit/thesis/Latex/img/angels.png>] <img/lhcb_detector.jpg, id=103, 566.115pt x 317.5062pt>
 File: img/lhcb_detector.jpg Graphic file (type jpg)
  <use img/lhcb_detector.jpg>
 Package pdftex.def Info: img/lhcb_detector.jpg used on input line 121.
 (pdftex.def)             Requested size: 452.39883pt x 253.73398pt.
 
-Overfull \vbox (11.59337pt too high) has occurred while \output is active []
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
  [3 </home/oliver/Master_ThesisGit/thesis/Latex/img/LHC_default.jpg>]
 Overfull \hbox (10.14581pt too wide) in paragraph at lines 127--133
@@ -1195,7 +1165,7 @@ Overfull \hbox (10.14581pt too wide) in paragraph at lines 127--133
  []
 
 
-Overfull \vbox (11.59337pt too high) has occurred while \output is active []
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
  [4 </home/oliver/Master_ThesisGit/thesis/Latex/img/lhcb_detector.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 147--149
@@ -1203,557 +1173,602 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--149
  []
 
 
-Overfull \vbox (11.59337pt too high) has occurred while \output is active []
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
  [5]
 Overfull \hbox (32.05145pt too wide) in paragraph at lines 168--169
 []\T1/ppl/m/n/10 The co-sine of the an-gle be-tween pri-mary ver-tex and de-cay ver-tex and recorded mo-men-tum (DIRA_OWNPV) 
  []
 
-<img/roc/fold_0_roc.pdf, id=133, 569.12625pt x 292.09125pt>
+<img/roc/fold_0_roc.pdf, id=137, 569.12625pt x 292.09125pt>
 File: img/roc/fold_0_roc.pdf Graphic file (type pdf)
  <use img/roc/fold_0_roc.pdf>
 Package pdftex.def Info: img/roc/fold_0_roc.pdf used on input line 174.
 (pdftex.def)             Requested size: 361.92044pt x 185.75665pt.
 
-Overfull \vbox (11.59337pt too high) has occurred while \output is active []
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
- [6] <img/plots/AdaBoost_plot_bdt_vs_B0_M.pdf, id=140, 569.12625pt x 312.16624pt>
+ [6] <img/plots/AdaBoost_plot_bdt_vs_B0_M.pdf, id=144, 569.12625pt x 312.16624pt>
 File: img/plots/AdaBoost_plot_bdt_vs_B0_M.pdf Graphic file (type pdf)
  <use img/plots/AdaBoost_plot_bdt_vs_B0_M.pdf>
 Package pdftex.def Info: img/plots/AdaBoost_plot_bdt_vs_B0_M.pdf used on input line 181.
 (pdftex.def)             Requested size: 226.19942pt x 124.07358pt.
- <img/plots/sk_bdtg_plot_bdt_vs_B0_M.pdf, id=141, 569.12625pt x 312.16624pt>
+ <img/plots/sk_bdt_plot_bdt_vs_B0_M.pdf, id=145, 569.12625pt x 312.16624pt>
+File: img/plots/sk_bdt_plot_bdt_vs_B0_M.pdf Graphic file (type pdf)
+ <use img/plots/sk_bdt_plot_bdt_vs_B0_M.pdf>
+Package pdftex.def Info: img/plots/sk_bdt_plot_bdt_vs_B0_M.pdf used on input line 188.
+(pdftex.def)             Requested size: 226.19942pt x 124.07358pt.
+
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
+
+ [7 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc/fold_0_roc.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/AdaBoost_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees>] <img/plots/sk_bdtg_plot_bdt_vs_B0_M.pdf, id=239, 569.12625pt x 312.16624pt>
 File: img/plots/sk_bdtg_plot_bdt_vs_B0_M.pdf Graphic file (type pdf)
  <use img/plots/sk_bdtg_plot_bdt_vs_B0_M.pdf>
-Package pdftex.def Info: img/plots/sk_bdtg_plot_bdt_vs_B0_M.pdf used on input line 188.
+Package pdftex.def Info: img/plots/sk_bdtg_plot_bdt_vs_B0_M.pdf used on input line 195.
 (pdftex.def)             Requested size: 226.19942pt x 124.07358pt.
-
-/home/oliver/Master_ThesisGit/thesis/Latex/uzhpub-en.tex:189: Missing $ inserted.
-<inserted text> 
-                $
-l.189 ...e sk_bdtg classifier and the $B_0$ mass.}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/home/oliver/Master_ThesisGit/thesis/Latex/uzhpub-en.tex:189: Missing $ inserted.
-<inserted text> 
-                $
-l.189 ...e sk_bdtg classifier and the $B_0$ mass.}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/home/oliver/Master_ThesisGit/thesis/Latex/uzhpub-en.tex:189: Missing $ inserted.
-<inserted text> 
-                $
-l.189 ...e sk_bdtg classifier and the $B_0$ mass.}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/home/oliver/Master_ThesisGit/thesis/Latex/uzhpub-en.tex:189: Missing $ inserted.
-<inserted text> 
-                $
-l.189 ...e sk_bdtg classifier and the $B_0$ mass.}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-<img/plots/uGB+FL_plot_bdt_vs_B0_M.pdf, id=142, 569.12625pt x 312.16624pt>
+ <img/plots/uBoost_plot_bdt_vs_B0_M.pdf, id=240, 569.12625pt x 312.16624pt>
+File: img/plots/uBoost_plot_bdt_vs_B0_M.pdf Graphic file (type pdf)
+ <use img/plots/uBoost_plot_bdt_vs_B0_M.pdf>
+Package pdftex.def Info: img/plots/uBoost_plot_bdt_vs_B0_M.pdf used on input line 202.
+(pdftex.def)             Requested size: 226.19942pt x 124.07358pt.
+ <img/plots/uGB+FL_plot_bdt_vs_B0_M.pdf, id=241, 569.12625pt x 312.16624pt>
 File: img/plots/uGB+FL_plot_bdt_vs_B0_M.pdf Graphic file (type pdf)
  <use img/plots/uGB+FL_plot_bdt_vs_B0_M.pdf>
-Package pdftex.def Info: img/plots/uGB+FL_plot_bdt_vs_B0_M.pdf used on input line 195.
+Package pdftex.def Info: img/plots/uGB+FL_plot_bdt_vs_B0_M.pdf used on input line 209.
 (pdftex.def)             Requested size: 226.19942pt x 124.07358pt.
 
-Overfull \vbox (11.59337pt too high) has occurred while \output is active []
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
- [7 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc/fold_0_roc.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/AdaBoost_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/sk_bdtg_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees>] <img/plots/uGB+knnAda_plot_bdt_vs_B0_M.pdf, id=280, 569.12625pt x 312.16624pt>
+ [8 </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/sk_bdt_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/sk_bdtg_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/uBoost_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees>] <img/plots/uGB+knnAda_plot_bdt_vs_B0_M.pdf, id=378, 569.12625pt x 312.16624pt>
 File: img/plots/uGB+knnAda_plot_bdt_vs_B0_M.pdf Graphic file (type pdf)
  <use img/plots/uGB+knnAda_plot_bdt_vs_B0_M.pdf>
-Package pdftex.def Info: img/plots/uGB+knnAda_plot_bdt_vs_B0_M.pdf used on input line 202.
+Package pdftex.def Info: img/plots/uGB+knnAda_plot_bdt_vs_B0_M.pdf used on input line 216.
 (pdftex.def)             Requested size: 226.19942pt x 124.07358pt.
- <img/plots/xgb_plot_bdt_vs_B0_M.pdf, id=281, 569.12625pt x 312.16624pt>
+ <img/plots/xgb_plot_bdt_vs_B0_M.pdf, id=379, 569.12625pt x 312.16624pt>
 File: img/plots/xgb_plot_bdt_vs_B0_M.pdf Graphic file (type pdf)
  <use img/plots/xgb_plot_bdt_vs_B0_M.pdf>
-Package pdftex.def Info: img/plots/xgb_plot_bdt_vs_B0_M.pdf used on input line 209.
+Package pdftex.def Info: img/plots/xgb_plot_bdt_vs_B0_M.pdf used on input line 223.
 (pdftex.def)             Requested size: 226.19942pt x 124.07358pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
+
+ [9 </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/uGB+FL_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/uGB+knnAda_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/xgb_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 250.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 250.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 250.
+
+
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
+
+ [10]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 277.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 277.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 277.
 
 
 Class scrartcl Warning: incompatible usage of \@ssect detected.
 (scrartcl)              You've used the KOMA-Script implementation of \@ssect
 (scrartcl)              from within a non compatible caller, that does not
 (scrartcl)              \scr@s@ct@@nn@m@ locally.
-(scrartcl)              This could result in several error messages on input line 227.
+(scrartcl)              This could result in several error messages on input line 289.
 
 
-Overfull \hbox (3.59987pt too wide) in paragraph at lines 230--232
+Overfull \hbox (3.59987pt too wide) in paragraph at lines 292--294
 []\T1/ppl/m/n/10 CERN Ac-cel-er-a-tor Com-plex, [][]$\T1/ppl/m/it/10 http : / / www . stfc . ac . uk / research / particle-[]physics-[]and-[]particle-[]astrophysics /
  []
 
 
-Overfull \vbox (11.59337pt too high) has occurred while \output is active []
-
- [8 </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/uGB+FL_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/uGB+knnAda_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees> </home/oliver/Master_ThesisGit/thesis/Latex/img/plots/xgb_plot_bdt_vs_B0_M.pdf, page is rotated 90 degrees>]
-Underfull \hbox (badness 5036) in paragraph at lines 248--250
+Underfull \hbox (badness 5036) in paragraph at lines 310--312
 []\T1/ppl/m/n/10 Calorimeters de-scrip-tion, [][]$\T1/ppl/m/it/10 http : / / lhcb-[]public . web . cern . ch / lhcb-[]public / en / Detector / Calorimeters2-[]en .
  []
 
-<img/roc.pdf, id=427, 569.12625pt x 292.09125pt>
+
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
+
+ [11] <img/roc.pdf, id=548, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf>
-Package pdftex.def Info: img/roc.pdf used on input line 259.
+Package pdftex.def Info: img/roc.pdf used on input line 321.
 (pdftex.def)             Requested size: 569.12486pt x 292.09052pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf>
-Package pdftex.def Info: img/roc.pdf used on input line 259.
+Package pdftex.def Info: img/roc.pdf used on input line 321.
 (pdftex.def)             Requested size: 569.12486pt x 292.09052pt.
- <img/roc.pdf, id=430, page=1, 569.12625pt x 292.09125pt>
+ <img/roc.pdf, id=551, page=1, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 1>
-Package pdftex.def Info: img/roc.pdf, page1 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page1 used on input line 321.
 (pdftex.def)             Requested size: 569.12486pt x 292.09052pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 1>
-Package pdftex.def Info: img/roc.pdf, page1 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page1 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 
-Overfull \vbox (9.63963pt too high) has occurred while \output is active []
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
- [9]
+ [12]
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 1>
-Package pdftex.def Info: img/roc.pdf, page1 used on input line 259.
-(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
-File: img/roc.pdf Graphic file (type pdf)
- <use img/roc.pdf, page 1>
-Package pdftex.def Info: img/roc.pdf, page1 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page1 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 1>
-Package pdftex.def Info: img/roc.pdf, page1 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page1 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [10 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=484, page=2, 569.12625pt x 292.09125pt>
+File: img/roc.pdf Graphic file (type pdf)
+ <use img/roc.pdf, page 1>
+Package pdftex.def Info: img/roc.pdf, page1 used on input line 321.
+(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
+ [13 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=605, page=2, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 2>
-Package pdftex.def Info: img/roc.pdf, page2 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page2 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 2>
-Package pdftex.def Info: img/roc.pdf, page2 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page2 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 2>
-Package pdftex.def Info: img/roc.pdf, page2 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page2 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [11 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=531, page=3, 569.12625pt x 292.09125pt>
+ [14 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=652, page=3, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 3>
-Package pdftex.def Info: img/roc.pdf, page3 used on input line 259.
-(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
-File: img/roc.pdf Graphic file (type pdf)
- <use img/roc.pdf, page 3>
-Package pdftex.def Info: img/roc.pdf, page3 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page3 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 3>
-Package pdftex.def Info: img/roc.pdf, page3 used on input line 259.
-(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [12 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=578, page=4, 569.12625pt x 292.09125pt>
-File: img/roc.pdf Graphic file (type pdf)
- <use img/roc.pdf, page 4>
-Package pdftex.def Info: img/roc.pdf, page4 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page3 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
+ <use img/roc.pdf, page 3>
+Package pdftex.def Info: img/roc.pdf, page3 used on input line 321.
+(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
+ [15 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=699, page=4, 569.12625pt x 292.09125pt>
+File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 4>
-Package pdftex.def Info: img/roc.pdf, page4 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page4 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 4>
-Package pdftex.def Info: img/roc.pdf, page4 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page4 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [13 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=627, page=5, 569.12625pt x 292.09125pt>
+File: img/roc.pdf Graphic file (type pdf)
+ <use img/roc.pdf, page 4>
+Package pdftex.def Info: img/roc.pdf, page4 used on input line 321.
+(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
+ [16 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=746, page=5, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
 
 <use img/roc.pdf, page 5>
-Package pdftex.def Info: img/roc.pdf, page5 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page5 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 5>
-Package pdftex.def Info: img/roc.pdf, page5 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page5 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 5>
-Package pdftex.def Info: img/roc.pdf, page5 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page5 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [14 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=674, page=6, 569.12625pt x 292.09125pt>
+ [17 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=793, page=6, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 6>
-Package pdftex.def Info: img/roc.pdf, page6 used on input line 259.
-(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
-File: img/roc.pdf Graphic file (type pdf)
- <use img/roc.pdf, page 6>
-Package pdftex.def Info: img/roc.pdf, page6 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page6 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 6>
-Package pdftex.def Info: img/roc.pdf, page6 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page6 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [15 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=721, page=7, 569.12625pt x 292.09125pt>
+File: img/roc.pdf Graphic file (type pdf)
+ <use img/roc.pdf, page 6>
+Package pdftex.def Info: img/roc.pdf, page6 used on input line 321.
+(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
+ [18 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=841, page=7, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 7>
-Package pdftex.def Info: img/roc.pdf, page7 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page7 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 7>
-Package pdftex.def Info: img/roc.pdf, page7 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page7 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 7>
-Package pdftex.def Info: img/roc.pdf, page7 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page7 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [16 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=768, page=8, 569.12625pt x 292.09125pt>
+ [19 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=889, page=8, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 8>
-Package pdftex.def Info: img/roc.pdf, page8 used on input line 259.
-(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
-File: img/roc.pdf Graphic file (type pdf)
- <use img/roc.pdf, page 8>
-Package pdftex.def Info: img/roc.pdf, page8 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page8 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 8>
-Package pdftex.def Info: img/roc.pdf, page8 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page8 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [17 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=815, page=9, 569.12625pt x 292.09125pt>
+File: img/roc.pdf Graphic file (type pdf)
+ <use img/roc.pdf, page 8>
+Package pdftex.def Info: img/roc.pdf, page8 used on input line 321.
+(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
+ [20 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=936, page=9, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 9>
-Package pdftex.def Info: img/roc.pdf, page9 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page9 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 9>
-Package pdftex.def Info: img/roc.pdf, page9 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page9 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 9>
-Package pdftex.def Info: img/roc.pdf, page9 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page9 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [18 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=863, page=10, 569.12625pt x 292.09125pt>
+ [21 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/roc.pdf, id=983, page=10, 569.12625pt x 292.09125pt>
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 10>
-Package pdftex.def Info: img/roc.pdf, page10 used on input line 259.
-(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
-File: img/roc.pdf Graphic file (type pdf)
- <use img/roc.pdf, page 10>
-Package pdftex.def Info: img/roc.pdf, page10 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page10 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
 File: img/roc.pdf Graphic file (type pdf)
  <use img/roc.pdf, page 10>
-Package pdftex.def Info: img/roc.pdf, page10 used on input line 259.
+Package pdftex.def Info: img/roc.pdf, page10 used on input line 321.
 (pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
- [19 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=911, 569.12625pt x 312.16624pt>
+File: img/roc.pdf Graphic file (type pdf)
+ <use img/roc.pdf, page 10>
+Package pdftex.def Info: img/roc.pdf, page10 used on input line 321.
+(pdftex.def)             Requested size: 597.63493pt x 306.72267pt.
+ [22 </home/oliver/Master_ThesisGit/thesis/Latex/img/roc.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1030, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf>
-Package pdftex.def Info: img/Corplots.pdf used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf used on input line 328.
 (pdftex.def)             Requested size: 569.12486pt x 312.16548pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf>
-Package pdftex.def Info: img/Corplots.pdf used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf used on input line 328.
 (pdftex.def)             Requested size: 569.12486pt x 312.16548pt.
- <img/Corplots.pdf, id=914, page=1, 569.12625pt x 312.16624pt>
+ <img/Corplots.pdf, id=1033, page=1, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 1>
-Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 328.
 (pdftex.def)             Requested size: 569.12486pt x 312.16548pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 1>
-Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 
-Overfull \vbox (11.59337pt too high) has occurred while \output is active []
+Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
- [20]
+ [23]
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 1>
-Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 1>
-Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 1>
-Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [21 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=965, page=2, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 1>
+Package pdftex.def Info: img/Corplots.pdf, page1 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [24 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1085, page=2, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 2>
-Package pdftex.def Info: img/Corplots.pdf, page2 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page2 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 2>
-Package pdftex.def Info: img/Corplots.pdf, page2 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page2 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 2>
-Package pdftex.def Info: img/Corplots.pdf, page2 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page2 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [22 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1012, page=3, 569.12625pt x 312.16624pt>
+ [25 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1133, page=3, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 3>
-Package pdftex.def Info: img/Corplots.pdf, page3 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 3>
-Package pdftex.def Info: img/Corplots.pdf, page3 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page3 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 3>
-Package pdftex.def Info: img/Corplots.pdf, page3 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page3 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [23 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1059, page=4, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 3>
+Package pdftex.def Info: img/Corplots.pdf, page3 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [26 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1180, page=4, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 4>
-Package pdftex.def Info: img/Corplots.pdf, page4 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page4 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 4>
-Package pdftex.def Info: img/Corplots.pdf, page4 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page4 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 4>
-Package pdftex.def Info: img/Corplots.pdf, page4 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page4 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [24 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1107, page=5, 569.12625pt x 312.16624pt>
+ [27 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1227, page=5, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 5>
-Package pdftex.def Info: img/Corplots.pdf, page5 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 5>
-Package pdftex.def Info: img/Corplots.pdf, page5 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page5 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 5>
-Package pdftex.def Info: img/Corplots.pdf, page5 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page5 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [25 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1155, page=6, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 5>
+Package pdftex.def Info: img/Corplots.pdf, page5 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [28 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1274, page=6, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 6>
-Package pdftex.def Info: img/Corplots.pdf, page6 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page6 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 6>
-Package pdftex.def Info: img/Corplots.pdf, page6 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page6 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 6>
-Package pdftex.def Info: img/Corplots.pdf, page6 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page6 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [26 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1202, page=7, 569.12625pt x 312.16624pt>
+ [29 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1322, page=7, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 7>
-Package pdftex.def Info: img/Corplots.pdf, page7 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 7>
-Package pdftex.def Info: img/Corplots.pdf, page7 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page7 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 7>
-Package pdftex.def Info: img/Corplots.pdf, page7 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page7 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [27 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1249, page=8, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 7>
+Package pdftex.def Info: img/Corplots.pdf, page7 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [30 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1369, page=8, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 8>
-Package pdftex.def Info: img/Corplots.pdf, page8 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page8 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 8>
-Package pdftex.def Info: img/Corplots.pdf, page8 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page8 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 8>
-Package pdftex.def Info: img/Corplots.pdf, page8 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page8 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [28 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1296, page=9, 569.12625pt x 312.16624pt>
+ [31 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1417, page=9, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 9>
-Package pdftex.def Info: img/Corplots.pdf, page9 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 9>
-Package pdftex.def Info: img/Corplots.pdf, page9 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page9 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 9>
-Package pdftex.def Info: img/Corplots.pdf, page9 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page9 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [29 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1344, page=10, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 9>
+Package pdftex.def Info: img/Corplots.pdf, page9 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [32 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1464, page=10, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 10>
-Package pdftex.def Info: img/Corplots.pdf, page10 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page10 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 10>
-Package pdftex.def Info: img/Corplots.pdf, page10 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page10 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 10>
-Package pdftex.def Info: img/Corplots.pdf, page10 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page10 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [30 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1391, page=11, 569.12625pt x 312.16624pt>
+ [33 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1511, page=11, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 11>
-Package pdftex.def Info: img/Corplots.pdf, page11 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 11>
-Package pdftex.def Info: img/Corplots.pdf, page11 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page11 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 11>
-Package pdftex.def Info: img/Corplots.pdf, page11 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page11 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [31 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1439, page=12, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 11>
+Package pdftex.def Info: img/Corplots.pdf, page11 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [34 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1559, page=12, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 12>
-Package pdftex.def Info: img/Corplots.pdf, page12 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page12 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 12>
-Package pdftex.def Info: img/Corplots.pdf, page12 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page12 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 12>
-Package pdftex.def Info: img/Corplots.pdf, page12 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page12 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [32 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1486, page=13, 569.12625pt x 312.16624pt>
+ [35 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1606, page=13, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 13>
-Package pdftex.def Info: img/Corplots.pdf, page13 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 13>
-Package pdftex.def Info: img/Corplots.pdf, page13 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page13 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 13>
-Package pdftex.def Info: img/Corplots.pdf, page13 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page13 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [33 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1533, page=14, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 13>
+Package pdftex.def Info: img/Corplots.pdf, page13 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [36 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1653, page=14, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 14>
-Package pdftex.def Info: img/Corplots.pdf, page14 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page14 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 14>
-Package pdftex.def Info: img/Corplots.pdf, page14 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page14 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 14>
-Package pdftex.def Info: img/Corplots.pdf, page14 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page14 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [34 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1581, page=15, 569.12625pt x 312.16624pt>
+ [37 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1701, page=15, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 15>
-Package pdftex.def Info: img/Corplots.pdf, page15 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 15>
-Package pdftex.def Info: img/Corplots.pdf, page15 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page15 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 15>
-Package pdftex.def Info: img/Corplots.pdf, page15 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page15 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [35 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1628, page=16, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 15>
+Package pdftex.def Info: img/Corplots.pdf, page15 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [38 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1748, page=16, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 16>
-Package pdftex.def Info: img/Corplots.pdf, page16 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page16 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 16>
-Package pdftex.def Info: img/Corplots.pdf, page16 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page16 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 16>
-Package pdftex.def Info: img/Corplots.pdf, page16 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page16 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [36 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1675, page=17, 569.12625pt x 312.16624pt>
+ [39 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1796, page=17, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 17>
-Package pdftex.def Info: img/Corplots.pdf, page17 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 17>
-Package pdftex.def Info: img/Corplots.pdf, page17 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page17 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 17>
-Package pdftex.def Info: img/Corplots.pdf, page17 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page17 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [37 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1723, page=18, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 17>
+Package pdftex.def Info: img/Corplots.pdf, page17 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [40 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1843, page=18, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 18>
-Package pdftex.def Info: img/Corplots.pdf, page18 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page18 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 18>
-Package pdftex.def Info: img/Corplots.pdf, page18 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page18 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 18>
-Package pdftex.def Info: img/Corplots.pdf, page18 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page18 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [38 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1770, page=19, 569.12625pt x 312.16624pt>
+ [41 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1890, page=19, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 19>
-Package pdftex.def Info: img/Corplots.pdf, page19 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 19>
-Package pdftex.def Info: img/Corplots.pdf, page19 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page19 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 19>
-Package pdftex.def Info: img/Corplots.pdf, page19 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page19 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [39 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1818, page=20, 569.12625pt x 312.16624pt>
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 19>
+Package pdftex.def Info: img/Corplots.pdf, page19 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [42 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1937, page=20, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 20>
-Package pdftex.def Info: img/Corplots.pdf, page20 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page20 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 20>
-Package pdftex.def Info: img/Corplots.pdf, page20 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page20 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 20>
-Package pdftex.def Info: img/Corplots.pdf, page20 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page20 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [40 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1865, page=21, 569.12625pt x 312.16624pt>
+ [43 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>] <img/Corplots.pdf, id=1985, page=21, 569.12625pt x 312.16624pt>
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 21>
-Package pdftex.def Info: img/Corplots.pdf, page21 used on input line 266.
-(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
-File: img/Corplots.pdf Graphic file (type pdf)
- <use img/Corplots.pdf, page 21>
-Package pdftex.def Info: img/Corplots.pdf, page21 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page21 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
 File: img/Corplots.pdf Graphic file (type pdf)
  <use img/Corplots.pdf, page 21>
-Package pdftex.def Info: img/Corplots.pdf, page21 used on input line 266.
+Package pdftex.def Info: img/Corplots.pdf, page21 used on input line 328.
 (pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
- [41 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
+File: img/Corplots.pdf Graphic file (type pdf)
+ <use img/Corplots.pdf, page 21>
+Package pdftex.def Info: img/Corplots.pdf, page21 used on input line 328.
+(pdftex.def)             Requested size: 597.63493pt x 327.80328pt.
+ [44 </home/oliver/Master_ThesisGit/thesis/Latex/img/Corplots.pdf, page is rotated 90 degrees>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 333.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 333.
  (/home/oliver/Master_ThesisGit/thesis/Latex/uzhpub-en.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 333.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 333.
 Package rerunfilecheck Info: File `uzhpub-en.out' has not changed.
-(rerunfilecheck)             Checksum: DA256C045085056DAB56F29193F40D9C;980.
+(rerunfilecheck)             Checksum: EFCBA3BF7B45CEC5B261F13CD4D7CCC3;1142.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1761,18 +1776,18 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 22944 strings out of 493029
- 419470 string characters out of 6136234
- 536176 words of memory out of 5000000
- 26052 multiletter control sequences out of 15000+600000
- 95584 words of font info for 226 fonts, out of 8000000 for 9000
+ 22941 strings out of 493029
+ 419652 string characters out of 6136234
+ 538587 words of memory out of 5000000
+ 26040 multiletter control sequences out of 15000+600000
+ 88442 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,18n,108p,10369b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/oliver/Master_ThesisGit/thesis/Latex/uzhpub-en.pdf (41 pages, 5167430 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on /home/oliver/Master_ThesisGit/thesis/Latex/uzhpub-en.pdf (44 pages, 5211738 bytes).
 PDF statistics:
- 1957 PDF objects out of 2073 (max. 8388607)
- 922 compressed objects within 10 object streams
- 80 named destinations out of 1000 (max. 500000)
- 369 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2085 PDF objects out of 2487 (max. 8388607)
+ 993 compressed objects within 10 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 395 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
 
   TCanvas *c1 = new TCanvas("c1", "c1", 800,600);
 
-  string MC_path = "/media/oliver/USB-HDD/ntupels/MC/Run2_S28_TISTOSFIX/B2KstarJpsi_MC_2016.root";
-  string data_path = "/media/oliver/USB-HDD/ntupels/Splot/KstarJpsi_2016_Splot.root";
+  string MC_path = "/home/oliver/Master_Thesis/storage/data_reduced/MC/B2KstarJpsi_MC_2016.root";
+  string data_path = "/home/oliver/Master_Thesis/storage/data_reduced/Splot/KstarJpsi_2016_Splot.root";
 
 
   vector<string> names={"nTracks", "B0_PT", "B0_ENDVERTEX_CHI2"};
@@ -79,16 +79,16 @@ int main(int argc, char *argv[])
   int bins=100;
   string dataWeightName="sigB0_sw";
 
-  string selection_MC  ="B0_M>4960&&B0_M<5700&&J_psi_M>(3097-60)&&J_psi_M<(3097+60) && Kstar_M>795.9 && Kstar_M < 995.9";
+  string selection_MC  ="B0_M>4960 && B0_M<5700 && J_psi_M>(3097-60) && J_psi_M<(3097+60) && Kstar_M>795.9 && Kstar_M < 995.9 && (B0_BKGCAT==0 || B0_BKGCAT==50)";
   string selection_DATA="1";
 
 
-  
+
   for(int i=1;i<5;++i)
     {
       stringstream fileHistoName;
       fileHistoName<<"out/out_"<<i<<".root";
-      getWeights(MC_path, data_path, "DecayTree", "data", bins, names, i, fileHistoName.str(),dataWeightName,  selection_MC, selection_DATA, "");
+      getWeights(MC_path, data_path, "Reduced", "data", bins, names, i, fileHistoName.str(),dataWeightName,  selection_MC, selection_DATA, "");
 
     }
 
