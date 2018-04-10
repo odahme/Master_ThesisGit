@@ -228,7 +228,6 @@ The next step is to check for unwanted correlations, only the correlations with 
 The two classifers with the least correlation are the sk\_bdt and the uBoost classifers. Therfore they were used to do the seperation between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data.
 
 \subsection{SPlot}
-SPlot is a technique to seperate probabillity density functions short PDF. \\
 
 \subsubsection{Likelihood method}
 Consider an analysis of a data sample, which consists of several types of events. These types represent signal components and background components, for example from different experiments. The log-liklihood of such a data sample is expressed as:
@@ -260,14 +259,14 @@ where sum $\sum_{i \subset \delta x}$ contains alle events for which $x_i$ lies 
 Therefor $N_n \tilde{M}_n (\bar{x}) \delta x$ is the x-distribution of the histogrammed events, using the weights of eq \ref{eq:P_n}.
 With this procedure one can on average reproduce the true distribution $\textbf{M}_n(x)$. One can even replace the sum in eq \ref{eq:Mn} by an integral:
 \begin{align}
-  \left \langle \sum_{i \subset \delta x} \right \rangle \rightarrow \int dy \sum_{j=1}^{N_s} N_j f_j (y) \delta (x(y) - \bar{x}) \delta x
+  \left \langle \sum_{i \subset \delta x} \right \rangle \rightarrow \int dy \sum_{j=1}^{N_s} N_j f_j (y) \delta (x(y) - \bar{x}) \delta x \label{eq:average}
 \end{align}
 Furthermore through identifying the number of events $N_i$ from the fit one gets:
 \begin{align}
   \langle N_n \rangle \tilde{M}_n (\bar{x}) & = \int dy \sum_{j=1}^{N_s} N_j f_j (y) \delta (x(y) - \bar{x}) P_n (y) \\
   & = \int dy \sum_{j=1}^{N_s} N_j f_j (y) \delta (x(y)- \bar{x}) \cdot \frac{N_n f_n (y)}{\sum_{k=1}^{N_s} N_k f_k (y)} \\
   & = N_n \int dy \delta (x(y) - \bar{x}) f_n (y) \\
-  & = N_n \textbf{M}_n(\bar{x})
+  & = N_n \textbf{M}_n(\bar{x}) \label{eq:N_nM_n}
 \end{align}
 One can see that the sum over enents of the daive weight $P_n$ provides a direct estimate of the x-distribution for the nth type.
 But this procedure has a major drawback, since x is correlated to y, the PDFs of x enter implicity in the definition of the naive weight. Therfor the $\tilde{M}_n$ distributions are a bad estimate for the quality of the fit, since the these distributions are biased in a difficult way, when the PDFs $f_i(y)$ are not accurate. \\
@@ -275,12 +274,59 @@ Consider for example a data sample where one of the types has events on the tail
 
 
 \subsubsection{$_{S} Plot$ technique}
-Consider two sets of varibales $x$ and $y$ which are uncorrelated, hence the total PDFs $f_i (x,y)$ all factorize into products $\textbf{M}_i (x) f_i(y)$.
+In the previous section it was shown that if a variable x belongs to a set y of discriminating varibales, one can reconstruct the expected x distribution.
+Consider now two sets of variables $x$ and $y$, where x does not belong to y and which are uncorrelated , hence the total PDFs $f_i (x,y)$ all factorize into products $\textbf{M}_i (x) f_i(y)$.
+The equation \ref{eq:N_nM_n} does not hold anymore because, when summing over the events the x-PDFs $\textbf{M}_j(x)$ appear:
 
+\begin{align}
+  \langle N_n \rangle \tilde{M}_n (\bar{x}) &= \int \int dy dx \sum_{j=1}^{N_s} N_j \textbf{M}_j (x) f_j (y) \delta (x- \bar{x}) P_n \label{eq:M_nX} \\
+  &= \int dy \sum_{j=1}^{N_s} N_j \textbf{M}_j (\bar{x}) f_j(y) \frac{N_n f_n(y)}{\sum_{k=1}^{N_s} N_k f_k(y)} \\
+  &= N_n \sum_{j=1}^{N_s} \textbf{M}_j (\bar{x}) \left( N_j \int dy \frac{f_n(y) f_j(y)}{\sum_{k=1}^{Ns} N_k f_k (y)} \right) \\
+  & \neq N_n \textbf{M}_n (\bar{x}).
+\end{align}
+
+The correction term
+
+\begin{align}
+  N_j \int dy \frac{f_n (y) f_j (y)}{\sum_{k=1}^{N_s} N_k f_k(y)}
+\end{align}
+is not identical to the kroenecker delta $\delta_{jn}$. In fact the $N_n \tilde{M}_n$ distribution obtained by the naive weight is a linear combination of the true distribution $\textbf{M}_j$. \\
+To go forward one has to realize that the correction term is related to the inverse of the covariance matrix, given by the second derivatives of $-L$, after the minimization.
+\begin{align}
+  \textbf{V}_{nj}^{-1} = \frac{\partial^2 (-L)}{\partial N_n \partial N_j} = \sum_{i=1}^{N} \frac{f_n(y_i) f_j(y_i)} {\left( \sum_{k=1}^{N_s} N_k f_k(y_i) \right)^2}
+\end{align}
+If one averages and is replacing the sum over events by intergals (eq \ref{eq:average}) the varaince matrix reads:
+\begin{align}
+  \langle \textbf{V}_{nj}^{-1} \rangle &= \int \int dy dx \sum_{e=1}^{N_s} N_e \textbf{M}_e(x) f_e(y) \frac{f_n(y) f_j(y)}{ \left( \sum_{k=1}^{N_s} N_k f_k(y) \right)^2} \\
+  &= \int dy \sum_{e=1}^{N_s} N_e f_e(y) \frac{f_n(y) f_j(y)}{ \left( \sum_{k=1}^{N_s} N_k f_k(y) \right)^2} \cdot \int dx \textbf{M}_l(x) \\
+  &= \int dy \frac{f_n (y) f_j (y)}{\sum_{k=1}^{N_s} N_k f_k(y)}
+\end{align}
+Therefor equation \ref{eq:M_nX} can be rewritten as:
+\begin{align}
+  \langle \tilde{M}_n (\bar{x}) \rangle = \sum_{j=1}^{N_s} \textbf{M}_j (\bar{x}) N_j \langle \textbf{V}_{nj}^{-1} \rangle .
+\end{align}
+To get the distribution of intrest one has to invert this matrix equation:
+\begin{align}
+  N_n \textbf{M}_n(\bar{x}) = \sum_{j=1}^{N_s} \langle \textbf{V}_nj \rangle \langle \tilde{M}_j (\bar{x}) \rangle
+\end{align}
+The true distribution of $x$ can still be reconstructed using the naive weight (eq \ref{eq:P_n}), through a linear combination of $_{in} Plots$. In other words: When x does not belong to the set y, the weights are not given by equation \ref{eq:P_n}, they are given by a covariance-weighted quantity called sWeight defined by:
+\begin{align}
+  _s P_n(y_i) = \frac{\sum_{j=1}^{N_s} \textbf{V}_nj f_j(y_i)} {\sum_{k=1}^{N_s} N_k f_k (y_i)} \label{eq:sWeight}
+\end{align}
+With the sWeights on can obtain the distribution of the x variable by histogramming the $_s Plot$:
+\begin{align}
+  N_n { }_{s} \tilde{M}_n (\bar{x}) \delta x = \sum_{i \subset \delta x} { }_{s} P_n (y_i) \label{eq:sPlot2}
+\end{align}
+On average it reproduced the true distribution:
+\begin{align}
+  \langle N_n { }_s \tilde{M}_n (x) \rangle = N_n \textbf{M}_n (x)
+\end{align}
+In the case were x is significantly correlated with y, the $_s Plots$ from equation \ref{eq:sPlot2} connt be compared with the pure distributions of the various types. To solve that problem one can perform a Monte Carlo simulation of the procedure and obtain the expected distributions to which the $_s Plots$ should be compared with. \\
+For more information on $_s Plots$ consider reading \cite{bib:sPlot}.
 
 
 \subsection{Reweighting}
-
+The infomation needed in an analysis is not all contained inside the data. For example efficiencies can not be recorded by a detector. But they can be simulated by a Monte Carlo simulation of the particle decay. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data. As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The parameters used to reweight the MC samples are applied in the following order: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
 
 
 
@@ -313,21 +359,24 @@ Consider two sets of varibales $x$ and $y$ which are uncorrelated, hence the tot
   \bibitem{bib:muonSys} Muon system description,
   \url{http://lhcb-public.web.cern.ch/lhcb-public/en/Detector/Muon2-en.html}
 
+  \bibitem{bib:sPlot} sPlot: a statistical tool to unfold data distributions,
+  	arXiv:physics/0402083 [physics.data-an]
+
 \end{thebibliography}
 
-\begin{appendix}
-  \section{ROC curves}
-  \label{app:roc}
-  \includepdf[pages={-}]{roc.pdf}
-
-  \section{Learning Curves}
-  \label{app:lc}
-
-  \section{Correlation plots}
-  \label{app:corr}
-  \includepdf[pages={-}]{Corplots.pdf}
-
-
-\end{appendix}
+% \begin{appendix}
+%   \section{ROC curves}
+%   \label{app:roc}
+%   \includepdf[pages={-}]{roc.pdf}
+%
+%   \section{Learning Curves}
+%   \label{app:lc}
+%
+%   \section{Correlation plots}
+%   \label{app:corr}
+%   \includepdf[pages={-}]{Corplots.pdf}
+%
+%
+% \end{appendix}
 
 \end{document}
