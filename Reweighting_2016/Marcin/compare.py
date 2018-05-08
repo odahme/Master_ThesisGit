@@ -6,7 +6,7 @@ def main(argv):
 
     gROOT.ProcessLine(".L lhcbStyle.C")
 
-    c1=TCanvas("c1", "c1", 800,600)
+    c1=TCanvas("c1", "c1", 1920,1080)
 
 
     fDATA= TFile("/home/oliver/Master_Thesis/storage/data_reduced/Splot/KstarJpsi_2016_Splot.root")
@@ -32,9 +32,9 @@ def main(argv):
     names_MC   += ['mu_minus_PT'    , 'mu_plus_PT',   'mu_minus_IP_OWNPV',  'mu_plus_IP_OWNPV']
     ranges     += [  '(100,0,10000)', '(100,0,10000)','(100,0., 5)' ,'(100,0., 5)' ]
 
-    names_data += ['B0_relinfo_MU_SLL_ISO_1', 'B0_relinfo_MU_SLL_ISO_2' ]
-    names_MC   += ['B0_relinfo_MU_SLL_ISO_1', 'B0_relinfo_MU_SLL_ISO_2' ]
-    ranges     += ['(100,0,15)', '(100,0,15)']
+#    names_data += ['B0_relinfo_MU_SLL_ISO_1', 'B0_relinfo_MU_SLL_ISO_2' ]
+#    names_MC   += ['B0_relinfo_MU_SLL_ISO_1', 'B0_relinfo_MU_SLL_ISO_2' ]
+#    ranges     += ['(100,0,15)', '(100,0,15)']
 
     names_data += ['mu_plus_PIDmu'       , 'mu_minus_PIDmu'    , 'K_PIDK'       , 'Pi_PIDK'    ]
     names_MC   += ['mu_plus_PIDmu_corr',  'mu_minus_PIDmu_corr', 'K_PIDK_corr'  , 'Pi_PIDK_corr'  ]
@@ -99,12 +99,16 @@ def main(argv):
 
 
         if(draw_leg):
-            leg=TLegend(0.2, 0.2, .35, .4)
+            if nameD == 'mu_plus_PIDmu' or nameD == 'mu_minus_PIDmu':
+                leg=TLegend(0.25, 0.6 ,0.4 ,0.8)
+            else:
+                leg=TLegend(0.55, 0.6, .7, .8)
             leg.AddEntry(histOLD, "Data" , "l")
-            leg.AddEntry(histNEW, "MC" , "f")
+            leg.AddEntry(histNEW, "weighted MC" , "f")
+            leg.AddEntry(histNEW2, "original MC", "f")
 
             leg.Draw()
-            draw_leg=False
+            #draw_leg=False
         c1.SaveAs(nameD+".pdf")
 
 

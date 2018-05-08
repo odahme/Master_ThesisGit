@@ -26,7 +26,7 @@
 \usepackage{float}
 %% ermöglicht Unter-Bilder in einer figure-Umgebung
 \usepackage{subfig}
-%% Grafik-Dateien werden in den folgenden Ordnern gesucht
+%% Grafik-Dateien werden in den folgenden Or\usepackage{braket}dnern gesucht
 \graphicspath{{img/}}
 %% Grafikdateien haben die folgenden Endungen (höchste Priorität zu erst)
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
@@ -53,6 +53,9 @@
 %  pdfborder={0 0 0}              % Links im PDF erhalten keinen Rahmen, nur nötig wenn colorlinks=false
 ]{hyperref}
 
+\usepackage{braket}
+\usepackage{amssymb}
+
 
 \begin{document}
 
@@ -78,9 +81,12 @@
 
 %\addpart{Introduction}
 
-\section{Introduction}
+\section{$B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
 
-\subsection{$B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
+The $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay has a quark $b \rightarrow s$ transition which is relevant
+
+
+\subsection{Kinematics}
 The Decay is a flavor changing neutral current (FCNC) with four charged particles in the final state: \\
 The $K^+$ and $\pi^-$ from the $K^{*}$ decay and two leptons from the loop or box digrams:
 \begin{figure}[H]
@@ -98,7 +104,107 @@ The kinematics of the decay are defined by the three angels $\theta_K$, $\theta_
 \end{figure}
 
 
-\subsection{The LHCb Experiment}
+\subsection{Operators for $B \rightarrow X_s l^+l^-$ decays}
+The effective Lagrangian for $B \rightarrow X_s l^+l^-$ decays has the form: \\
+\begin{align}
+  \mathcal{L}_{eff} &= \mathcal{L}_{QCD,QED}(u,d,s,c,b,e,\mu,\tau) \notag\\
+                    &+ \frac{4G_F}{\sqrt(2)} \left[ V_{us}^* V_{ub} (C_1^c P_1^u + C_2^c P_2^u) + V_{cs}^* V_{cb} (C_1^c P_1^c + C_2^c P_2^c) \right] \label{eq:La} \\
+                    &+ \frac{4G_F}{\sqrt(2)} \sum_{i=3}^{10} \left[ (V_{us}^* V_{ub} + V_{cs}^* V_{cb})C_i^c + V_{ts}^* V_{tb} C_i^t  \right]P_i . \notag
+\end{align}
+The first term in equation \ref{eq:La} contains the kintec terms of the light SM particles as well as their QCD and QED interactions. The remaining two terms consist of $\Delta B = - \Delta S =1$ local operators of dimension $(d \leq 6)$, which contain those light fields. The mass of the s quark can be negleted in comparisson with the b mass. One gets the following operators:
+\begin{equation}
+  \begin{split}
+  \mathcal{O}_1^u &= (\bar{s}_L \gamma_\mu T^a u_L)(\bar{u}_L \gamma^\mu T^a b_L),  \\
+  \mathcal{O}_2^u &= (\bar{s}_L \gamma_\mu u_L) (\bar{u}_L \gamma^\mu b_L),  \\
+  \mathcal{O}_1^c &= (\bar{s}_L \gamma_\mu T^a c_L) (\bar{c}_L \gamma^\mu T^a b_L), g \\
+  \mathcal{O}_2^c &= (\bar{s}_L \gamma_\mu c_L) (\bar{c}_L \gamma^\mu b_L),  \\
+  \mathcal{O}_3 &= (\bar{s}_L \gamma_\mu b_L) \sum_q (\bar{q} \gamma^\mu q),  \\
+  \mathcal{O}_4 &= (\bar{s}_L \gamma_\mu T^a b_L) \sum_q (\bar{q} \gamma^\mu T^a q),  \\
+  \mathcal{O}_5 &= (\bar{s}_L \gamma_{\mu_1} \gamma_{\mu_2} \gamma_{\mu_3} b_L ) \sum_q (\bar{q} \gamma^{\mu_1} \gamma^{\mu_1} \gamma^{\mu_1} q),
+\end{split}
+\begin{split}
+  \mathcal{O}_6 &= (\bar{s}_L \gamma_{\mu_1} \gamma_{\mu_2} \gamma_{\mu_3} T^a b_L) \sum_q (\bar{q} \gamma^{\mu_1} \gamma^{\mu_1} \gamma^{\mu_1} T^a q), \\
+  \mathcal{O}_7 &= \frac{e}{g^2} m_b (\bar{s}_L \sigma^{\mu \nu} b_R) F_{\mu \nu},g \\
+  \mathcal{O}_8 &= \frac{1}{g} m_b (\bar{s}_L \sigma^{\mu \nu} T^a b_R) G_{\mu \nu}^a,  \\
+  \mathcal{O}_9 &= \frac{e^2}{g^2} (\bar{s}_L \gamma_\mu b_L) \sum_l (\bar{l} \gamma^\mu l),  \\
+  \mathcal{O}_{10} &= \frac{e^2}{g^2} (\bar{s}_L \gamma_\mu b_L) \sum_l (\bar{l} \gamma^\mu \gamma_5 l),
+\end{split}
+\label{eq:P}
+\end{equation}
+where $\sum_q$ and $\sum_l$ denote the sums over light quarks and all leptons, respectivly.
+
+
+
+
+\subsection{Wilson coefficients}
+The calculation of decay amplitude of the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay requires three different steps:
+\begin{enumerate}
+  \item The speration of short-distance effects from long-sistance QCD in an effetive Hamiltonian $H_{eff}$
+  \item The calculation of matrix elements of local quark bilinear operators J of type $\braket{ K^* | J | B }$
+  \item The claculation of effects of 4-quark operators in $H_{eff}$ which give rise to non factorizable corrections and can be calculated using QCD factorization.
+\end{enumerate}
+QCD factorization is only valid for small invariant dilepton mass $ q^2 \sim \mathcal{O} $ (1 GeV$^2$),
+or large $K^*$ energy $E \sim \mathcal{O}(m_B /2)$,
+which implies certain cuts on $q^2$ or $E$. The effective Hamiltonian for $b \rightarrow s \mu^+ \mu^- $ transitions can be written as:
+
+\begin{align}
+  H_{eff} = - \frac{4 G_F}{\sqrt{2}} \left(\lambda_t H_eff^{(t)} + \lambda_u H_{eff}^(u) \right) \label{eq:H}
+\end{align}
+The $\lambda_i$ can be expressed with CKM combinations $\lambda_i = V_{ib}V_{is}^*$.
+\begin{align}
+  H_{eff}^{(t)} &= C_1 \mathcal{O}_1^c + C_2 \mathcal{O}_2^C + \sum_{i=3}^6 C_i \mathcal{O}_i + \sum_{i=7,8,9,10,P,S} (C_i \mathcal{O}_i + C_i' \mathcal{O}_i') \label{eq:H(t)} \\
+  H_{eff}^{(u)} &= C_1 ( \mathcal{O}_1^C - \mathcal{O}_1^u) + C_2 (\mathcal{O}_2^C - \mathcal{O}_2^u). \label{eq:H(u)}
+\end{align}
+The contribution of $H_{eff}^{(u)}$ has a double Cabibbo supression and is therfore usually dropped. It is kept here since it is sensitive to complex phases of decay amplitudes. The operators $P_{i \leq 6}$ are the same as for general $B \rightarrow X_s l^+l^-$ decays, see equation \ref{eq:P}.
+The remaining ones are given by:
+\begin{equation}
+  \begin{split}
+    \mathcal{O}_7 &= \frac{e}{g^2} m_b (\bar{s} \sigma_{\mu \nu} P_R b) F^{\mu \nu}, \\
+    \mathcal{O}_8 &= \frac{1}{g} m_b (\bar{s} \sigma_{\mu \nu} T^a P_R b) G^{\mu \nu a}, \\
+    \mathcal{O}_9 &= \frac{e^2}{g^2} (\bar{s} \sigma_\mu P_L b) (\bar{\mu} \gamma^\mu \mu), \\
+    \mathcal{O}_{10} &= \frac{e^2}{g^2} (\bar{s} \gamma_mu P_L b) (\bar{\mu} \gamma^\mu \gamma_5 \mu), \\
+    \mathcal{O}_S &= \frac{e^2}{16 \pi^2} m_b (\bar{s} P_R b) (\bar{\mu} \mu), \\
+    \mathcal{O}_P &= \frac{e^2}{16 \pi^2} m_b (\bar{s} P_R b)( \bar{\mu} \gamma_5 \mu),
+\end{split}
+\begin{split}
+  \mathcal{O}_7^\prime &= \frac{e}{g^2} m_b (\bar{s} \sigma_{\mu \nu} P_L b) F^{\mu \nu}, \\
+  \mathcal{O}_8^\prime &= \frac{1}{g} m_b (\bar{s} \sigma_{\mu \nu} T^a P_L b) G^{\mu \nu a}, \\
+  \mathcal{O}_9^\prime &= \frac{e^2}{g^2} (\bar{s} \gamma_\mu P_R b) (\bar{\mu} \gamma^\mu \mu), \\
+  \mathcal{O}_{10}^\prime &= \frac{e^2}{g^2} (\bar{s} \gamma_\mu P_R b) (\bar{\mu} \gamma^\mu \gamma_5 \mu), \\
+  \mathcal{O}_S^\prime &= \frac{e^2}{16 \pi^2} m_b (\bar{s} P_L b) (\bar{\mu} \mu), \\
+  \mathcal{O}_P^\prime &= \frac{e^2}{16 \pi^2} m_b (\bar{s} P_L b) (\bar{\mu} \gamma_5 \mu),
+\end{split}
+\label{eq:P2}
+\end{equation}
+where $m_b$ denotes the running b mass in the $\overline{MS}$ scheme and g is the strong coupling constant and $P_{L,R} = ( 1 \pm \gamma_5)/2$. In the Standart Modell the primed Operators with opposite chirality to the unprimed operators vanish or are highly suppresd as are the $\mathcal{O}_S$ and $\mathcal{O}_P$. The contributions of $\mathcal{O}_{1,2,3,4,5,6}$ are neglected, since they are either heavily constrained or their impact turns out to be generically very small. For example in the left-right symmetric models or throughout gluino contributions in a general Minimal Supersymmetric Standard Model. \\
+The $C_i$ coefficients in the equations \ref{eq:H(t)} and \ref{eq:H(u)} are called Wilson coefficients. They encode short-distance physics and New Physics effects. For the calculation a matching scale $\mu = m_W$ is chosen, in a pertubative expansion in powers of $\alpha_s (m_W)$. Then the Wilson coefficents are evolved down to scales $\mu = m_b$ according to the solutions of the renomalization group equations. Contributions by New Physics enter through $C_i(m_W)$, while the low scales are determined by the Standart Modell. To allow a more organized expansion of the Wilson coefficients in pertubation theory the factors $16 \pi^2 / g^2 = 4 \pi / \alpha_S$ are included into the definitions of the operators $\mathcal{O}_{i \geq 7}$. All the $C_i$ expand as:
+\begin{align}
+  C_i = C_i^{(0)} + \frac{\alpha_s}{4 \pi} C_i^{(1)} + \left( \frac{\alpha_s}{4 \pi} \right)^2 C_i^{(2)} + O(\alpha_s^3)
+\end{align}
+where $C_i^{(0)}$ is the tree-level contribution, which is quale to zero for all operators except $\mathcal{O}_2$ and $C_i^{(n)}$ denotes the n-loop contributions.
+Before discussing the Wilson coefficents in details, lets look at the Operators again; the operators $\mathcal{O}_S^\prime$ and $\mathcal{O}_P^\prime$ are given in terms of conserved currents. They carry no scale-dependence. They do not mix with other operators and their Wilson coefficents are at the matching scale. $\mathcal{O}_9$ is also given by conserved curents. It mixes with $\mathcal{O}_{1,2,3,4,5,6}$ via a virtual photon decaying into $\mu^+ \mu^-$. In addition their is a scale depedence from the factor $1/g^2$. This dependence is also present in $C_{10}$ which otherwise would be scale independent. \\
+In equation \ref{eq:M} one can see that $C_7$ and $C_9$ always appear in a particular combination with oder Wilson coefficents in matrix elements. Therfore effective coefficients are defined, since they proof more convenient further on.
+ \begin{align}
+   \begin{split}
+     C_7^{eff} = \frac{4 \pi}{\alpha_s} C_7 - \frac{1}{3} C_3 - \frac{4}{9} C_4 - \frac{20}{3} C_5 - \frac{80}{9} C_6
+   \end{split}
+ \end{align}
+
+
+\subsection{Differential Decay Distribution}
+In the experiments the observed decay is not $B \rightarrow K^* \mu \mu$, but $ B \rightarrow K^*(K \pi) \mu \mu$. This provides addition information on the polarization of the $K^*$ since the decay angle between $K$ and $\pi$ is senitiv to it. The matrix elemt of the effetive Hamiltonian (equation \ref{eq:H}) for this decay can be written as:
+\begin{equation}
+  \begin{split}
+  \mathcal{M} &= \frac{G_F \alpha}{\sqrt{2} \pi} V_{tb} V_{ts}^* \Bigg \{ \bigg [ \braket{K \pi | \bar{s} \gamma^\mu ( C_9^{eff} P_L + C_9^{eff} P_R) b | \bar{B}}  \\
+   &- \frac{2 m_b}{q^2} \braket{K \pi| \bar{s} i \sigma^{\mu \nu} q_\nu (C_7^{eff} P_L) b| \bar{b}} \bigg ] (\bar{\mu} \gamma_\mu \mu) \\
+   &+ \braket{K \pi | \bar{s} \gamma^\mu ( C_{10}^{eff} P_L + C_{10}^{eff} P_R) b \bar{B}} (\bar{\mu} \gamma_5 \mu) \\
+   &+ \braket{K \pi | \bar{s} (C_S P_R + C_S^\prime P_L) b|\bar{B}} (\bar{\mu} \mu) \\
+   &+ \barket{K \pi | \bar{s} (C_P P_R + C_P^\prime P_L) b |\bar{B}} (\bar{\mu} \gamma_5 \mu) \Bigg \} . \label{eq:M}
+ \end{split}
+\end{equation}
+
+
+\section{The LHCb Experiment}
 The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based at the CERN laboratory near Geneva in Switzerland. It is part of the Large Hadron Collider (LHC), a proton-proton accelerator and collider located in a vast unterground tunnel with 26.7 km circumference beneath the Swiss-French countryside.
 The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefor very large detectors. ALICE investigates quark-gluon plasma and therefor needs geavy ion collisions, instead of proton collisions. \\
 The protons in the LHC have a kinetic energy of 7 TeV, which allows a collision energy, in the LHCb detector, of 13 TeV. In the year 2016 the LHCb had a recorded luminosity of $\SI{1906}{pb^{-1}}$. For this thesis $\SI{2280}{pb^{-1}}$ of data, collected at LHCb during the years 2011 to 2016 are used.
@@ -137,6 +243,8 @@ The rate of events at the LHCb interaction point is $\SI{40}{MHz}$. But the rate
 The \textbf{Level Zero (L0)} trigger reduces the beginning $\SI{40}{MHz}$ to $\SI{1}{MHz}$. To get this high rate it can only rely on fast sub-detectors as the calorimeters and the muon system. The L0 trigger looks for events with high transverse momentum with respect to the patrticle beam axis (pT), because particles from a B decay have this attribute, since B Mesons are always produced almost parallel to the beam axis.
 In addition the L0 trigger performs a simplified vertex reconstruction with the signal of two silicon layers of the VELO to identifie events with multple proton-proton collisions. They are rejected because for this kind of events its much more difiicult to reconstruct B meson decays, since it is harder to distinguish primary and secondary vertex of the B decay. \\
 The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 1000 16-core computers. It has two stages: HLT1 which reduces the event rate to a few tens of kHz and HLT2 which reduces the rate to the $\SI{2}{kHz}$ which are recorded. HLT1 gets all the candidates of the L0 trigger and uses the full detector information on them to search for particles with a high impact parameter with respect the proton-proton collision. These particles are most likly decay products from B mesons, because of its relatively long life-time. They typically fly 1 cm away from the collision before decaying resulting in a high impact parameter for the decay products. HLT2 does a complete reconstruction of the events. It starts with the track of the VELO and connects them to the tracks in the other sub-detectors. Most important are displaced vertices, since they are strong indicator for B decays. The selection is devided into two parts. The inclusive selection searches for resonance decays like $D^*$ or $J/ \psi$. The exclusive selection is desigened to provide the highest possible efficiency to fully reconstruct B decays of interest. It therfor uses all information available such as mass and vertex quality and intermediate resonances.
+
+
 
 \section{Analysis}
 
@@ -327,6 +435,127 @@ For more information on $_s Plots$ consider reading \cite{bib:sPlot}.
 
 \subsection{Reweighting}
 The infomation needed in an analysis is not all contained inside the data. For example efficiencies can not be recorded by a detector. But they can be simulated by a Monte Carlo simulation of the particle decay. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data. As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The parameters used to reweight the MC samples are applied in the following order: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
+
+
+
+
+\section{RooMCMarkovChain}
+RooMCMarkovChain is a new class for the ROOT Data Analysis Framework, which can be used to for fits and presents a alternative to the brodly used MINUIT algorithm. RooMCMarkovChain uses a metropolis algorithm as a minimizer for the negative log likelihood function. The metropolis algorithm is based ona Monte Carlo Markov Chain and can therfore easily be scaled to multidimensional parameter space and moreover, such kind of algorithms can easily be parallelized.
+
+\subsection{Monte Carlo Markov Chain (MCMC)}
+A Markov Chain is a random process which undergoes several states. From each state there is a probability ditribution to change into another state or to stay. Most important i the asumption that every next step just depends on the current state.
+The figure \ref{fig:MCMC} illustrates the behavior of such a Markov Chain.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\textwidth]{MCMC_Chain}
+  \caption{Illustration of states and the probability distribution to change or the stay in a state of a Monte Carlo Markov Chain. In state A there is a 0.3 probability to change into state B and a 0.7 probability to stay in state A.}
+  \label{fig:MCMC}
+\end{figure}
+
+\subsection{Metropolis Hastings}
+
+
+Metropolis Hastings is a so called Monte Carlo updater. It updates the probabillity distribution when a change of states is proposed. That is very usefull in the cases where the states are not discrete like in figure \ref{fig:MCMC} but continous. Suppose that a specified distribution has unnormalized density $h$. The Metopolis Hastings update does the following:
+\begin{enumerate}
+  \item The current state x is proposed to move to another state y with a conditional probability given x denoted as $q(x,\cdot)$.
+  \item The Hastings ratio is calculated:
+  \begin{align}
+    r(x,y) = \frac{h(y) \cdot q(y,x)}{h(x) \cdot q(x,y)} \label{eq:r(x,y)}
+  \end{align}
+  \item The proposed move to y is accepted with the probability $a(x,y)$:
+  \begin{align}
+    a(x,y) = min(1,r(x,y))
+  \end{align}
+\end{enumerate}
+
+This principle is used in the RooMCMarkovChain class to minimize the negative log likelihood function. In detail a robust adaptive Metrpolis hastings process is implemented. It is defined as:
+\begin{enumerate}
+  \item  Compute next proposed state $Y_n$ as a random change from the current state $X_{n-1}$:
+  \begin{align*}   Y_n &\equiv X_{n-1} + S_{n-1} U_n    \end{align*}
+  , where $U_n$ is an independent random vector.
+  \item With the probability $\alpha_n$ the proposal is accepted and $X_n = Y_n$. Otherwise the proposal is rejected and $X_n = X_{n-1}$
+  \begin{align*}  \alpha_n &\equiv min\{ 1, r(X_{n-1},Y_n) \} \end{align*}
+  , where $r$ is the hastings ratio see equation \ref{eq:r(x,y)}.
+  \item compute the lower-diagonal matrix $S_n$ with positive diagonal elements satisfying the equation:
+  \begin{align}
+    S_n S_n^T = S_{n-1} \left( I + \eta_n(\alpha_n - \alpha_*) \frac{U_n Y_n^T}{||U_n||^2} \right) S_{n-1}^T
+  \end{align}
+  ,where $I \in R^{dxd}$ is the identity matrix.
+\end{enumerate}
+
+
+
+\subsection{Features}
+ The features of the RooMCMarkovChain class will be shown by fitting the following probability density function (pdf):
+\begin{align}
+  g(x) = \frac{1}{\sqrt{2 \pi \sigma_1^2}} e^{- \frac{(x-\mu_1)^2}{2 \sigma_1^2}} + f \cdot  \frac{1}{\sqrt{2 \pi \sigma_2^2}} e^{- \frac{(x-\mu_2)^2}{2 \sigma_2^2}} \label{eq:gausspdf}
+ \end{align}
+It is so called double gaus pdf, which is just the sum of two gaussian pdfs with a fractional parameter $f$.
+The result of the fit is compared with the result of the Minuit algorithm:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{RooMCMC/twogausfit}
+  \caption{Fit of double gaus pdf (see equation \ref{eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu_1 = 4$, $\sigma_1 = 1$, $\mu_2 = -2$, $\sigma_2 = 1.5$ and the fraction $f = 0.5$}
+  \label{fig:twogaus}
+\end{figure}
+
+The corresponding terminal output gives the estimated parameters with error interval and correlation coefficents of each parameter pair.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{RooMCMC/terminal_output}
+  \caption{Terminal output of the RooMCMarkovChain fit.}
+  \label{fig:terminal}
+\end{figure}
+This gives a good initial overview of results after the fit has finished. The error calculation can be set to assume gaussian or non-gaussian errors.
+
+In addition several other properties of the parameters can be obtainded:
+\begin{enumerate}
+  \item The 1 dimensional profile of the negative log liklihood function for a given parameter.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{RooMCMC/walkProfile}
+    \caption{Profile of the negative log lilihood function for $\mu_2$ in equation \ref{eq:gausspdf}. There is a local minimum at the nll value of 2600.}
+    \label{fig:profile}
+  \end{figure}
+  From this plot on can see how the algorithm reached the minimum of the negative log likelihood function and if there are local minima. \\
+
+
+  \item The walk distribution of a given parameter.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{RooMCMC/walkDis}
+    \caption{Walk distribution of $\mu_2$ in equation \ref{eq:gausspdf}. The red points are not considered for the error calculation.}
+    \label{fig:walkDis}
+  \end{figure}
+  This plot is very important for handling the RooMCMarkovChain class. Since the error calculation is based on the variance of the walk distribution, cutting of points in the begginning greatly reduces this variance. The user has to choose how many points are cut off. Plotting the walk distribution of all parameters helps choosing the right amount. \\
+
+  \item The walk distribution of a given parameter as a histogramm.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{RooMCMC/walkDisHis}
+    \caption{Walk distribution of $\mu_2$ in equation \ref{eq:gausspdf} as a histogramm.}
+    \label{fig:walkDisHis}
+  \end{figure}
+  This plot can be used to check, which error strategy should be used. If the walk distribution histogramm is gaussian, gaussian errors can be assumed. \\
+
+  \item The scatterplot between two given parameters.
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{RooMCMC/scatter}
+    \caption{Scatterplot between $\mu_1$ and $\mu_2$ in equation \ref{eq:gausspdf}.}
+    \label{fig:scatter}
+  \end{figure}
+  This plot shows the correlation between two parameters graphically.
+\end{enumerate}
+
+
+
+
+
+
 
 
 
