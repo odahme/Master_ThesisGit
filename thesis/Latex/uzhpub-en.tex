@@ -66,7 +66,7 @@
 
 \author{Author: Oliver Dahme}
 
-%\date{Date}
+%date{Date}
 
 \maketitle
 
@@ -79,16 +79,42 @@
  Here comes the abstract
 \end{abstract}
 
+\tableofcontents
+
 %\addpart{Introduction}
 
-\section{$B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
+\section{Motivation}
 
-% The $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay has a quark $b \rightarrow s$ transition which is relevant
+In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B_0$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
+\begin{equation}
+  \begin{split}
+  R_{K*0} &= \left. \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} \mu^+ \mu^-)}{\mathcal{B}(B^0 \rightarrow K^{*0} J/\psi(\rightarrow \mu^+ \mu^-))} \middle/   \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} e^+ e^-)}{\mathcal{B} ( B^0 \rightarrow K^{*0} J/\psi(\rightarrow e^+ e^-))}  \right. , \\
+  R_{K*0} &=   \begin{cases}
+    0.66^{+0.11}_{-0.07} (\text{stat}) \pm 0.03 (\text{syst}) \text{for} 0.045 < q^2 < 1.1 \text{GeV}^2/c^4, \\
+    0.69^{+0.11}_{-0.07} (\text{stat}) \pm 0.05 (\text{syst}) \text{for} 1.1 < q^2 < 6.0 \text{GeV}^2/c^4.
+\end{cases}
+\end{split}
+\end{equation}
+The mesurement shows a 2.1-2.3 and 2.4-2.5 $\sigma$ deviation from the Standart Modell in the two $q^2$ regions, respectively.
+To investigate further the same measurment is performed with new data from the LHCb detector. The goal of this thesis is to contribute to this new measuremnt.
+
+
+
+%
+% 1. SM sagt vorraus das BR(K* mu mu )(K* e e ) muestte eins sein experimentelle (Referenz)
+% 2. alte LHCb Analyse
+% 3. Aufgabe, erneute Analyse mit neuen daten und neue Methoden (neue classifier)
+% 4. mit viel mehr Daten
+
+
+\section{The $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
+
 
 
 \subsection{Kinematics}
-The Decay is a flavor changing neutral current (FCNC) with four charged particles in the final state: \\
-The $K^+$ and $\pi^-$ from the $K^{*}$ decay and two leptons from the loop or box digrams:
+In this section the decay itself and its kinematics are explained:
+The Decay is a flavor changing neutral current (FCNC) with four charged particles in the final state. The FCNC is a current, which changes the falvor of a fermion without changing its electric charge. The four particles in the final stage are:  \\
+The $K^+$ and $\pi^-$ from the $K^{*}$ decay and two leptons from the loop or box diagrams:
 \begin{figure}[H]
  \centering
  \includegraphics[width=0.8\linewidth]{KstarFeynman}
@@ -114,15 +140,17 @@ From them one can obatain the differential decay rate for the $B^0$ Meson:
  \end{split}
  \label{eq:diff_decay_rate}
 \end{equation}
+This decay rate is defined as the probability per unit time that the particle will decay.
 
 \subsection{Operators for $B \rightarrow X_s l^+l^-$ decays}
-The effective Lagrangian for $B \rightarrow X_s l^+l^-$ decays has the form: \\
+In this section all the operators of the decay are derived from the effective Lagrangian. the operators in Quantum field theory are used to create or destroy particles, by applying them to a quantum field. This section should just give an overview if you need more detailed information consider reading \cite{bib:Operators}. \\
+The effective Lagrangian for $B \rightarrow X_s l^+l^-$ decays has the form:
 \begin{align}
  \mathcal{L}_{eff} & = \mathcal{L}_{QCD,QED}(u,d,s,c,b,e,\mu,\tau) \notag                                                                                           \\
                    & + \frac{4G_F}{\sqrt(2)} \left[ V_{us}^* V_{ub} (C_1^c P_1^u + C_2^c P_2^u) + V_{cs}^* V_{cb} (C_1^c P_1^c + C_2^c P_2^c) \right] \label{eq:La} \\
                    & + \frac{4G_F}{\sqrt(2)} \sum_{i=3}^{10} \left[ (V_{us}^* V_{ub} + V_{cs}^* V_{cb})C_i^c + V_{ts}^* V_{tb} C_i^t  \right]P_i . \notag
 \end{align}
-The first term in equation \ref{eq:La} contains the kintec terms of the light SM particles as well as their QCD and QED interactions. The remaining two terms consist of $\Delta B = - \Delta S =1$ local operators of dimension $(d \leq 6)$, which contain those light fields. The mass of the s quark can be negleted in comparisson with the b mass. One gets the following operators:
+The first term in equation \ref{eq:La} contains the kinetic terms of the light SM particles as well as their QCD and QED interactions. The remaining two terms consist of $\Delta B = - \Delta S =1$ local operators of dimension $(d \leq 6)$, which contain those light fields. The mass of the s quark can be negleted in comparisson with the b mass. One gets the following operators:
 \begin{equation}
  \begin{split}
   \mathcal{O}_1^u &= (\bar{s}_L \gamma_\mu T^a u_L)(\bar{u}_L \gamma^\mu T^a b_L),  \\
@@ -148,15 +176,8 @@ where $\sum_q$ and $\sum_l$ denote the sums over light quarks and all leptons, r
 
 
 \subsection{Wilson coefficients}
-The calculation of decay amplitude of the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay requires three different steps:
-\begin{enumerate}
- \item The speration of short-distance effects from long-sistance QCD in an effetive Hamiltonian $H_{eff}$
- \item The calculation of matrix elements of local quark bilinear operators J of type $\braket{ K^* | J | B }$
- \item The claculation of effects of 4-quark operators in $H_{eff}$ which give rise to non factorizable corrections and can be calculated using QCD factorization.
-\end{enumerate}
-QCD factorization is only valid for small invariant dilepton mass $ q^2 \sim \mathcal{O} $ (1 GeV$^2$),
-or large $K^*$ energy $E \sim \mathcal{O}(m_B /2)$,
-which implies certain cuts on $q^2$ or $E$. The effective Hamiltonian for $b \rightarrow s \mu^+ \mu^- $ transitions can be written as:
+In this section the Wilson coefficents are derived from the effective Hamiltonion of the deacy.
+The effective Hamiltonian for $b \rightarrow s \mu^+ \mu^- $ transitions can be written as:
 
 \begin{align}
  H_{eff} = - \frac{4 G_F}{\sqrt{2}} \left(\lambda_t H_eff^{(t)} + \lambda_u H_{eff}^(u) \right) \label{eq:H}
@@ -212,7 +233,7 @@ In equation \ref{eq:M} one can see that $C_7$ and $C_9$ always appear in a parti
   &+ \frac{4}{3} C_3 + \frac{64}{9} C_5 + \frac{64}{27} C_6 .
  \end{split}env
 \end{equation}
-Now everything is in order for further calculations. The function $h(q^2,m_q)$ comes from the fermion loop and for completness is presented in equation \ref{eq:h(q2,m)} below.
+The function $h(q^2,m_q)$ comes from the fermion loop and for completness is presented in equation \ref{eq:h(q2,m)} below. If you need more details consider reading \cite{bib:Wilson}.
 \begin{align}
  h(q^2,m_q)                                            & = - \frac{4}{9} \left(\ln{\frac{m_q^2}{\mu^2}} - \frac{2}{3} - z \right) - \frac{4}{9}(2+z) \sqrt{|z-1|}  \cdot  \begin{cases}
  \arctan{\frac{1}{\sqrt{z-1}}}                         & z > 1                                                                                                                          \\
@@ -239,6 +260,7 @@ Now everything is in order for further calculations. The function $h(q^2,m_q)$ c
 
 
 \section{The LHCb Experiment}
+In this section the experimental setup of the detector is presented, which recorded the data used in this thesis.
 The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based at the CERN laboratory near Geneva in Switzerland. It is part of the Large Hadron Collider (LHC), a proton-proton accelerator and collider located in a vast unterground tunnel with 26.7 km circumference beneath the Swiss-French countryside.
 The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefor very large detectors. ALICE investigates quark-gluon plasma and therefor needs geavy ion collisions, instead of proton collisions. \\
 The protons in the LHC have a kinetic energy of 7 TeV, which allows a collision energy, in the LHCb detector, of 13 TeV. In the year 2016 the LHCb had a recorded luminosity of $\SI{1906}{pb^{-1}}$. For this thesis $\SI{2280}{pb^{-1}}$ of data, collected at LHCb during the years 2011 to 2016 are used.
@@ -253,7 +275,7 @@ LHCb is dedicated to falvour physics. It therefor investigates rare decays and C
 
 
 
-\subsubsection{The LHCb Detector}
+\subsection{The LHCb Detector}
 The LHCb Detector has a fix target geometry, because beauty hadrons are manily produced at small angeles with respect to the beam pipe.
 
 \begin{figure}[H]
@@ -272,7 +294,7 @@ The LHCb Detector has a fix target geometry, because beauty hadrons are manily p
 \textbf{Muon System \cite{bib:muonSys} :} The muon system consistes of 5 rectangular stations, which cover an area of $\SI{435}{m^2}$. Each station has chambers filled with three gases: carbon dioxide, argon and tetrafluoromethane. Passing muons react with the mixture and electrodes detect the result.
 
 
-\subsubsection{The LHCb trigger system}
+\subsection{The LHCb trigger system}
 The rate of events at the LHCb interaction point is $\SI{40}{MHz}$. But the rate to have a B meson contained in the detector is $\SI{15}{kHz}$. But the offline computing power just allows $\SI{2}{kHz}$ to be recorded. The LHCb trigger system aims to 'fill' this $\SI{2}{kHz}$ with intresting B decays and important control decays like $J/ \psi$ decays. The trigger has two levels: \\
 The \textbf{Level Zero (L0)} trigger reduces the beginning $\SI{40}{MHz}$ to $\SI{1}{MHz}$. To get this high rate it can only rely on fast sub-detectors as the calorimeters and the muon system. The L0 trigger looks for events with high transverse momentum with respect to the patrticle beam axis (pT), because particles from a B decay have this attribute, since B Mesons are always produced almost parallel to the beam axis.
 In addition the L0 trigger performs a simplified vertex reconstruction with the signal of two silicon layers of the VELO to identifie events with multple proton-proton collisions. They are rejected because for this kind of events its much more difiicult to reconstruct B meson decays, since it is harder to distinguish primary and secondary vertex of the B decay. \\
@@ -280,17 +302,25 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
 
 
 
-\section{Analysis}
+\section{Contribution to the Analysis}
+
+This section presents the two contribution done for the analysis of the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay. \\
+ The first contributed to the eliminiation of combinatorial background. Combinatorial background is the background that is created due to the fact that in a hadron collider there are alwas several reaction happening at once. The different reaction combine to background.
+To seperate the combinatorial background from the signal a classification is done. Classification is term from the Machine Learning field and means identifiying to which categorie an object belongs. For example consider having 100 pictures of animals and you want to know which ones are cats, dogs and cows. These are the categories and the pictures are the objects. The classification is perfomed by algorithms called classifieres. But before using them, they have to be trained. That is done by a training data set. It should look similar to the real data set, except that every object is labeld by its category. To get back to the animal pictures: One could create a training set by taking 5 pictures of a cat, 5 of a dog and 5 of a cow. These 15 pictures are the training set for the classifier. Now that the classifier knows how a cat, a dog and a cow looks like. It can identifie them in a random collection of pictures. \\
+
+% Ziel: Signal K* mu mu vom background zu trennen
+% combinatorial background erklaeren und entstehung
 
 \subsection{Classification}
 
-\subsubsection{Introduction}
+%besser erklaeren
 
-To eliminate combinatorial background Machine Learning algorithms called classifiers are used. They can seperate data into two or more parts, depending on certain parameters.For example sperating colors depending on their share of magenta, cian and yellow. But first they need to be trained on so called labeled data. In a labeled data set it is known which entrie corresponds to which category, like colors. While training the algorithm will learn so sperate data into the pre defined categories. That is the reason it is called Machine learning. In this thesis the classfication should seperate signal from combinatorial background. \\
-To do so Monte Carlo data which contains only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays is labeled with probability $1$ to be signal. Then it is merged with real data and used to train the classifiers. But since the classification becomes naturally biased if the data to classify is the same as the training data, a technique called K-folding is used. K-folding seperates the data Monte Carlo mix into several parts called folds. To classify one fold all the other folds are used for training. After iterating over all the folds one has a complety classified data set without any bias. \\
+In this section it is explained how to use the Machine Learning method Classification to separate combinatorial background from signal: \\
+
+To do so Monte Carlo simulated data which contains only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays is labeled with probability $1$ to be signal. Then it is merged with real data and used to train the classifiers. But since the classification becomes naturally biased if the data to classify is the same as the training data, a technique called K-folding is used. K-folding seperates the data Monte Carlo mix into several parts called folds. To classify one fold all the other folds are used for training. After iterating over all the folds one has a complety classified data set without any bias. \\
+The conribution of this thesis is that several different classifiers are tested to find the one best suited for the analysis.
 
 \subsubsection{classifiers test}
-In this thesis the classifiers themselves are used as a black box and are not explained further.
 First the following list of classifers where tested and compared in terms of perfomance:
 \begin{itemize}
  \item Ada Boost
@@ -309,7 +339,7 @@ The test was performed with 30000 events from the 2016 LHCb $B$ $\rightarrow$ $K
  \item Flight distance (FD\_OWNPV)
  \item The cosine of the angle between primary vertex and decay vertex and recorded momentum (DIRA\_OWNPV)
 \end{itemize}
-To compare the different classifiers the ROC curves and the correlations to the kinematic variabels of the decay (see \ref{fig:angels}) are used. First lets inspect the ROC curve. Since the curves for the different folds all look alike only one is presented here \ref{fig:roc}. One can find the other nine curves in the appendix \ref{app:roc}.
+To compare the different classifiers the ROC curves and the correlations to the kinematic variabels of the decay (see \ref{fig:angels}) are used. The receiver operating characterisitc (ROC) curve is a graphical plot that illustrates the ability of a classifier to correctly classify the data as its dicrimination threshold varies. Since the curves for the different folds all look alike only one is presented here \ref{fig:roc}. One can find the other nine curves in the appendix \ref{app:roc}.
 It turns out that all the classifiers classify the data correctly with just some minor variances. The ROC curve is in that case not a good tool to compare the different classifiers.
 \begin{figure}[H]
  \centering
@@ -370,6 +400,7 @@ The next step is to check for unwanted correlations, only the correlations with 
 The two classifers with the least correlation are the sk\_bdt and the uBoost classifers. Therfore they were used to do the seperation between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data.
 
 \subsection{SPlot}
+In this section the SPlot Technique to sperate two or more merged distributions. It has been used to get the inital weights for the Reweighting in chapter \ref{sec:Reweight}.
 
 \subsubsection{Likelihood method}
 Consider an analysis of a data sample, which consists of several types of events. These types represent signal components and background components, for example from different experiments. The log-liklihood of such a data sample is expressed as:
@@ -467,14 +498,14 @@ In the case were x is significantly correlated with y, the $_s Plots$ from equat
 For more information on $_s Plots$ consider reading \cite{bib:sPlot}.
 
 
-\subsection{Reweighting}
+\subsection{Reweighting} \label{sec:Reweight}
 The infomation needed in an analysis is not all contained inside the data. For example efficiencies can not be recorded by a detector. But they can be simulated by a Monte Carlo simulation of the particle decay. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data. As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The parameters used to reweight the MC samples are applied in the following order: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
 
 
 
 
 \section{RooMCMarkovChain}
-RooMCMarkovChain is a new class for the ROOT Data Analysis Framework, which can be used to for fits and presents a alternative to the brodly used MINUIT algorithm. RooMCMarkovChain uses a metropolis algorithm as a minimizer for the negative log likelihood function. The metropolis algorithm is based ona Monte Carlo Markov Chain and can therfore easily be scaled to multidimensional parameter space and moreover, such kind of algorithms can easily be parallelized.
+RooMCMarkovChain is a new class for the ROOT Data Analysis Framework, which can be used to for fits and presents a alternative to the brodly used MINUIT algorithm. RooMCMarkovChain uses a metropolis algorithm as a minimizer for the negative log likelihood function. The metropolis algorithm is based on a Monte Carlo Markov Chain and can therfore easily be scaled to multidimensional parameter space and moreover, such kind of algorithms can easily be parallelized.
 
 \subsection{Monte Carlo Markov Chain (MCMC)}
 A Markov Chain is a random process which undergoes several states. From each state there is a probability ditribution to change into another state or to stay. Most important i the asumption that every next step just depends on the current state.
@@ -597,6 +628,12 @@ In addition several other properties of the parameters can be obtainded:
 
 \begin{thebibliography}{100}
   \addcontentsline{toc}{section}{Bibliography}
+
+  \bibitem{bib:LU} JHEP08 (2017) 055
+
+  \bibitem{bib:Operators}  C. Bobeth, M. Misiak and J. Urban, Nucl. Phys. B 574 (2000) 291 [arXiv:hep-ph/9910220].
+
+  \bibitem{bib:Wilson} 	arXiv:0811.1214 [hep-ph]
 
   \bibitem{bib:lhc_img} CERN Accelerator Complex,
   \url{http://www.stfc.ac.uk/research/particle-physics-and-particle-astrophysics/large-hadron-collider/cern-accelerator-complex/}

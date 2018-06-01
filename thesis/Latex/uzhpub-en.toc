@@ -1,7 +1,22 @@
 \select@language {english}
-\contentsline {part}{Introduction}{1}
-\contentsline {section}{\numberline {1}The LHCb Experiment}{1}
-\contentsline {subsection}{\numberline {1.1}The LHCb Detector}{1}
-\contentsline {subsection}{\numberline {1.2}Yet another subtitle}{2}
-\contentsline {subsubsection}{\numberline {1.2.1}Sub-subtitle}{2}
-\contentsline {subsubsection}{\numberline {1.2.2}Yet another sub-subtitle}{2}
+\contentsline {section}{\numberline {1}Motivation}{2}{section.1}
+\contentsline {section}{\numberline {2}The $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ decay}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Kinematics}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Operators for $B \rightarrow X_s l^+l^-$ decays}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Wilson coefficients}{4}{subsection.2.3}
+\contentsline {section}{\numberline {3}The LHCb Experiment}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}The LHCb Detector}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}The LHCb trigger system}{9}{subsection.3.2}
+\contentsline {section}{\numberline {4}Contribution to the Analysis}{10}{section.4}
+\contentsline {subsection}{\numberline {4.1}Classification}{10}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}classifiers test}{10}{subsubsection.4.1.1}
+\contentsline {subsection}{\numberline {4.2}SPlot}{14}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Likelihood method}{14}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}$_{in} Plot$ technique}{14}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}$_{S} Plot$ technique}{15}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.3}Reweighting}{17}{subsection.4.3}
+\contentsline {section}{\numberline {5}RooMCMarkovChain}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}Monte Carlo Markov Chain (MCMC)}{17}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Metropolis Hastings}{18}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Features}{18}{subsection.5.3}
+\contentsline {section}{Bibliography}{21}{section*.20}
