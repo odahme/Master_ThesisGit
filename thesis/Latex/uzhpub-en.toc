@@ -1,22 +1,24 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Motivation}{2}{section.1}
-\contentsline {section}{\numberline {2}The $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ decay}{2}{section.2}
-\contentsline {subsection}{\numberline {2.1}Kinematics}{2}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Operators for $B \rightarrow X_s l^+l^-$ decays}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Wilson coefficients}{4}{subsection.2.3}
-\contentsline {section}{\numberline {3}The LHCb Experiment}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}The LHCb Detector}{7}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}The LHCb trigger system}{9}{subsection.3.2}
-\contentsline {section}{\numberline {4}Contribution to the Analysis}{10}{section.4}
-\contentsline {subsection}{\numberline {4.1}Classification}{10}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}classifiers test}{10}{subsubsection.4.1.1}
-\contentsline {subsection}{\numberline {4.2}SPlot}{14}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Likelihood method}{14}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}$_{in} Plot$ technique}{14}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}$_{S} Plot$ technique}{15}{subsubsection.4.2.3}
-\contentsline {subsection}{\numberline {4.3}Reweighting}{17}{subsection.4.3}
-\contentsline {section}{\numberline {5}RooMCMarkovChain}{17}{section.5}
-\contentsline {subsection}{\numberline {5.1}Monte Carlo Markov Chain (MCMC)}{17}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Metropolis Hastings}{18}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Features}{18}{subsection.5.3}
-\contentsline {section}{Bibliography}{21}{section*.20}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}New fitting routine}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Test of classifiers}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Reweighting}{3}{subsection.1.3}
+\contentsline {section}{\numberline {2}RooMCMarkovChain}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Monte Carlo Markov Chain (MCMC)}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Metropolis Hastings}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Features}{5}{subsection.2.3}
+\contentsline {section}{\numberline {3}The LHCb Experiment}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}The LHCb Detector}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}The LHCb trigger system}{11}{subsection.3.2}
+\contentsline {section}{\numberline {4}The $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ decay}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Motivation to analyse $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ decays}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Kinematics}{12}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Operators for $B \rightarrow X_s l^+l^-$ decays}{14}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Wilson coefficients}{14}{subsection.4.4}
+\contentsline {section}{\numberline {5}Classifiers test}{16}{section.5}
+\contentsline {section}{\numberline {6}Reweighting}{20}{section.6}
+\contentsline {subsection}{\numberline {6.1}SPlot}{21}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Likelihood method}{21}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}$_{in} Plot$ technique}{21}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}$_{S} Plot$ technique}{22}{subsubsection.6.1.3}
+\contentsline {section}{Bibliography}{24}{section*.20}

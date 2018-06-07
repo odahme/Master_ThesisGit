@@ -13,8 +13,8 @@ def main(argv):
     tDATA = fDATA.Get("data")
 
     tMC= TChain()
-    tMC.Add("/home/oliver/Master_Thesis/storage/data_reduced/MC/original/B2KstarJpsi_MC_2016_MagDown_Pythia8_Sim09b_Filtered_11144001.root/Reduced")
-    tMC.Add("/home/oliver/Master_Thesis/storage/data_reduced/MC/original/B2KstarJpsi_MC_2016_MagUp_Pythia8_Sim09b_Filtered_11144001.root/Reduced")
+    tMC.Add("/home/oliver/Master_Thesis/storage/data_reduced/MC/B2KstarJpsi_MC_2016_MagDown_Pythia8_Sim09b_Filtered_11144001.root/Reduced")
+    tMC.Add("/home/oliver/Master_Thesis/storage/data_reduced/MC/B2KstarJpsi_MC_2016_MagUp_Pythia8_Sim09b_Filtered_11144001.root/Reduced")
 
 
     #names = ['costhetak', 'costhetal', 'phi' ]#, 'J_psi_M' ]

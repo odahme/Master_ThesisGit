@@ -1,21 +1,23 @@
-\BOOKMARK [1][-]{section.1}{Motivation}{}% 1
-\BOOKMARK [1][-]{section.2}{The B \040K* \040 decay}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Kinematics}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Operators for B Xs l+l- decays}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Wilson coefficients}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{The LHCb Experiment}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{The LHCb Detector}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{The LHCb trigger system}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Contribution to the Analysis}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Classification}{section.4}% 10
-\BOOKMARK [3][-]{subsubsection.4.1.1}{classifiers test}{subsection.4.1}% 11
-\BOOKMARK [2][-]{subsection.4.2}{SPlot}{section.4}% 12
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Likelihood method}{subsection.4.2}% 13
-\BOOKMARK [3][-]{subsubsection.4.2.2}{in Plot technique}{subsection.4.2}% 14
-\BOOKMARK [3][-]{subsubsection.4.2.3}{S Plot technique}{subsection.4.2}% 15
-\BOOKMARK [2][-]{subsection.4.3}{Reweighting}{section.4}% 16
-\BOOKMARK [1][-]{section.5}{RooMCMarkovChain}{}% 17
-\BOOKMARK [2][-]{subsection.5.1}{Monte Carlo Markov Chain \(MCMC\)}{section.5}% 18
-\BOOKMARK [2][-]{subsection.5.2}{Metropolis Hastings}{section.5}% 19
-\BOOKMARK [2][-]{subsection.5.3}{Features}{section.5}% 20
-\BOOKMARK [1][-]{section*.20}{Bibliography}{}% 21
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{New fitting routine}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Test of classifiers}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Reweighting}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{RooMCMarkovChain}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Monte Carlo Markov Chain \(MCMC\)}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Metropolis Hastings}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Features}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{The LHCb Experiment}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{The LHCb Detector}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{The LHCb trigger system}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{The B \040K* \040 decay}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{Motivation to analyse B \040K* \040 decays}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.2}{Kinematics}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.3}{Operators for B Xs l+l- decays}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.4}{Wilson coefficients}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Classifiers test}{}% 17
+\BOOKMARK [1][-]{section.6}{Reweighting}{}% 18
+\BOOKMARK [2][-]{subsection.6.1}{SPlot}{section.6}% 19
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Likelihood method}{subsection.6.1}% 20
+\BOOKMARK [3][-]{subsubsection.6.1.2}{in Plot technique}{subsection.6.1}% 21
+\BOOKMARK [3][-]{subsubsection.6.1.3}{S Plot technique}{subsection.6.1}% 22
+\BOOKMARK [1][-]{section*.20}{Bibliography}{}% 23
