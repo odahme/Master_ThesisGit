@@ -61,7 +61,7 @@
 
 %% Titelei
 %\title{Masterthesis: analysis of $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
-\title{Masterhesis: Development of improved method for fitting differential decay rates, Classification of data and Reweighting}
+\title{Masterhesis: Development of an improved fitting routine. Classification and Reweighting of the $B \rightarrow K^* \mu \mu$ decay}
 \subtitle{Supervisors: Prof. Dr. Nicola Serra, Dr. Marcin Chzsaszcz}
 
 \author{Author: Oliver Dahme}
@@ -96,9 +96,10 @@ The reasons for choosing this decay are explained in section \ref{sec:Motivation
 
 
 \subsection{New fitting routine}
-In particle physics the angular coefficients of a decay rate are obtained, by fitting (expained in section \ref{sec:fit}) the decay rate distribution the experimentally obtained kinematic variabels like angles between final state particles and their energies. \\
-This has been done with the broadly used algorithm MINUIT \cite{bib:Minuit}. But like explained in section \ref{sec:RooMCMC} MINUIT can make random fatal errors while fitting, without any obvious explanation. The second problem with MINUIT is the intransperency: One can not comprehend how the fit is performed or if it really has found the global minimum. \\
-The new algorithm implemented as part of this thesis, is called RooMCMarkovChain. It is based on a Monte Carlo Markov Chain, where one link in the chain respresents a point on the log-likelihood function of the fit. The chain is designed to follow the global minimum and to jump out of local minima. This provides two things: A fitting parameter set, for example the angular coefficents of a decay rate, at the global minimum. And a scan of the log-likelihood function in the vicinity of the global minimum, which can be used for the error estimation and can be send along side papers containing fits to make it transperent for the reader how the fit performed.
+In particle physics the decay rate distributions depend on kinematic variables, the angles between the final state particles and their energies. To get the angular coefficients of the decay rate the experimentally obtained decay rates are fitted.
+% In particle physics the angular coefficients of a decay rate are obtained, by fitting (expained in section \ref{sec:fit}) the decay rate distribution the experimentally obtained kinematic variabels like angles between final state particles and their energies. \\
+So far this has been done with the broadly used algorithm MINUIT \cite{bib:Minuit}. But like explained in section \ref{sec:RooMCMC} MINUIT can make random fatal errors while fitting, without any obvious explanation. The second problem with MINUIT is the intransperency: One can not comprehend how the fit is performed or if it really has found the global minimum. \\
+The new algorithm implemented as part of this thesis, is called RooMCMarkovChain. It is based on a Monte Carlo Markov Chain (see section \ref{sec:MCMC}), where one link in the chain respresents a point on the log-likelihood function of the fit. The chain is designed to follow the global minimum and to jump out of local minima. This provides two things: A fitting parameter set, for example the angular coefficents of a decay rate, at the global minimum. And a scan of the log-likelihood function in the vicinity of the global minimum, which can be used for the error estimation and can be send along side papers containing fits to make it transperent for the reader how the fit performed.
 
 \subsection{Test of classifiers}
 Raw data from a particle detector contains all kind possible decays. The first challenge of an anlysis is to distinguish the one decay one wants to analyse from all the others.
@@ -106,7 +107,7 @@ The common prcedure to reach that goal in our days the usage of Machine Learning
 The test of classifiers presented in section \ref{sec:clas} has the goal to find the best classifier to distinguish $B_0 \rightarrow K^* \mu^+ \mu^-$ decays in the raw data of the LHCb detector.
 
 \subsection{Reweighting}
-The infomation needed in an analysis is not all contained inside the data. For example efficiencies can not be recorded by a detector. But they can be simulated by a Monte Carlo simulation of the particle decay. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data. As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The parameters used to reweight the MC samples are applied in the following order: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
+In data analysis on has to take into account the efficiencies of all the detector components.Those efficiencies can be obtained by Monte Carlo simulations. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data. As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The parameters used to reweight the MC samples are applied in the following order: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
 % Reweighting is a technique used to learn about quantities that can not be measured but only simulated. For example detector efficiencies can be very preciesly simulated be Monte Carlo simulations but can not be measured.
 % To archive that goal the Monte Carlo data is uniformly binned as is the real data. Then each MC bin gets compared with each data bin. Then a weight for each Monte Carlo event is choosen in a way that the bins get equal. Three parameters had been choosen to reweight the $B_0 \rightarrow K^* \mu^+ \mu^-$ Monte Carlo events:
 
@@ -139,10 +140,12 @@ The infomation needed in an analysis is not all contained inside the data. For e
 % 4. mit viel mehr Daten
 
 
-\section{RooMCMarkovChain}
-RooMCMarkovChain is a new class for the ROOT Data Analysis Framework, which can be used to for fits and presents a alternative to the brodly used MINUIT algorithm. RooMCMarkovChain uses a metropolis algorithm as a minimizer for the negative log likelihood function. The metropolis algorithm is based on a Monte Carlo Markov Chain and can therfore easily be scaled to multidimensional parameter space and moreover, such kind of algorithms can easily be parallelized.
+\section{RooMCMarkovChain} \label{sec:RooMCMC}
+RooMCMarkovChain is a new class for the ROOT Data Analysis Framework \cite{bib:root}. You can find the install-instructions at \cite{bib:root}. It works best on a unix based operation system.
 
-\subsection{Monte Carlo Markov Chain (MCMC)}
+ RooMCMarkovChain uses a metropolis algorithm as a minimizer for the negative log likelihood function. The metropolis algorithm is based on a Monte Carlo Markov Chain and can therfore easily be scaled to multidimensional parameter space and moreover, such kind of algorithms can easily be parallelized.
+
+\subsection{Monte Carlo Markov Chain (MCMC)}  \label{sec:MCMC}
 A Markov Chain is a random process which undergoes several states. From each state there is a probability ditribution to change into another state or to stay. Most important i the asumption that every next step just depends on the current state.
 The figure \ref{fig:MCMC} illustrates the behavior of such a Markov Chain.
 
@@ -156,7 +159,7 @@ The figure \ref{fig:MCMC} illustrates the behavior of such a Markov Chain.
 \subsection{Metropolis Hastings}
 
 
-Metropolis Hastings is a so called Monte Carlo updater. It updates the probabillity distribution when a change of states is proposed. That is very usefull in the cases where the states are not discrete like in figure \ref{fig:MCMC} but continous. Suppose that a specified distribution has unnormalized density $h$. The Metopolis Hastings update does the following:
+Metropolis Hastings is a so called Monte Carlo updater. It updates the probabilitydistribution when a change of states is proposed. That is very usefull in the cases where the states are not discrete like in figure \ref{fig:MCMC} but continous. Suppose that a specified distribution has unnormalized density $h$. The Metopolis Hastings update does the following:
 \begin{enumerate}
   \item The current state x is proposed to move to another state y with a conditional probability given x denoted as $q(x,\cdot)$.
   \item The Hastings ratio is calculated:
@@ -186,22 +189,22 @@ This principle is used in the RooMCMarkovChain class to minimize the negative lo
 
 
 
-\subsection{Features}
+\subsection{Features} \label{sec:features}
  The features of the RooMCMarkovChain class will be shown by fitting the following probability density function (pdf):
 \begin{align}
   g(x) = \frac{1}{\sqrt{2 \pi \sigma_1^2}} e^{- \frac{(x-\mu_1)^2}{2 \sigma_1^2}} + f \cdot  \frac{1}{\sqrt{2 \pi \sigma_2^2}} e^{- \frac{(x-\mu_2)^2}{2 \sigma_2^2}} \label{eq:gausspdf}
  \end{align}
 It is so called double gaus pdf, which is just the sum of two gaussian pdfs with a fractional parameter $f$.
-The result of the fit is compared with the result of the Minuit algorithm:
+The result of the fit is compared with the result of the Minuit algorithm. Therfore 1000 points were simulated fowllowing the distribution \ref{eq:gausspdf}:
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{RooMCMC/twogausfit}
-  \caption{Fit of double gaus pdf (see equation \ref{eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu_1 = 4$, $\sigma_1 = 1$, $\mu_2 = -2$, $\sigma_2 = 1.5$ and the fraction $f = 0.5$}
+  \caption{Fit of double gaus pdf (see equation \ref{eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu_1 = 4$, $\sigma_1 = 1$, $\mu_2 = -2$, $\sigma_2 = 1.5$ and the fraction $f = 0.5$. The Minuit fit fails, because of a random error. The fits gets right if the starting parameters are changed.}
   \label{fig:twogaus}
 \end{figure}
-
-The corresponding terminal output gives the estimated parameters with error interval and correlation coefficents of each parameter pair.
+As one can see in figure \ref{fig:twogaus} the Minuit routine fails to fit the distribution. The reasons are unknwon, but the fit gets right if the starting parameters are changed. Intensive testing prooved RooMCMCarkovChain less sensitive to starting parameters. But in high parameters space test (up to 20) revealed that Minuit and RooMCMarkovChain are equal in performace. One should do another performace analysis with the number of parameters usually used in particle physics, with up to 50 parameters. \\
+The terminal output, for the fit in figure \ref{fig:twogaus}, gives the estimated parameters with error interval and correlation coefficents of each parameter pair.
 
 \begin{figure}[H]
   \centering
@@ -298,7 +301,9 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
 
  \section{The $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
 
- \subsection{Motivation to analyse $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays}
+This section describes the motivation to analyse this decay, then the operators needed to calculate the different couplings are derived and in the last section the effetive Wilson coefficients are derived. This section is mostly theoretical and should give an overview over the decay.
+
+ \subsection{Motivation to analyse $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays} \label{sec:Motivation}
 
  In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B_0$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
  \begin{equation}
@@ -314,7 +319,7 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
  To investigate further the same measurment is performed with new data from the LHCb detector. The goal of this thesis is to contribute to this new measuremnt.
 
 
- \subsection{Kinematics}
+ \subsection{Kinematics} \label{sec:Kinematics}
  In this section the decay itself and its kinematics are explained:
  The Decay is a flavor changing neutral current (FCNC) with four charged particles in the final state. The FCNC is a current, which changes the falvor of a fermion without changing its electric charge. The four particles in the final stage are:  \\
  The $K^+$ and $\pi^-$ from the $K^{*}$ decay and two leptons from the loop or box diagrams:
@@ -331,7 +336,7 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
   \caption{kinematic variables of the decay $B^0$ $\rightarrow$ $K^{*0}$ $\mu$ $\mu$}
   \label{fig:angels}
  \end{figure}
- From them one can obatain the differential decay rate for the $B^0$ Meson:
+The differential decay rate for the $B^0$ Meson can be expressed in terms of these variables:
  \begin{equation}
   \begin{split}
    \frac{d^4 \Gamma}{d \cos{ \theta_L} d \cos{\theta_K} d \phi d q^2} &= \frac{9}{32 \pi} I(q^2,\theta_L, \theta_K, \phi) \\
@@ -343,7 +348,7 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
   \end{split}
   \label{eq:diff_decay_rate}
  \end{equation}
- This decay rate is defined as the probability per unit time that the particle will decay.
+ This decay rate is defined as the probability per unit time that the particle will decay. The $I_i$ can be obtained by fitting this decay rate to the kinematic variables obtained by the detector. This fit is usually done by a standart fitting routine called MINUIT \cite{bib:Minuit}. In section \ref{sec:RooMCMC} an alternative is presented.
 
  \subsection{Operators for $B \rightarrow X_s l^+l^-$ decays}
  In this section all the operators of the decay are derived from the effective Lagrangian. the operators in Quantum field theory are used to create or destroy particles, by applying them to a quantum field. This section should just give an overview if you need more detailed information consider reading \cite{bib:Operators}. \\
@@ -418,7 +423,7 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
  \end{align}
  where $C_i^{(0)}$ is the tree-level contribution, which is quale to zero for all operators except $\mathcal{O}_2$ and $C_i^{(n)}$ denotes the n-loop contributions.
  Before discussing the Wilson coefficents in details, lets look at the Operators again; the operators $\mathcal{O}_S^\prime$ and $\mathcal{O}_P^\prime$ are given in terms of conserved currents. They carry no scale-dependence. They do not mix with other operators and their Wilson coefficents are at the matching scale. $\mathcal{O}_9$ is also given by conserved curents. It mixes with $\mathcal{O}_{1,2,3,4,5,6}$ via a virtual photon decaying into $\mu^+ \mu^-$. In addition their is a scale depedence from the factor $1/g^2$. This dependence is also present in $C_{10}$ which otherwise would be scale independent. \\
- In equation \ref{eq:M} one can see that $C_7$ and $C_9$ always appear in a particular combination with oder Wilson coefficents in matrix elements. Therfore effective coefficients are defined:
+ $C_7$ and $C_9$ always appear in a particular combination with other Wilson coefficents in matrix elements. Therfore effective coefficients are defined:
  \begin{equation}
   \begin{split}
    C_7^{eff} &= \frac{4 \pi}{\alpha_s} C_7 - \frac{1}{3} C_3 - \frac{4}{9} C_4 - \frac{20}{3} C_5 - \frac{80}{9} C_6, \\
@@ -475,7 +480,7 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
  % Ziel: Signal K* mu mu vom background zu trennen
  % combinatorial background erklaeren und entstehung
 
- \section{Classifiers test}
+ \section{Classifiers test} \label{sec:clas}
 
 In particle physics the first step of each analysis is to clean up the data. That means to subtract the background from the signal. Signal means for example a type of decay like the $B \rightarrow K^* \mu \mu$ decay. To find this decay in the raw data of a detector which contains all kind of decays one needs thresholds on experimental parameters which are different or in the best case unique to the decay. That can be all kind of parameters like vertex locations, momentas or angles between trajectories. For the $B \rightarrow K^* \mu \mu$ decay these parameters would be:
 \begin{itemize}
@@ -486,20 +491,12 @@ In particle physics the first step of each analysis is to clean up the data. Tha
  \item The cosine of the angle between primary vertex and decay vertex and recorded momentum (DIRA\_OWNPV)
 \end{itemize}
 The names in the bracets are the labels given to these parameters in the data structure of the ROOT Data Anlysis Framework \cite{bib:root}.
-Now one needs thresholds on these parameters, which define the signal-region. For example the flight distance has to be between 0.2 milimeters and 2 centimeters. But how do you obtain these thresholds? Thats were Classifiers get usefull. Classifiers are a type of algorithm from the Machine Learning area. They can be trained to distinguish different types of data. In this case signal and background. Each event in the data gets a probability to be signal assigend to it. So after the classification one can just take all the events with a probability over lets say 80\%. One has now eliminated 80\% of the background and can continue cleaning up the signal but thats not a part of this thesis. The goal of this part was to find the best classifier to be used in the  $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay analysis. \\
+Now one needs thresholds on these parameters, which define the signal-region. For example the flight distance has to be between 0.2 milimeters and 2 centimeters. But how do you obtain these thresholds? Thats were Classifiers are usefull. Classifiers are a type of algorithm from the Machine Learning area. They can be trained to distinguish different types of data. In this case signal and background. Each event in the data gets a probability to be signal assigend to it. So after the classification one can just take all the events with a probability over lets say 80\%. One has now eliminated 80\% of the background and can continue cleaning up the signal but thats not a part of this thesis. The goal of this part was to find the best classifier to be used in the  $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay analysis. \\
 
-Seven different classifiers were tested. A test means that the classifier is given a training set consisting of Monte arlo simulated events containing only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays and randomly choosen real detector data, containing all kinds of decays. In a training set the data is labeled. The Monte Carlo events are labeld with $1$ for signal and the real data with $0$ for background. The classifier will now train, that means the algorithm tries to label the data into signal and background by choosing different thresholds on the parameters mentioned above. After the training the thresholds get fixed. Now one has to test the classifer to check if everything worked fine. To do so a second set of data is prepared similar to the training set, just that the labels are now hidden from the classifier. A good classifier will now label the data corretly, while a bad one will just assign 0.5 signal probability to each event. In other words the classifier can not distinguish between signal and background so he assigns a 
-
-
- and the classifier is now able to find $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays. Thats how it works in theory, but in practice this precedure is not perfect. To express this inperfection the classifier will not label the data with $0$ and $1$. But will assign a probability to be signal for each event.
-As explained above this probability can then be used as a threshold itself to cut off the background.
-
+Seven different classifiers were tested. A test means that the classifier is given a training set consisting of Monte arlo simulated events containing only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays and randomly choosen real detector data, containing all kinds of decays. In a training set the data is labeled. The Monte Carlo events are labeld with $1$ for signal and the real data with $0$ for background. The classifier will now train, that means the algorithm tries to label the data into signal and background by choosing different thresholds on the parameters mentioned above. After the training the thresholds get fixed. Now one has to test the classifer to check if everything worked fine. To do so a second set of data is prepared similar to the training set, just that the labels are now hidden from the classifier. Since the classifiers are not perfect, they do not assign $0$ and $1$ to each event but rather a probability to bi signal between 0 and 1. A good classifier will now label the signal events with a high probabilityand background with a low probabillity. A bad classifier will assign 0.5 probabilityto each event.
+With a 0.5 probability no information was gained by classification, because having a 50:50 chance is as good as guessing. This probability assignements can now be used as a threshold themselves. \\
 Another property of classifiers is, that the data used in the training, can no longer be used in the analysis, because the classifier knows the training set too well and a bias is introduced if one reuses the training data in the actual analysis. That would mean that the part of the real detector data which is needed to train the classifiers would be lost for further analysis. To avoid such a waste of data a technique called k-folding is used. \\
-K-folding means that the
-
-
-
-
+K-folding means that the no training set is created. But the data Monte Carlo Mix with signal events and all kinds of other events is split into k equal parts. Now to classify one part all the other parts are used for training. After iterating over all parts, one has classified all the data without loosing any. The only disadvantage are the addidtional computer resources needed, since the classifier has now to be trained k times instead of one time.
 
  The following list of classifers where tested and compared in terms of perfomance:
  \begin{itemize}
@@ -513,78 +510,117 @@ K-folding means that the
  \end{itemize}
  The test was performed with 30000 events from the 2016 LHCb $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data and 10000 events from the Monte Carlo simulation.
 
- Since
-
-To compare classifiers the so called ROC (receiver operating charactertic) curves are used. The ROC curve shows the true positive rate against the false positive rate. The true positive rate is the rate of signal events that have been classified correctly as signal events, while the false postive rate ist the rate of background events classified as signal events.
-
-
-
-
- To compare the different classifiers the ROC curves and the correlations to the kinematic variabels of the decay (see \ref{fig:angels}) are used. The receiver operating characterisitc (ROC) curve is a graphical plot that illustrates the ability of a classifier to correctly classify the data as its dicrimination threshold varies. Since the curves for the different folds all look alike only one is presented here \ref{fig:roc}. One can find the other nine curves in the appendix \ref{app:roc}.
- It turns out that all the classifiers classify the data correctly with just some minor variances. The ROC curve is in that case not a good tool to compare the different classifiers.
+To compare classifiers the so called ROC (receiver operating charactertic) curves are used. The ROC curve shows the true positive rate against the false positive rate. The true positive rate is the rate of signal events that have been classified correctly as signal events, while the false postive rate ist the rate of background events classified as signal events. On figure \ref{fig:roc} a ROC curves of the classifiers above is displayed.
+The sample of 40000 events to test the classifiers was cut into ten equal parts, also called folds. In figure \ref{fig:roc} the ROC curve of one of these folds is displayed, the other nine can be found in the appendix \ref{app:roc}. \\
+ It turns out that all the classifiers classify the data mostly correctly with just some minor variances. The ROC curve is in that case not a good tool to compare the different classifiers.
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{roc/fold_0_roc.pdf}
   \caption{ROC curve of the first fold. One can see that all the classifiers are competetive in terms of classifing correctly}
   \label{fig:roc}
  \end{figure}
- The next step is to check for unwanted correlations, only the correlations with the mass are shown here. The others can be found in appendix \ref{app:corr}.
+ The next step is to check for correlations between the assigned probabilities and the kinematic variables. The kinematic variabels as explained in section \ref{sec:Kinematics} are used to obtain the angular coefficients of the decay rate. If there is a correlation between the assigned probabilities from the classifier and these variables, a peak is artificialy added into the distribution of these variables. Imagine a positive correlation between the $B$ mass in the range 5000 to 6000 GeV and the probability to bi signal. After cutting at lets say 0.8 probability there will be a peak in the B mass distribution between 5000 and 6000 GeV. Normally such a peak suggest a new particle in this range. This is to avoid at all cost since it will compremise the whole analysis later on. \\
+In the following the correlation between the probability to be signal assigned by the classifier and the $B$ mass are shown. The correlation plots for the other kinematic variables can be found in appendix \ref{app:corr}.
+
+
+ % \begin{figure}[H]
+ %  \centering
+ %  \includegraphics[width=0.5\textwidth]{plots/AdaBoost_plot_bdt_vs_B0_M}
+ %  \caption{This plot shows the correltation between the bdt decision of the AdaBoost classifier and the $B_0$ mass. There is clearly a correlation starting from the second bin from the left.}
+ %  \label{fig:AdaB0M}
+ % \end{figure}
+
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/AdaBoost_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correltation between the bdt decision of the AdaBoost classifier and the $B_0$ mass. There is clearly a correlation starting from the second bin from the left.}
+  \caption{This plot showes the probabilities assign by the classifier as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the classifiers probabilities and the $B$ mass for the AdaBoost classifier. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:AdaB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/sk_bdt_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correltation between the bdt decision of the sk\_bdt classifier and the $B_0$ mass. There is no correlation.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt classifier and the $B$ mass. There is no correlation.}
   \label{fig:skbdtB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/sk_bdtg_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correltation between the bdt decision of the sk\_bdtg classifier and the $B_0$ mass. There is clearly a correlation starting from the second bin from the left.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg classifier and the $B$ mass. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:skbdtgB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uBoost_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correltation between the bdt decision of the uBoost classifier and the $B_0$ mass. There is just a very small correlation compared to other classifiers.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uBoost classifier and the $B$ mass. There is just a very small correlation compared to other classifiers.}
   \label{fig:uBoostB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uGB+FL_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correltation between the bdt decision of the uGB+FL classifier and the $B_0$ mass. There is clearly a correlation starting from the second bin from the left.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL classifier and the $B$ mass. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:uGB+FLB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uGB+knnAda_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correltation between the bdt decision of the uGB+knnAda classifier and the $B_0$ mass. There is clearly a correlation starting from the second bin from the left.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda classifier and the $B$ mass. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:uGB+knnAdaB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/xgb_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correltation between the bdt decision of the xgb classifier and the $B_0$ mass. There is clearly a correlation starting from the second bin from the left.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the xgb classifier and the $B$ mass. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:xgbB0M}
  \end{figure}
 
- The two classifers with the least correlation are the sk\_bdt and the uBoost classifers. Therfore they were used to do the seperation between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data.
+ The two classifers with the least correlation are the sk\_bdt and the uBoost classifers. Therfore they could be used to do seperate between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data.
 
 
 
  \section{Reweighting} \label{sec:Reweight}
- The infomation needed in an analysis is not all contained inside the data. For example efficiencies can not be recorded by a detector. But they can be simulated by a Monte Carlo simulation of the particle decay. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data. As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The parameters used to reweight the MC samples are applied in the following order: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
 
+ % The infomation needed in an analysis is not all contained inside the data. For example efficiencies can not be recorded by a detector. But they can be simulated by a Monte Carlo simulation of the particle decay. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data.
+
+ Reweighting is method to matchh the Monte Carlo data to the real detector data, to extract quantities not measurable by the detector like efficiencies. The match is done by applying weights to the Monte Carlo events. \\
+As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The weights are calculated by comparing the the following parameters: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
+
+\subsection{Reweighting the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ Monte Carlo data}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Reweighting/nTracksw}
+\caption{This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the weight best to reweight the Monte Carlo data to match the detector data. Thx X achsis show the values for the number of tracks in an event (nTracks). On the Left achsis the fraction of events having so many nTracks is given, for data and Monte Carlo. On the right achsis the magnitude of the weights is shown.}
+\label{fig:nTracksw}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Reweighting/B0_PTw}
+\caption{Same plot as in figure \ref{fig:nTracksw}, for the transversal momentum of the $B-0$ meson (B0\_PT)}
+\label{fig:B0_PTw}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Reweighting/B0_ENDVERTEX_CHI2w}
+\caption{Same plot as in figure \ref{fig:nTracksw}, for the quality of the $K \pi \mu \mu$ vertex (B0\_ENDVERTEX\_CHI2).}
+\label{fig:B0_ENDVERTEX_CHI2w}
+\end{figure}
+
+After applying those weights to the Monte Carlo data, the distributions of all the event parameters will change. To check if the simulation really matches the data. Some comparison plots have been made. One is presented here, while many others can be found in appendix \ref{app:re}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Reweighting/B0_PT}
+\caption{This plots shows the distribution of the $B_0$ transversal momentum. The violet points represent the distribution in the detector data. In red is the distribution befor reweighting the Monte Carlo data and in blue is the distribution after reweighting the Monte Carlo data. The X achsis shows the $B_0$ transversal momentum (B0\_PT)}
+\label{fig:B0_PT}
+\end{figure}
 
 
 
@@ -737,7 +773,7 @@ To compare classifiers the so called ROC (receiver operating charactertic) curve
 
    \bibitem{bib:xgb}  arXiv:1603.02754 [cs.LG]
 
-   \bibitem{bib:bdtg} Gradient Boosting classifier from the sk_learn python package \url{http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html}
+   \bibitem{bib:bdtg} Gradient Boosting classifier from the sk\_learn python package \url{http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html}
 
    \bibitem{bib:bdt} A vaiation of the AdaBoost classifier called AdaBoost-SAMME \url{http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html}
 
@@ -749,19 +785,19 @@ To compare classifiers the so called ROC (receiver operating charactertic) curve
 
  \end{thebibliography}
 
- % \begin{appendix}
- %   \section{ROC curves}
- %   \label{app:roc}
- %   \includepdf[pages={-}]{roc.pdf}
- %
- %   \section{Learning Curves}
- %   \label{app:lc}
- %
- %   \section{Correlation plots}
- %   \label{app:corr}
- %   \includepdf[pages={-}]{Corplots.pdf}
- %
- %
- % \end{appendix}
+ \begin{appendix}
+   \section{ROC curves}
+   \label{app:roc}
+   \includepdf[pages={-}]{roc.pdf}
+
+   \section{Correlation plots}
+   \label{app:corr}
+   \includepdf[pages={-}]{Corplots.pdf}
+
+   \section{Reweighting plots}
+   \label{app:re}
+   \includepdf[pages={-}]{Reweighting/reweight_app.pdf}
+
+ \end{appendix}
 
  \end{document}

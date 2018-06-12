@@ -1,7 +1,7 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}New fitting routine}{2}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Test of classifiers}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.2}Test of classifiers}{3}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Reweighting}{3}{subsection.1.3}
 \contentsline {section}{\numberline {2}RooMCMarkovChain}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Monte Carlo Markov Chain (MCMC)}{3}{subsection.2.1}
@@ -16,9 +16,13 @@
 \contentsline {subsection}{\numberline {4.3}Operators for $B \rightarrow X_s l^+l^-$ decays}{14}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Wilson coefficients}{14}{subsection.4.4}
 \contentsline {section}{\numberline {5}Classifiers test}{16}{section.5}
-\contentsline {section}{\numberline {6}Reweighting}{20}{section.6}
-\contentsline {subsection}{\numberline {6.1}SPlot}{21}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Likelihood method}{21}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}$_{in} Plot$ technique}{21}{subsubsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.3}$_{S} Plot$ technique}{22}{subsubsection.6.1.3}
-\contentsline {section}{Bibliography}{24}{section*.20}
+\contentsline {section}{\numberline {6}Reweighting}{21}{section.6}
+\contentsline {subsection}{\numberline {6.1}Reweighting the $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ Monte Carlo data}{22}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}SPlot}{24}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Likelihood method}{24}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}$_{in} Plot$ technique}{24}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}$_{S} Plot$ technique}{25}{subsubsection.6.2.3}
+\contentsline {section}{Bibliography}{27}{section*.24}
+\contentsline {section}{\numberline {A}ROC curves}{27}{appendix.A}
+\contentsline {section}{\numberline {B}Correlation plots}{38}{appendix.B}
+\contentsline {section}{\numberline {C}Reweighting plots}{60}{appendix.C}

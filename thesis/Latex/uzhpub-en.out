@@ -16,8 +16,12 @@
 \BOOKMARK [2][-]{subsection.4.4}{Wilson coefficients}{section.4}% 16
 \BOOKMARK [1][-]{section.5}{Classifiers test}{}% 17
 \BOOKMARK [1][-]{section.6}{Reweighting}{}% 18
-\BOOKMARK [2][-]{subsection.6.1}{SPlot}{section.6}% 19
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Likelihood method}{subsection.6.1}% 20
-\BOOKMARK [3][-]{subsubsection.6.1.2}{in Plot technique}{subsection.6.1}% 21
-\BOOKMARK [3][-]{subsubsection.6.1.3}{S Plot technique}{subsection.6.1}% 22
-\BOOKMARK [1][-]{section*.20}{Bibliography}{}% 23
+\BOOKMARK [2][-]{subsection.6.1}{Reweighting the B \040K* \040 Monte Carlo data}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.2}{SPlot}{section.6}% 20
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Likelihood method}{subsection.6.2}% 21
+\BOOKMARK [3][-]{subsubsection.6.2.2}{in Plot technique}{subsection.6.2}% 22
+\BOOKMARK [3][-]{subsubsection.6.2.3}{S Plot technique}{subsection.6.2}% 23
+\BOOKMARK [1][-]{section*.24}{Bibliography}{}% 24
+\BOOKMARK [1][-]{appendix.A}{ROC curves}{}% 25
+\BOOKMARK [1][-]{appendix.B}{Correlation plots}{}% 26
+\BOOKMARK [1][-]{appendix.C}{Reweighting plots}{}% 27
