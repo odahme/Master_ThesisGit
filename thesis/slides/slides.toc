@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{LHCb Detector}{3}{0}{1}
+\beamer@sectionintoc {2}{The $B_0 \rightarrow K^* \mu ^+ \mu ^-$ decay }{8}{0}{2}
+\beamer@sectionintoc {3}{Test of Classifiers}{11}{0}{3}
+\beamer@sectionintoc {4}{Reweighting}{12}{0}{4}
+\beamer@sectionintoc {5}{RooMCMarkovChain}{13}{0}{5}
