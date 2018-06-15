@@ -76,7 +76,7 @@
 %\addpart{Abstract}
 
 \begin{abstract}
-  The work presented in this thesis consists of three parts, which are all intended to be used in the contents of data analysis of data taken by the LHCb detector, especially to analyze the decay $B \rightarrow K^* \mu \mu$.
+  The work presented in this thesis consists of three parts, which are all intended to be used in the contents of data analysis of data taken by the LHCb detector, especially to analyse the decay $B \rightarrow K^* \mu \mu$.
   \begin{enumerate}
     \item A new fitting routine has been developed as a more transparent and reliable alternative to the broadly used routine Minuit.
     \item A test of classifiers has been performed. Classifiers are algorithms used to separate signal from background. The test in this thesis was performed to find the best classifiers in order to select events with the decay $B \rightarrow K^* \mu \mu$.
@@ -96,15 +96,15 @@ Decay rate distributions in particle physics depend on kinematic variables as th
 So far this has been done with the MINUIT \cite{bib:Minuit} algorithm. But as explained in detail in section \ref{sec:RooMCMC}, the MINUIT algorithm produces random errors without explanation. Furthermore MINUIT is not transparent: It is not clear, how the fit is performed, and if it really has found the global minimum. \\
 The new algorithm implemented as part of this thesis, is called RooMCMarkovChain. It is based on a Monte Carlo Markov Chain (see section \ref{sec:MCMC}), where a certain link in the chain respresents a point on the negative log-likelihood function of the fit. The chain is designed to follow the global minimum and to jump out of local minima. \\
 RooMCMarkovChain provides two things: A fitting parameter set, for example the angular coefficents of a decay rate, at the global minimum. And one-dimensional projections of the  negative log-likelihood function in the vicinity of the global minimum. They can be used for error estimations and sent along side papers which describe, how the fit has been performed.
-The RooMCMarkovChain will be part of the roofit package of the ROOT Data analysis framework \cite{bib:root}.
+The RooMCMarkovChain will be part of the roofit package of CERN's ROOT Data analysis framework \cite{bib:root}.
 
 \subsection{Test of classifiers}
-Raw data from a particle detector contains all kind possible decays. The first challenge of an anlysis is to distinguish the one decay one wants to analyze from everything else.
-The common prcedure to reach that goal in our days the usage of Machine Learning algorithms called Classifiers. The algorithm need two things to perform the analysis: A training dataset where signal and background is labeld accordingly, and a list of parameters that are different in signal and background. While training the algorithm will adapt thresholds on these parameters. Then, using these thresholds the algorithm is able to distinguish signal from background in unlabeled data. \\
+Raw data from a particle detector contains all kinds of possible decays. The first challenge of an anlysis is to distinguish the one decay one wants to analyse from everything else.
+The common prcedure to reach that goal in our days is the usage of Machine Learning algorithms called Classifiers. The algorithm need two things to perform the analysis: A training dataset where signal and background is labeld accordingly, and a list of parameters that are different in signal and background. While training the algorithm will adapt thresholds on these parameters. Then, using these thresholds the algorithm is able to distinguish signal from background in unlabeled data. \\
 The test of classifiers presented in section \ref{sec:clas} has the goal to find the best classifier to select $B \rightarrow K^* \mu \mu$ decays in the raw data of the LHCb detector.
 
 \subsection{Reweighting}
-The efficiencies of all detector components have to be taken into account in data analysis. These efficiencies may be obtained by Monte Carlo simulations. Finally, Monte Carlo data and real data must match to get the correct results. SRe-simulating every time everything with different parameters until the data distributions match would take too much resources. Therefore the Monte Carlo data is reweighted. Reweighting means that a weight is applied to each Monte Carlo. The weights are choosed in a way that afterwards the simulation matches the data.
+The efficiencies of all detector components have to be taken into account in data analysis. These efficiencies may be obtained by Monte Carlo simulations. Finally, Monte Carlo data and real data must match to get the correct results. Re-simulating every time everything with different parameters until the data distributions match would take too much resources. Therefore the Monte Carlo data is reweighted. Reweighting means that a weight is applied to each Monte Carlo event. The weights are choosed in a way that afterwards the simulation matches the data.
 
 
 
@@ -136,8 +136,8 @@ The efficiencies of all detector components have to be taken into account in dat
 
 %
 % 1. SM sagt vorraus das BR(K* mu mu )(K* e e ) muestte eins sein experimentelle (Referenz)
-% 2. alte LHCb analyze
-% 3. Aufgabe, erneute analyze mit neuen daten und neue Methoden (neue classifier)
+% 2. alte LHCb analyse
+% 3. Aufgabe, erneute analyse mit neuen daten und neue Methoden (neue classifier)
 % 4. mit viel mehr Daten
 
 
@@ -166,7 +166,7 @@ That only holds if the state space is finite. Most Markov chains of interest in 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.3\textwidth]{MCMC_Chain}
-  \caption{Illustration of states and the probability distribution to change or the stay in a state of a Monte Carlo Markov Chain. In state A there is a 0.3 probability to change into state B and a 0.7 probability to stay in state A.}
+  \caption{Illustration of states and the probability distribution to change or stay in a state of a Monte Carlo Markov Chain. In state A there is a 0.3 probability to change into state B and a 0.7 probability to stay in state A.}
   \label{fig:MCMC}
 \end{figure}
 
@@ -197,8 +197,9 @@ This principle is used in the RooMCMarkovChain class to minimize the negative lo
   \begin{align}
     S_n S_n^T = S_{n-1} \left( I + \eta_n(\alpha_n - \alpha_*) \frac{U_n Y_n^T}{||U_n||^2} \right) S_{n-1}^T \label{eq:matrix}
   \end{align}
-  ,where $I \in R^{dxd}$ is the identity matrix and $\alpha^*$ is the forced acceptance rate.
+  ,where $I \in R^{dxd}$ is the identity matrix, $\alpha^*$ is the forced acceptance rate and suppose $\{\eta_n\}_{n \geq 1} \subset (0,1]$ is a step size sequence decaying to zero.
 \end{enumerate}
+
 
 
 
@@ -215,10 +216,10 @@ The result of the fit is compared with the result of the Minuit algorithm. Therf
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{RooMCMC/twogausfit}
-  \caption{Fit of double gaus pdf (see equation \ref{eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu_1 = 4$, $\sigma_1 = 1$, $\mu_2 = -2$, $\sigma_2 = 1.5$ and the fraction $f = 0.5$. The Minuit fit fails, because of a random error. The fits gets right if the starting values for the parameters are changed.}
+  \caption{Fit of double gaus pdf (see equation \ref{eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu_1 = -2$, $\sigma_1 = 1.5$, $\mu_2 = 4$, $\sigma_2 = 1$ and the fraction $f = 0.5$. The Minuit fit fails, because of a unknown error. The fits gets right if the starting values for the parameters are changed.}
   \label{fig:twogaus}
 \end{figure}
-Figure \ref{fig:twogaus} shows that the Minuit routine fails to fit the distribution. The reasons are unknwon, but the fit gets right if the starting values of the parameters are changed. Intensive testing prooved RooMCMCarkovChain less sensitive to starting values. But one should analysis with the number of parameters usually used in particle physics, with up to 50 parameters. \\
+Figure \ref{fig:twogaus} shows that the Minuit routine fails to fit the distribution. The reasons are unknwon, but the fit gets right if the starting values of the parameters are changed. Intensive testing prooved RooMCMarkovChain less sensitive to starting values. But one should analysis with the number of parameters usually used in particle physics, with up to 50 parameters. \\
 The terminal output, for the fit in figure \ref{fig:twogaus}, gives the estimated parameters with error interval and correlation coefficents of each parameter pair.
 
 \begin{figure}[H]
@@ -231,11 +232,11 @@ This gives a good initial overview of results after the fit has finished. The er
 
 In addition several other properties of the parameters can be obtainded:
 \begin{enumerate}
-  \item The 1 dimensional profile of the negative log liklihood function for a given parameter.
+  \item The 1 dimensional profile of the negative log likelihood function for a given parameter.
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{RooMCMC/walkProfile}
-    \caption{Profile of the negative log lilihood function for $\mu_2 = mean2$ in equation \ref{eq:gausspdf}. There is a local minimum at the nll value of 2600, because the chain stoped going downwards.}
+    \caption{Profile of the negative log likelihood function for $\mu_2 = mean2$ in equation \ref{eq:gausspdf}. There is a local minimum at the nll value of 2600, since the algorithm scanned that region very briefly.}
     \label{fig:profile}
   \end{figure}
   From this plot on can see how the algorithm reached the minimum of the negative log likelihood function and if there are local minima. \\
@@ -248,7 +249,7 @@ In addition several other properties of the parameters can be obtainded:
     \caption{Walk distribution of $\mu_2 = mean2$ in equation \ref{eq:gausspdf}. The red points are not considered for the error calculation, the number of points beeing cut of is defined by the user.}
     \label{fig:walkDis}
   \end{figure}
-  This plot is very important for handling the RooMCMarkovChain class. Since the error calculation is based on the variance of the walk distribution, cutting of points in the begginning greatly reduces this variance. The user has to choose how many points are cut off. Plotting the walk distribution of all parameters helps choosing the right amount. The right amount would be at the point where there is only the oszillation arround the global minimum left. \\
+  This plot is very important for handling the RooMCMarkovChain class. Since the error calculation is based on the variance of the walk distribution, cutting of points in the begginning greatly reduces this variance. The user has to choose how many points are cut off. Plotting the walk distribution of all parameters helps choosing the right amount. The right amount would be at the point where there is only the oszillation arround the global minimum left. This has to be done by the user since there is now way to predict how many steps RooMCMarkovChain needs to reach the global minimum. \\
 
   \item The walk distribution of a given parameter as a histogramm.
   \begin{figure}[H]
@@ -275,14 +276,14 @@ In addition several other properties of the parameters can be obtainded:
 \section{The LHCb Experiment} \label{sec:LHCb}
 In this section the experimental setup of the detector is presented, which recorded the data used in this thesis.
 The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based at the CERN laboratory near Geneva in Switzerland. It is part of the Large Hadron Collider (LHC), a proton-proton accelerator and collider located in a vast unterground tunnel with 26.7 km circumference beneath the Swiss-French countryside.
-The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefor very large detectors. ALICE investigates quark-gluon plasma and therefor needs geavy ion collisions, instead of proton collisions. \\
-The protons in the LHC have a kinetic energy of 7 TeV, which allows a collision energy, in the LHCb detector, of 13 TeV. In the year 2016 the LHCb had a recorded luminosity of $\SI{1906}{pb^{-1}}$. For this thesis $\SI{2280}{pb^{-1}}$ of data, collected at LHCb during the years 2011 to 2016 are used.
-LHCb is dedicated to falvour physics. It therefor investigates rare decays and CP violation in beauty and charm hadrons.
+The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefore very large detectors. ALICE investigates quark-gluon plasma and therefore needs heavy ion collisions, instead of proton collisions. \\
+The protons in the LHC have a kinetic energy of 7 TeV, which allows a collision energy, in the LHCb detector, of 13 TeV. In the year 2016 the LHCb had a recorded luminosity of $\SI{1906}{pb^{-1}}$. For this thesis 1'575'210 potential $B \rightarrow K^* \mu \mu$ events are used and refered as raw LHCb data.
+LHCb is dedicated to falvour physics. It therefore investigates rare decays and CP violation in beauty and charm hadrons.
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=1.0\textwidth]{{{LHC_default}}}
- \caption{CERN's Accelerator Complex.\cite{bib:lhc_img} The protons get injected in the lineare accelerator LINAC2. Then they get pre-accelerated in 3 synchrotons (BOOSTER,PS,SPS) where the protons reach a kinetic energy of 450 GeV. That is the entering energy of the LHC which accelerates them futher up to 7 TeV, before they collide at the four detectors: CMS, ATLAS, LHCb and ALICE.}
+ \caption{CERN's Accelerator Complex \cite{bib:lhc_img}: The protons get injected in the lineare accelerator LINAC2. Then they get pre-accelerated in 3 synchrotons (BOOSTER,PS,SPS) where the protons reach a kinetic energy of 450 GeV. That is the entering energy of the LHC which accelerates them futher up to 7 TeV, before they collide at the four detectors: CMS, ATLAS, LHCb and ALICE.}
  \label{fig:lhc}
 \end{figure}
 
@@ -294,21 +295,21 @@ The LHCb Detector has a fix target geometry, because beauty hadrons are manily p
 \begin{figure}[H]
  \centering
  \includegraphics[width=1.0\textwidth]{{{lhcb_detector}}}
- \caption{Basic layout of the LHCb detector \cite{bib:lhcb_detector}. The interaction point is inside the vertrex detector and the beam pipe passes through the center. The different subdetecors are the two Ring Imaging Cherenkov Detecors (RICH1 and RICH2), the tracking stations (TT and T1 to T3), the scintillator pad detector (SPD), the preshower electromagnetic calorimeter (ECAL), the hadronic calorimeter (HCAL) and the muon stations (M1-M5). }
+ \caption{Basic layout of the LHCb detector \cite{bib:lhcb_detector}. The interaction point is inside the vertrex detector and the beam pipe passes through the center. The different subdetectors are the two Ring Imaging Cherenkov Detectors (RICH1 and RICH2), the tracking stations (TT and T1 to T3), the scintillator pad detector (SPD), the preshower electromagnetic calorimeter (ECAL), the hadronic calorimeter (HCAL) and the muon stations (M1-M5). }
  \label{fig:lhcb_detector}
 \end{figure}
 
 
-\textbf{VErtex LOcator (VELO) \cite{bib:velo} :} Velo picks out B mesons from the multitude of other particles produced. This is a complex task since B mesons have very short livetimes spent colse to the beam. The VELO's silicon detecor elements must be placed at a distance of just five milimetres to the interaction point. To prevent damage to the detector during beam injection and stabilization it is mechanically moved to a safe distance. Velo measures B mesons indirectly be detecting its decay particles, nevertheless it has a resolution of $\SI{10}{microns}$. . \\
-\textbf{Ring Imaging Cherenkov (RICH) detectors \cite{bib:rich} :} The RICH detectors meeasure the emission of Cherenkov radiation, which happens when a charged particle passes through a medium faster than light does. It is a similar effect like the sonic boom a aircraft produces by breaking the sound barrier. The shape of the light cone depends on the particle's velocity, enabling the detector to determine its speed.  \\
-\textbf{Magnet \cite{bib:mag} :} The big magnet of the LHCb experiment weights 27 tonnes ands is mounted inside a 1,450 tonne steel frame. This powerful magnet forces all charged particels to change there trajectory. By examining the curvature of the path one can calculate its momentum.  \\
+\textbf{VErtex LOcator (VELO) \cite{bib:velo} :} Velo picks out B mesons from the multitude of other particles produced. This is a complex task since B mesons have very short livetimes spent colse to the beam. The VELO's silicon detecor elements must be placed at a distance of just five milimetres to the interaction point. To prevent damage to the detector during beam injection and stabilization it is mechanically moved to a safe distance. Velo measures B mesons indirectly be detecting its decay particles, nevertheless it has a resolution of $\SI{10}{microns}$.\\
+\textbf{Ring Imaging Cherenkov (RICH) detectors \cite{bib:rich} :} The RICH detectors meeasure the emission of Cherenkov radiation, which happens when a charged particle passes through a medium faster than light does. It is a similar effect like the sonic boom a aircraft produces by breaking the sound barrier. The shape of the light cone depends on the particle's velocity, enabling the detector to determine the speed of a charged particle.  \\
+\textbf{Magnet \cite{bib:mag} :} The big magnet of the LHCb experiment weights 27 tonnes and is mounted inside a 1,450 tonne steel frame. This powerful magnet forces all charged particels to change there trajectory. By examining the curvature of the path one can calculate the momentum of the particle.  \\
 \textbf{Trackers \cite{bib:trac} :} The LHCb's tracking system consists of a series of four large rectangular stations, each covering an area of $\SI{40}{m^2}$. While flying through this area charged particles will leave a trace, therefor one can estimate the trajectory of a particle. The trajectory is used to link the signals left in other detecor elements to the corresponding particle. In LHCb two different tracker technologies are used: The silicon tracker placed close to the beam pipe, uses silicon microstripes. If a charged particle passes such a stripe it collides with the silicon atoms, liverating electrons and creating an electric current, which is then recorded. The outer tracker situated further from the beam pipe consists of gas-filled tubes. The gas ionizes when a charged particle hits a gas molecules, producing electrons. These reach an anode wire situated in the centre of each tube. The position of the track is found by timing how long it takes electrons to reach it. \\
-\textbf{Calorimeters \cite{bib:calo} :} Calorimeters stop particles as they pass through, measuring the amount of energy lost. In LHCb there are two different types: The elctromagnetic calorimeter responsible for light particles like electrons and photons and the hadronic calorimeter responsible for heavier particles containing quarks. Both have a sandwich-like structure, with alternating layers of metal and plastic plates. If a particles hits a metal plate it produces a shower of secondary particles. These will excite polystyrenne molecules in the plastic plates, which then emit ultraviolet light. The energy lost by the particle in the metal plate is propoertional to the amount of UV light produced in the platic plates. \\
-\textbf{Muon System \cite{bib:muonSys} :} The muon system consistes of 5 rectangular stations, which cover an area of $\SI{435}{m^2}$. Each station has chambers filled with three gases: carbon dioxide, argon and tetrafluoromethane. Passing muons react with the mixture and electrodes detect the result.
+\textbf{Calorimeters \cite{bib:calo} :} Calorimeters stop particles as they pass through, measuring the amount of energy lost. In LHCb there are two different types: The elctromagnetic calorimeter responsible for light particles like electrons and photons and the hadronic calorimeter responsible for heavier particles containing quarks. Both have a sandwich-like structure, with alternating layers of metal and plastic plates. If a particles hits a metal plate it produces a shower of secondary particles. These will excite polystyrenne molecules in the plastic plates, which then emit ultraviolet light. The energy lost by the particle in the metal plate is proportional to the amount of UV light produced in the plastic plates. \\
+\textbf{Muon System \cite{bib:muonSys} :} The muon system consistes of 5 rectangular stations, which cover an area of $\SI{435}{m^2}$. Each station has chambers filled with three gases: carbon dioxide, argon and tetrafluoromethane. Passing muons react with the gas mixture and electrodes detect the result.
 
 
 \subsection{The LHCb trigger system}
-The rate of events at the LHCb interaction point is $\SI{40}{MHz}$. But the rate to have a B meson contained in the detector is $\SI{15}{kHz}$. But the offline computing power just allows $\SI{2}{kHz}$ to be recorded. The LHCb trigger system aims to 'fill' this $\SI{2}{kHz}$ with intresting B decays and important control decays like $J/ \psi$ decays. The trigger has two levels: \\
+The rate of events at the LHCb interaction point is $\SI{40}{MHz}$. But the rate to have a B meson contained in the detector is $\SI{15}{kHz}$. The offline computing power just allows $\SI{2}{kHz}$ to be recorded. The LHCb trigger system aims to 'fill' this $\SI{2}{kHz}$ with intresting B decays and important control decays like $J/ \psi$ decays \cite{bib:JPsi}. The trigger has two levels: \\
 The \textbf{Level Zero (L0)} trigger reduces the beginning $\SI{40}{MHz}$ to $\SI{1}{MHz}$. To get this high rate it can only rely on fast sub-detectors as the calorimeters and the muon system. The L0 trigger looks for events with high transverse momentum with respect to the patrticle beam axis (pT), because particles from a B decay have this attribute, since B Mesons are always produced almost parallel to the beam axis.
 In addition the L0 trigger performs a simplified vertex reconstruction with the signal of two silicon layers of the VELO to identifie events with multple proton-proton collisions. They are rejected because for this kind of events its much more difiicult to reconstruct B meson decays, since it is harder to distinguish primary and secondary vertex of the B decay. \\
 The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 1000 16-core computers. It has two stages: HLT1 which reduces the event rate to a few tens of kHz and HLT2 which reduces the rate to the $\SI{2}{kHz}$ which are recorded. HLT1 gets all the candidates of the L0 trigger and uses the full detector information on them to search for particles with a high impact parameter with respect the proton-proton collision. These particles are most likly decay products from B mesons, because of its relatively long life-time. They typically fly 1 cm away from the collision before decaying resulting in a high impact parameter for the decay products. HLT2 does a complete reconstruction of the events. It starts with the track of the VELO and connects them to the tracks in the other sub-detectors. Most important are displaced vertices, since they are strong indicator for B decays. The selection is devided into two parts. The inclusive selection searches for resonance decays like $D^*$ or $J/ \psi$. The exclusive selection is desigened to provide the highest possible efficiency to fully reconstruct B decays of interest. It therfor uses all information available such as mass and vertex quality and intermediate resonances.
@@ -316,17 +317,17 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
 
  \section{The $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
 
-This section describes the motivation to analyze this decay, then the operators needed to calculate the different couplings are derived and in the last section the effetive Wilson coefficients are derived. This section is mostly theoretical and should give an overview over the decay.
+This section describes the motivation to analyse this decay, then the operators needed to calculate the different couplings are derived and in the last section the effetive Wilson coefficients are derived. This section is mostly theoretical and should give an overview over the decay.
 
- \subsection{Motivation to analyze $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays} \label{sec:Motivation}
+ \subsection{Motivation to analyse $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays} \label{sec:Motivation}
 
  In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
  \begin{equation}
    \begin{split}
    R_{K*0} &= \left. \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} \mu^+ \mu^-)}{\mathcal{B}(B^0 \rightarrow K^{*0} J/\psi(\rightarrow \mu^+ \mu^-))} \middle/   \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} e^+ e^-)}{\mathcal{B} ( B^0 \rightarrow K^{*0} J/\psi(\rightarrow e^+ e^-))}  \right. , \\
    R_{K*0} &=   \begin{cases}
-     0.66^{+0.11}_{-0.07} (\text{stat}) \pm 0.03 (\text{syst}) \text{for} 0.045 < q^2 < 1.1 \text{GeV}^2/c^4, \\
-     0.69^{+0.11}_{-0.07} (\text{stat}) \pm 0.05 (\text{syst}) \text{for} 1.1 < q^2 < 6.0 \text{GeV}^2/c^4.
+     0.66^{+0.11}_{-0.07} (\text{stat}) \pm 0.03 (\text{syst}) \text{for} 0.045 < q^2 < 1.1 \text{ GeV}^2/c^4, \\
+     0.69^{+0.11}_{-0.07} (\text{stat}) \pm 0.05 (\text{syst}) \text{for} 1.1 < q^2 < 6.0 \text{ GeV}^2/c^4.
  \end{cases}
  \end{split}
  \end{equation}
@@ -336,12 +337,12 @@ This section describes the motivation to analyze this decay, then the operators 
 
  \subsection{Kinematics} \label{sec:Kinematics}
  In this section the decay itself and its kinematics are explained:
- The Decay is a flavor changing neutral current (FCNC) with four charged particles in the final state. The FCNC is a current, which changes the falvor of a fermion without changing its electric charge. The four particles in the final stage are:  \\
+ The Decay is a flavor changing neutral current (FCNC) with four charged particles in the final state. The FCNC is a current, which changes the flavor of a fermion without changing its electric charge. The four particles in the final stage are:  \\
  The $K^+$ and $\pi^-$ from the $K^{*}$ decay and two leptons from the loop or box diagrams:
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\linewidth]{KstarFeynman}
-  \caption{Feynman diagrams for decay $B(\bar{b},d)$ $\rightarrow$ $ K^*(\bar{s},d) l^+$ $\l^-$ at lowest order}
+  \caption{Feynman diagrams for decay $B(\bar{b},d)$ $\rightarrow$ $ K^*(\bar{s},d) l^+$ $l^-$ at lowest order}
   \label{fig:Feynman}
  \end{figure}
  The kinematics of the decay are defined by the three angels $\theta_K$, $\theta_L$ and $\phi$, shown in figure \ref{fig:angels} and the invariant di-muon mass square $q^2$.
@@ -367,7 +368,7 @@ The differential decay rate for the $B^0$ Meson can be expressed in terms of the
  For completness the next two sections desribe some of the theory concerning the decay: The operators and wilson coefficients.
 
  \subsection{Operators for $B \rightarrow X_s l^+l^-$ decays}
- In this section all the operators of the decay are derived from the effective Lagrangian. the operators in Quantum field theory are used to create or destroy particles, by applying them to a quantum field. This section should just give an overview if you need more detailed information consider reading \cite{bib:Operators}. \\
+ In this section all the operators of the decay are derived from the effective Lagrangian. the operators in Quantum field theory are used to create or destroy particles, by applying them to a quantum field. This section should just give an overview if you need more detailed information consider reading reference \cite{bib:Operators}. \\
  The effective Lagrangian for $B \rightarrow X_s l^+l^-$ decays has the form:
  \begin{align}
   \mathcal{L}_{eff} & = \mathcal{L}_{QCD,QED}(u,d,s,c,b,e,\mu,\tau) \notag                                                                                           \\
@@ -404,14 +405,14 @@ The differential decay rate for the $B^0$ Meson can be expressed in terms of the
  The effective Hamiltonian for $b \rightarrow s \mu^+ \mu^- $ transitions can be written as:
 
  \begin{align}
-  H_{eff} = - \frac{4 G_F}{\sqrt{2}} \left(\lambda_t H_eff^{(t)} + \lambda_u H_{eff}^(u) \right) \label{eq:H}
+  H_{eff} = - \frac{4 G_F}{\sqrt{2}} \left(\lambda_t H_{eff}^{(t)} + \lambda_u H_{eff}^{(u)} \right) \label{eq:H}
  \end{align}
  The $\lambda_i$ can be expressed with CKM combinations $\lambda_i = V_{ib}V_{is}^*$.
  \begin{align}
   H_{eff}^{(t)} & = C_1 \mathcal{O}_1^c + C_2 \mathcal{O}_2^C + \sum_{i=3}^6 C_i \mathcal{O}_i + \sum_{i=7,8,9,10,P,S} (C_i \mathcal{O}_i + C_i' \mathcal{O}_i') \label{eq:H(t)} \\
   H_{eff}^{(u)} & = C_1 ( \mathcal{O}_1^C - \mathcal{O}_1^u) + C_2 (\mathcal{O}_2^C - \mathcal{O}_2^u). \label{eq:H(u)}
  \end{align}
- The contribution of $H_{eff}^{(u)}$ has a double Cabibbo supression and is therfore usually dropped. It is kept here since it is sensitive to complex phases of decay amplitudes. The operators $P_{i \leq 6}$ are the same as for general $B \rightarrow X_s l^+l^-$ decays, see equation \ref{eq:P}.
+ The contribution of $H_{eff}^{(u)}$ has a double Cabibbo supression and is therfore usually dropped. It is kept here since it is sensitive to complex phases of decay amplitudes. The operators $\matchal{O}_{i \leq 6}$ are the same as for general $B \rightarrow X_s l^+l^-$ decays, see equation \ref{eq:P}.
  The remaining ones are given by:
  \begin{equation}
   \begin{split}
@@ -457,7 +458,7 @@ The differential decay rate for the $B^0$ Meson can be expressed in terms of the
    &+ \frac{4}{3} C_3 + \frac{64}{9} C_5 + \frac{64}{27} C_6 .
   \end{split}env
  \end{equation}
- The function $h(q^2,m_q)$ comes from the fermion loop and for completness is presented in equation \ref{eq:h(q2,m)} below. If you need more details consider reading \cite{bib:Wilson}.
+ The function $h(q^2,m_q)$ comes from the fermion loop and for completness is presented in equation \ref{eq:h(q2,m)} below. If you need more details consider reading reference \cite{bib:Wilson}.
  \begin{align}
   h(q^2,m_q)                                            & = - \frac{4}{9} \left(\ln{\frac{m_q^2}{\mu^2}} - \frac{2}{3} - z \right) - \frac{4}{9}(2+z) \sqrt{|z-1|}  \cdot  \begin{cases}
   \arctan{\frac{1}{\sqrt{z-1}}}                         & z > 1                                                                                                                          \\
@@ -508,11 +509,10 @@ In particle physics the first step of each analysis is to clean up the data. Tha
 \end{itemize}
 The names in the bracets are the labels given to these parameters in the data structure of the ROOT Data Anlysis Framework \cite{bib:root}.
 Now one needs thresholds on these parameters, which define the signal-region. For example the flight distance has to be between 0.2 milimeters and 2 centimeters. But how do you obtain these thresholds? Thats were Classifiers are usefull. Classifiers are a type of algorithm from the Machine Learning area. They can be trained to distinguish different types of data. In this case signal and background. Each event in the data gets a probability to be signal assigend to it. So after the classification one can just take all the events with a probability over lets say 80\%. One has now eliminated 80\% of the background and can continue cleaning up the signal but thats not a part of this thesis. The goal of this part was to find the best classifier to be used in the  $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay analysis. \\
-
-Seven different classifiers were tested. A test means that the classifier is given a training set consisting of Monte arlo simulated events containing only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays and randomly choosen real detector data, containing all kinds of decays. In a training set the data is labeled. The Monte Carlo events are labeld with $1$ for signal and the real data with $0$ for background. The classifier will now train, that means the algorithm tries to label the data into signal and background by choosing different thresholds on the parameters mentioned above. After the training the thresholds get fixed. Now one has to test the classifer to check if everything worked fine. To do so a second set of data is prepared similar to the training set, just that the labels are now hidden from the classifier. Since the classifiers are not perfect, they do not assign $0$ and $1$ to each event but rather a probability to bi signal between 0 and 1. A good classifier will now label the signal events with a high probabilityand background with a low probabillity. A bad classifier will assign 0.5 probabilityto each event.
-With a 0.5 probability no information was gained by classification, because having a 50:50 chance is as good as guessing. This probability assignements can now be used as a threshold themselves. \\
+Seven different classifiers were tested. A test means that the classifier is given a training set consisting of Monte Carlo simulated events containing only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays and randomly choosen real detector data, containing all kind of decays. In a training set the data is labeled. The Monte Carlo events are labeld with $1$ for signal and the real data with $0$ for background. The classifier will now train, that means the algorithm tries to label the data into signal and background by choosing different thresholds on the parameters mentioned above. After the training the thresholds get fixed. Now one has to test the classifer to check if everything worked fine. To do so a second set of data is prepared similar to the training set, just that the labels are now hidden from the classifier. Since the classifiers are not perfect, they do not assign $0$ and $1$ to each event but rather a probability to be signal between 0 and 1. A good classifier will now label the signal events with a high probability and background with a low probabillity. A bad classifier will assign 0.5 probability to each event.
+With a 0.5 probability no information was gained by classification, because having a 50:50 chance is as good as guessing. This probability assignements can now be used as a threshold themselves to subtract the background. \\
 Another property of classifiers is, that the data used in the training, can no longer be used in the analysis, because the classifier knows the training set too well and a bias is introduced if one reuses the training data in the actual analysis. That would mean that the part of the real detector data which is needed to train the classifiers would be lost for further analysis. To avoid such a waste of data a technique called k-folding is used. \\
-K-folding means that the no training set is created. But the data Monte Carlo Mix with signal events and all kinds of other events is split into k equal parts. Now to classify one part all the other parts are used for training. After iterating over all parts, one has classified all the data without loosing any. The only disadvantage are the addidtional computer resources needed, since the classifier has now to be trained k times instead of one time.
+K-folding means that the no training set is created. But the data Monte Carlo Mix with signal events labeled with 1 and background events labeled with 0 is split into k equal parts. Now to classify one part all the other parts are used for training, while the labels of the one part are of course hidden. After iterating over all parts, one has classified all the data without loosing any. The only disadvantage are the addidtional computer resources needed, since the classifier has now to be trained k times instead of one time.
 
  The following list of classifers where tested and compared in terms of perfomance:
  \begin{itemize}
@@ -535,7 +535,7 @@ The sample of 40000 events to test the classifiers was cut into ten equal parts,
   \caption{ROC curve of the first fold. One can see that all the classifiers are competetive in terms of classifing correctly}
   \label{fig:roc}
  \end{figure}
- The next step is to check for correlations between the assigned probabilities and the kinematic variables. The kinematic variabels as explained in section \ref{sec:Kinematics} are used to obtain the angular coefficients of the decay rate. If there is a correlation between the assigned probabilities from the classifier and these variables, a peak is artificialy added into the distribution of these variables. Imagine a positive correlation between the $B$ mass in the range 5000 to 6000 GeV and the probability to bi signal. After cutting at lets say 0.8 probability there will be a peak in the B mass distribution between 5000 and 6000 GeV. Normally such a peak suggest a new particle in this range. This is to avoid at all cost since it will compremise the whole analysis later on. \\
+ The next step is to check for correlations between the assigned probabilities and the kinematic variables. The kinematic variabels as explained in section \ref{sec:Kinematics} are used to obtain the angular coefficients of the decay rate. If there is a correlation between the assigned probabilities from the classifier and these variables, a peak is artificialy added into the distribution of these variables. Imagine a positive correlation between the $B$ mass in the range 5000 to 6000 GeV and the probability to be signal from the classifier. After cutting at lets say 0.8 probability there will be a peak in the B mass distribution between 5000 and 6000 GeV. Normally such a peak suggest a new particle in this range. This is to avoid at all cost since it will compremise the whole analysis later on. \\
 In the following the correlation between the probability to be signal assigned by the classifier and the $B$ mass are shown. The correlation plots for the other kinematic variables can be found in appendix \ref{app:corr}.
 
 
@@ -549,53 +549,53 @@ In the following the correlation between the probability to be signal assigned b
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/AdaBoost_plot_bdt_vs_B0_M}
-  \caption{This plot showes the probabilities assign by the classifier as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the classifiers probabilities and the $B$ mass for the AdaBoost classifier. There is a obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot showes the probabilities assign by the classifier as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the classifiers probabilities and the $B$ mass for the AdaBoost classifier. There is an obvius correlation from the second bin to the fourth bin.}
   \label{fig:AdaB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/sk_bdt_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt classifier and the $B$ mass. There is no correlation.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt classifier and the $B$ mass in MeV. There is no correlation.}
   \label{fig:skbdtB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/sk_bdtg_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg classifier and the $B$ mass. There is a obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg classifier and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:skbdtgB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uBoost_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uBoost classifier and the $B$ mass. There is just a very small correlation compared to other classifiers.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uBoost classifier and the $B$ mass in MeV. There is just a very small correlation compared to other classifiers.}
   \label{fig:uBoostB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uGB+FL_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL classifier and the $B$ mass. There is a obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL classifier and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.}
   \label{fig:uGB+FLB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uGB+knnAda_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda classifier and the $B$ mass. There is a obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda classifier and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:uGB+knnAdaB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/xgb_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the xgb classifier and the $B$ mass. There is a obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the xgb classifier and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.}
   \label{fig:xgbB0M}
  \end{figure}
 
- The two classifers with the least correlation are the sk\_bdt and the uBoost classifers. Therfore they could be used to do seperate between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data.
+ The two classifers with the least correlation are the sk\_bdt and the uBoost classifers. Therfore they could be used to do seperate between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data. But the uBoost classifer is a little bit better in the ROC curve (figure \ref{fig:roc}).
 
 
 
@@ -603,12 +603,12 @@ In the following the correlation between the probability to be signal assigned b
 
  % The infomation needed in an analysis is not all contained inside the data. For example efficiencies can not be recorded by a detector. But they can be simulated by a Monte Carlo simulation of the particle decay. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data.
 
-Reweighting is method to matchh the Monte Carlo data to the real detector data, to extract quantities not measurable by the detector like efficiencies. The match is done by applying weights to the Monte Carlo events. \\
-As an initial weight the sWeights see equation \ref{eq:sWeight} are used. he parameters used for reweighting are applied in the following order:
+Reweighting is a method to match the Monte Carlo data to the real detector data, to extract quantities not measurable by the detector itself like efficiencies. The match is done by applying weights to the Monte Carlo events. \\
+As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The parameters used for reweighting are applied in the following order:
 \begin{itemize}
   \item number of tracks: 'nTracks'
   \item transversal momentum of the $B$ Meson: '$B$ $p_T$'
-  \item quality of the $K \pi \mu \mu$ vertex.
+  \item quality of the $K \pi \mu \mu$ vertex. 'B vertex $\chi^2$'
 \end{itemize}
 The new weights derived by the difference in data and simulation of these parameters for the very clean channel $K^* \rightarrow J/ \Psi K^{*}$ \cite{bib:JPsi}, are used to reweight the $B \rightarrow K^* \mu \mu$ Monte Carlo sample.
 
@@ -674,12 +674,12 @@ Consider a variable x which can be expressed as a function of the discriminating
  \begin{align}
   P_n(y_i) = \frac{N_n f_n(y_i)}{\sum_{k=1}^{N_s} N_k f_k(y_i)} \label{eq:P_n}
  \end{align}
- Therefore $N_n \tilde{M}_n (\bar{x})$ i sthe x-distribution of the plotted events, using the weights of eq \ref{eq:P_n}.
+which leads the the x-distribution $\tilde{M}_n$ defined by:
  \begin{align}
   N_n \tilde{M}_n (\bar{x}) = \sum_{i \subset \delta x} P_n (y_i) \label{eq:Mn}
  \end{align}
  where sum $\sum_{i \subset \delta x}$ contains alle events for which $x_i$ lies in the interval centered on $\bar{x}$ and of total width $\delta x$.
- Therefor $N_n \tilde{M}_n (\bar{x}) \delta x$ is the x-distribution of the histogrammed events, using the weights of eq \ref{eq:P_n}.
+ Therefore $N_n \tilde{M}_n (\bar{x}) \delta x$ is the x-distribution of the histogrammed events, using the weights of eq \ref{eq:P_n}.
  With this procedure one can on average reproduce the true distribution $\textbf{M}_n(x)$. One can even replace the sum in eq \ref{eq:Mn} by an integral:
  \begin{align}
   \left \langle \sum_{i \subset \delta x} \right \rangle \rightarrow \int dy \sum_{j=1}^{N_s} N_j f_j (y) \delta (x(y) - \bar{x}) \delta x \label{eq:average}
@@ -691,8 +691,8 @@ Consider a variable x which can be expressed as a function of the discriminating
                                             & = N_n \int dy \delta (x(y) - \bar{x}) f_n (y)                                                                        \\
                                             & = N_n \textbf{M}_n(\bar{x}) \label{eq:N_nM_n}
  \end{align}
- One can see that the sum over enents of the naive weight $P_n$ provides a direct estimate of the x-distribution for the nth type.
- But this procedure has a major drawback. Since x is correlated to y, the PDFs of x enter implicity in the definition of the naive weight. Therefore the $\tilde{M}_n$ distributions are a bad estimate for the quality of the fit.These distributions are biased in a difficult way, when the PDFs $f_i(y)$ are not accurate. \\
+ One can see that the sum over events of the naive weight $P_n$ provides a direct estimate of the x-distribution for the nth type.
+ But this procedure has a major drawback. Since x is correlated to y, the PDFs of x enter implicity in the definition of the naive weight. Therefore the $\tilde{M}_n$ distributions are a bad estimate for the quality of the fit. These distributions are biased in a difficult way, when the PDFs $f_i(y)$ are not accurate. \\
  Consider for example a data sample where one of the types has events on the tail of the x-distribution. Such events require the true distribution to account for the tail. But since the events are averaged the weights on the tail are going to be very small missing those events in the estimated true distribution.
  Only the core of the x-distribution can be examined with $_{in} Plots$.
 
@@ -700,7 +700,7 @@ Consider a variable x which can be expressed as a function of the discriminating
  \subsubsection{$_{S} Plot$ technique}
  In the previous section it was shown that if a variable x belongs to a set y of discriminating varibales, the expected x distribution can be reconstruct.
  Consider now two sets of variables $x$ and $y$, where x does not belong to y and which are uncorrelated , hence the total PDFs $f_i (x,y)$ all factorize into products $\textbf{M}_i (x) f_i(y)$.
- The equation \ref{eq:N_nM_n} does not hold anymore because, when summing over the events the x-PDFs $\textbf{M}_j(x)$ appear:
+ The equation \ref{eq:N_nM_n} does not hold anymore because, when summing over the events the x-PDFs $\textbf{M}_j(x)$ appears:
 
  \begin{align}
   \langle N_n \rangle \tilde{M}_n (\bar{x}) & = \int \int dy dx \sum_{j=1}^{N_s} N_j \textbf{M}_j (x) f_j (y) \delta (x- \bar{x}) P_n \label{eq:M_nX}                    \\

@@ -7,11 +7,11 @@
 \contentsline {subsection}{\numberline {2.1}Monte Carlo Markov Chain (MCMC)}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Metropolis Hastings algorithm}{4}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Features}{5}{subsection.2.3}
-\contentsline {section}{\numberline {3}The LHCb Experiment}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}The LHCb Detector}{9}{subsection.3.1}
+\contentsline {section}{\numberline {3}The LHCb Experiment}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}The LHCb Detector}{10}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}The LHCb trigger system}{11}{subsection.3.2}
 \contentsline {section}{\numberline {4}The $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ decay}{12}{section.4}
-\contentsline {subsection}{\numberline {4.1}Motivation to analyze $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ decays}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Motivation to analyse $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ decays}{12}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Kinematics}{12}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Operators for $B \rightarrow X_s l^+l^-$ decays}{14}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Wilson coefficients}{14}{subsection.4.4}
