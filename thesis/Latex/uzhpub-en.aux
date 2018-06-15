@@ -22,7 +22,7 @@
 \@writefile{lof}{\select@language{english}}
 \@writefile{lot}{\select@language{english}}
 \citation{bib:Minuit}
-\citation{bib:Minuit}
+\citation{bib:root}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}New fitting routine}{2}{subsection.1.1}}
 \citation{bib:root}
@@ -37,27 +37,27 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:MCMC}{{1}{4}{Illustration of states and the probability distribution to change or the stay in a state of a Monte Carlo Markov Chain. In state A there is a 0.3 probability to change into state B and a 0.7 probability to stay in state A.\relax }{figure.caption.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Metropolis Hastings algorithm}{4}{subsection.2.2}}
-\newlabel{eq:r(x,y)}{{1}{4}{Metropolis Hastings algorithm}{equation.2.1}{}}
-\newlabel{eq:matrix}{{3}{4}{Metropolis Hastings algorithm}{equation.2.3}{}}
+\newlabel{eq:r(x,y)}{{3}{4}{Metropolis Hastings algorithm}{equation.2.3}{}}
+\newlabel{eq:matrix}{{5}{5}{Metropolis Hastings algorithm}{equation.2.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Features}{5}{subsection.2.3}}
 \newlabel{sec:features}{{2.3}{5}{Features}{subsection.2.3}{}}
-\newlabel{eq:gausspdf}{{4}{5}{Features}{equation.2.4}{}}
+\newlabel{eq:gausspdf}{{6}{5}{Features}{equation.2.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Fit of double gaus pdf (see equation \ref  {eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu _1 = 4$, $\sigma _1 = 1$, $\mu _2 = -2$, $\sigma _2 = 1.5$ and the fraction $f = 0.5$. The Minuit fit fails, because of a random error. The fits gets right if the starting values for the parameters are changed.\relax }}{5}{figure.caption.2}}
 \newlabel{fig:twogaus}{{2}{5}{Fit of double gaus pdf (see equation \ref {eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu _1 = 4$, $\sigma _1 = 1$, $\mu _2 = -2$, $\sigma _2 = 1.5$ and the fraction $f = 0.5$. The Minuit fit fails, because of a random error. The fits gets right if the starting values for the parameters are changed.\relax }{figure.caption.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Terminal output of the RooMCMarkovChain fit.\relax }}{6}{figure.caption.3}}
-\newlabel{fig:terminal}{{3}{6}{Terminal output of the RooMCMarkovChain fit.\relax }{figure.caption.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Profile of the negative log lilihood function for $\mu _2$ in equation \ref  {eq:gausspdf}. There is a local minimum at the nll value of 2600.\relax }}{6}{figure.caption.4}}
-\newlabel{fig:profile}{{4}{6}{Profile of the negative log lilihood function for $\mu _2$ in equation \ref {eq:gausspdf}. There is a local minimum at the nll value of 2600.\relax }{figure.caption.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Walk distribution of $\mu _2$ in equation \ref  {eq:gausspdf}. The red points are not considered for the error calculation.\relax }}{7}{figure.caption.5}}
-\newlabel{fig:walkDis}{{5}{7}{Walk distribution of $\mu _2$ in equation \ref {eq:gausspdf}. The red points are not considered for the error calculation.\relax }{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Walk distribution of $\mu _2$ in equation \ref  {eq:gausspdf} as a histogramm.\relax }}{7}{figure.caption.6}}
-\newlabel{fig:walkDisHis}{{6}{7}{Walk distribution of $\mu _2$ in equation \ref {eq:gausspdf} as a histogramm.\relax }{figure.caption.6}{}}
-\citation{bib:lhc_img}
-\citation{bib:lhc_img}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Scatterplot between $\mu _1$ and $\mu _2$ in equation \ref  {eq:gausspdf}.\relax }}{8}{figure.caption.7}}
-\newlabel{fig:scatter}{{7}{8}{Scatterplot between $\mu _1$ and $\mu _2$ in equation \ref {eq:gausspdf}.\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Terminal output of the RooMCMarkovChain fit. Note that RooMCMarkovChain confused the two means, because for the algorithm the two pdfs are equal.\relax }}{6}{figure.caption.3}}
+\newlabel{fig:terminal}{{3}{6}{Terminal output of the RooMCMarkovChain fit. Note that RooMCMarkovChain confused the two means, because for the algorithm the two pdfs are equal.\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Profile of the negative log lilihood function for $\mu _2 = mean2$ in equation \ref  {eq:gausspdf}. There is a local minimum at the nll value of 2600, because the chain stoped going downwards.\relax }}{7}{figure.caption.4}}
+\newlabel{fig:profile}{{4}{7}{Profile of the negative log lilihood function for $\mu _2 = mean2$ in equation \ref {eq:gausspdf}. There is a local minimum at the nll value of 2600, because the chain stoped going downwards.\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Walk distribution of $\mu _2 = mean2$ in equation \ref  {eq:gausspdf}. The red points are not considered for the error calculation, the number of points beeing cut of is defined by the user.\relax }}{7}{figure.caption.5}}
+\newlabel{fig:walkDis}{{5}{7}{Walk distribution of $\mu _2 = mean2$ in equation \ref {eq:gausspdf}. The red points are not considered for the error calculation, the number of points beeing cut of is defined by the user.\relax }{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Walk distribution of $\mu _2 = mean2$ in equation \ref  {eq:gausspdf} as a histogramm.\relax }}{8}{figure.caption.6}}
+\newlabel{fig:walkDisHis}{{6}{8}{Walk distribution of $\mu _2 = mean2$ in equation \ref {eq:gausspdf} as a histogramm.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Scatterplot between $\mu _1$ and $\mu _2$ in equation \ref  {eq:gausspdf}. The round shape states that there is no correlation between the two parameters.\relax }}{8}{figure.caption.7}}
+\newlabel{fig:scatter}{{7}{8}{Scatterplot between $\mu _1$ and $\mu _2$ in equation \ref {eq:gausspdf}. The round shape states that there is no correlation between the two parameters.\relax }{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}The LHCb Experiment}{8}{section.3}}
 \newlabel{sec:LHCb}{{3}{8}{The LHCb Experiment}{section.3}{}}
+\citation{bib:lhc_img}
+\citation{bib:lhc_img}
 \citation{bib:lhcb_detector}
 \citation{bib:lhcb_detector}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces CERN's Accelerator Complex.\cite  {bib:lhc_img} The protons get injected in the lineare accelerator LINAC2. Then they get pre-accelerated in 3 synchrotons (BOOSTER,PS,SPS) where the protons reach a kinetic energy of 450 GeV. That is the entering energy of the LHC which accelerates them futher up to 7 TeV, before they collide at the four detectors: CMS, ATLAS, LHCb and ALICE.\relax }}{9}{figure.caption.8}}
@@ -79,23 +79,23 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Kinematics}{12}{subsection.4.2}}
 \newlabel{sec:Kinematics}{{4.2}{12}{Kinematics}{subsection.4.2}{}}
 \citation{bib:Minuit}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Feynman diagrams for decay $B_d$ $\rightarrow $ $\mu ^+$ $\mu ^-$ at lowest order\relax }}{13}{figure.caption.10}}
-\newlabel{fig:Feynman}{{10}{13}{Feynman diagrams for decay $B_d$ $\rightarrow $ $\mu ^+$ $\mu ^-$ at lowest order\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Feynman diagrams for decay $B(\bar {b},d)$ $\rightarrow $ $ K^*(\bar {s},d) l^+$ $\l ^-$ at lowest order\relax }}{13}{figure.caption.10}}
+\newlabel{fig:Feynman}{{10}{13}{Feynman diagrams for decay $B(\bar {b},d)$ $\rightarrow $ $ K^*(\bar {s},d) l^+$ $\l ^-$ at lowest order\relax }{figure.caption.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces kinematic variables of the decay $B^0$ $\rightarrow $ $K^{*0}$ $\mu $ $\mu $\relax }}{13}{figure.caption.11}}
 \newlabel{fig:angels}{{11}{13}{kinematic variables of the decay $B^0$ $\rightarrow $ $K^{*0}$ $\mu $ $\mu $\relax }{figure.caption.11}{}}
-\newlabel{eq:diff_decay_rate}{{6}{13}{Kinematics}{equation.4.6}{}}
+\newlabel{eq:diff_decay_rate}{{8}{13}{Kinematics}{equation.4.8}{}}
 \citation{bib:Operators}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Operators for $B \rightarrow X_s l^+l^-$ decays}{14}{subsection.4.3}}
-\newlabel{eq:La}{{7}{14}{Operators for $B \rightarrow X_s l^+l^-$ decays}{equation.4.7}{}}
-\newlabel{eq:P}{{8}{14}{Operators for $B \rightarrow X_s l^+l^-$ decays}{equation.4.8}{}}
+\newlabel{eq:La}{{9}{14}{Operators for $B \rightarrow X_s l^+l^-$ decays}{equation.4.9}{}}
+\newlabel{eq:P}{{10}{14}{Operators for $B \rightarrow X_s l^+l^-$ decays}{equation.4.10}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Wilson coefficients}{14}{subsection.4.4}}
-\newlabel{eq:H}{{9}{14}{Wilson coefficients}{equation.4.9}{}}
-\newlabel{eq:H(t)}{{10}{15}{Wilson coefficients}{equation.4.10}{}}
-\newlabel{eq:H(u)}{{11}{15}{Wilson coefficients}{equation.4.11}{}}
-\newlabel{eq:P2}{{12}{15}{Wilson coefficients}{equation.4.12}{}}
+\newlabel{eq:H}{{11}{14}{Wilson coefficients}{equation.4.11}{}}
+\newlabel{eq:H(t)}{{12}{15}{Wilson coefficients}{equation.4.12}{}}
+\newlabel{eq:H(u)}{{13}{15}{Wilson coefficients}{equation.4.13}{}}
+\newlabel{eq:P2}{{14}{15}{Wilson coefficients}{equation.4.14}{}}
 \citation{bib:Wilson}
 \citation{bib:root}
-\newlabel{eq:h(q2,m)}{{16}{16}{Wilson coefficients}{equation.4.16}{}}
+\newlabel{eq:h(q2,m)}{{18}{16}{Wilson coefficients}{equation.4.18}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Classifiers test}{16}{section.5}}
 \newlabel{sec:clas}{{5}{16}{Classifiers test}{section.5}{}}
 \citation{bib:AdaBoost}
@@ -125,28 +125,29 @@
 \@writefile{toc}{\contentsline {section}{\numberline {6}Reweighting}{21}{section.6}}
 \newlabel{sec:Reweight}{{6}{21}{Reweighting}{section.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Results of the $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ reweighting}{22}{subsection.6.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the weight best to reweight the Monte Carlo data to match the detector data. Thx X achsis show the values for the number of tracks in an event (nTracks). On the Left achsis the fraction of events having so many nTracks is given, for data and Monte Carlo. On the right achsis the magnitude of the weights is shown.\relax }}{22}{figure.caption.20}}
-\newlabel{fig:nTracksw}{{20}{22}{This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the weight best to reweight the Monte Carlo data to match the detector data. Thx X achsis show the values for the number of tracks in an event (nTracks). On the Left achsis the fraction of events having so many nTracks is given, for data and Monte Carlo. On the right achsis the magnitude of the weights is shown.\relax }{figure.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Same plot as in figure \ref  {fig:nTracksw}, for the transversal momentum of the $B-0$ meson (B0\_PT)\relax }}{22}{figure.caption.21}}
-\newlabel{fig:B0_PTw}{{21}{22}{Same plot as in figure \ref {fig:nTracksw}, for the transversal momentum of the $B-0$ meson (B0\_PT)\relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the best weights to reweight the Monte Carlo data in order to match the detector data. The x- axes are the values for the number of tracks in an event (nTracks). On the left y-axes the fraction of events having nTracks is plotted. On the right y-axes the magnitude of the weights is shown.\relax }}{22}{figure.caption.20}}
+\newlabel{fig:nTracksw}{{20}{22}{This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the best weights to reweight the Monte Carlo data in order to match the detector data. The x- axes are the values for the number of tracks in an event (nTracks). On the left y-axes the fraction of events having nTracks is plotted. On the right y-axes the magnitude of the weights is shown.\relax }{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Same plot as in figure \ref  {fig:nTracksw}, for the transversal momentum of the $B$ meson (B0\_PT) in MeV.\relax }}{22}{figure.caption.21}}
+\newlabel{fig:B0_PTw}{{21}{22}{Same plot as in figure \ref {fig:nTracksw}, for the transversal momentum of the $B$ meson (B0\_PT) in MeV.\relax }{figure.caption.21}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Same plot as in figure \ref  {fig:nTracksw}, for the quality of the $K \pi \mu \mu $ vertex (B0\_ENDVERTEX\_CHI2).\relax }}{23}{figure.caption.22}}
 \newlabel{fig:B0_ENDVERTEX_CHI2w}{{22}{23}{Same plot as in figure \ref {fig:nTracksw}, for the quality of the $K \pi \mu \mu $ vertex (B0\_ENDVERTEX\_CHI2).\relax }{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces This plots shows the distribution of the $B$ transversal momentum. The violet points represent the distribution in the detector data. In red is the distribution befor reweighting the Monte Carlo data and in blue is the distribution after reweighting the Monte Carlo data. The X achsis shows the $B$ transversal momentum (B0\_PT)\relax }}{23}{figure.caption.23}}
-\newlabel{fig:B0_PT}{{23}{23}{This plots shows the distribution of the $B$ transversal momentum. The violet points represent the distribution in the detector data. In red is the distribution befor reweighting the Monte Carlo data and in blue is the distribution after reweighting the Monte Carlo data. The X achsis shows the $B$ transversal momentum (B0\_PT)\relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces This plots shows the distribution of the $B$ transversal momentum. The X achsis shows the $B$ transversal momentum (B0\_PT) in MeV. The violet points represent the distribution of (B0\_PT) in the detector data. The red line represents the distribution of (B0\_PT) before reweighting the Monte Carlo data. The blue line represents the distribution (B0\_PT) after reweighting the Monte Carlo data. \relax }}{23}{figure.caption.23}}
+\newlabel{fig:B0_PT}{{23}{23}{This plots shows the distribution of the $B$ transversal momentum. The X achsis shows the $B$ transversal momentum (B0\_PT) in MeV. The violet points represent the distribution of (B0\_PT) in the detector data. The red line represents the distribution of (B0\_PT) before reweighting the Monte Carlo data. The blue line represents the distribution (B0\_PT) after reweighting the Monte Carlo data. \relax }{figure.caption.23}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}SPlot}{24}{subsection.6.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Likelihood method}{24}{subsubsection.6.2.1}}
-\newlabel{eq:L}{{17}{24}{Likelihood method}{equation.6.17}{}}
+\newlabel{eq:L}{{19}{24}{Likelihood method}{equation.6.19}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}$_{in} Plot$ technique}{24}{subsubsection.6.2.2}}
-\newlabel{eq:P_n}{{18}{24}{$_{in} Plot$ technique}{equation.6.18}{}}
-\newlabel{eq:Mn}{{19}{24}{$_{in} Plot$ technique}{equation.6.19}{}}
-\newlabel{eq:average}{{20}{25}{$_{in} Plot$ technique}{equation.6.20}{}}
-\newlabel{eq:N_nM_n}{{24}{25}{$_{in} Plot$ technique}{equation.6.24}{}}
+\newlabel{eq:P_n}{{20}{24}{$_{in} Plot$ technique}{equation.6.20}{}}
+\newlabel{eq:Mn}{{21}{24}{$_{in} Plot$ technique}{equation.6.21}{}}
+\newlabel{eq:average}{{22}{25}{$_{in} Plot$ technique}{equation.6.22}{}}
+\newlabel{eq:N_nM_n}{{26}{25}{$_{in} Plot$ technique}{equation.6.26}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}$_{S} Plot$ technique}{25}{subsubsection.6.2.3}}
-\newlabel{eq:M_nX}{{25}{25}{$_{S} Plot$ technique}{equation.6.25}{}}
+\newlabel{eq:M_nX}{{27}{25}{$_{S} Plot$ technique}{equation.6.27}{}}
 \citation{bib:sPlot}
+\citation{bib:pull}
+\newlabel{eq:sWeight}{{38}{26}{$_{S} Plot$ technique}{equation.6.38}{}}
+\newlabel{eq:sPlot2}{{39}{26}{$_{S} Plot$ technique}{equation.6.39}{}}
 \bibcite{bib:root}{1}
-\newlabel{eq:sWeight}{{36}{26}{$_{S} Plot$ technique}{equation.6.36}{}}
-\newlabel{eq:sPlot2}{{37}{26}{$_{S} Plot$ technique}{equation.6.37}{}}
 \bibcite{bib:Minuit}{2}
 \bibcite{bib:LU}{3}
 \bibcite{bib:Operators}{4}
@@ -167,11 +168,13 @@
 \bibcite{bib:bdt}{19}
 \bibcite{bib:JPsi}{20}
 \bibcite{bib:sPlot}{21}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Outlook}{27}{section.7}}
 \@writefile{toc}{\contentsline {section}{Bibliography}{27}{section*.24}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}ROC curves}{27}{appendix.A}}
-\newlabel{app:roc}{{A}{27}{ROC curves}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Correlation plots}{38}{appendix.B}}
-\newlabel{app:corr}{{B}{38}{Correlation plots}{appendix.B}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}Reweighting plots}{60}{appendix.C}}
-\newlabel{app:re}{{C}{60}{Reweighting plots}{appendix.C}{}}
+\bibcite{bib:pull}{22}
+\@writefile{toc}{\contentsline {section}{\numberline {A}ROC curves}{28}{appendix.A}}
+\newlabel{app:roc}{{A}{28}{ROC curves}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Correlation plots}{39}{appendix.B}}
+\newlabel{app:corr}{{B}{39}{Correlation plots}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Reweighting plots}{61}{appendix.C}}
+\newlabel{app:re}{{C}{61}{Reweighting plots}{appendix.C}{}}
 \global\@altsecnumformattrue

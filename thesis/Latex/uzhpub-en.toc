@@ -22,7 +22,8 @@
 \contentsline {subsubsection}{\numberline {6.2.1}Likelihood method}{24}{subsubsection.6.2.1}
 \contentsline {subsubsection}{\numberline {6.2.2}$_{in} Plot$ technique}{24}{subsubsection.6.2.2}
 \contentsline {subsubsection}{\numberline {6.2.3}$_{S} Plot$ technique}{25}{subsubsection.6.2.3}
+\contentsline {section}{\numberline {7}Outlook}{27}{section.7}
 \contentsline {section}{Bibliography}{27}{section*.24}
-\contentsline {section}{\numberline {A}ROC curves}{27}{appendix.A}
-\contentsline {section}{\numberline {B}Correlation plots}{38}{appendix.B}
-\contentsline {section}{\numberline {C}Reweighting plots}{60}{appendix.C}
+\contentsline {section}{\numberline {A}ROC curves}{28}{appendix.A}
+\contentsline {section}{\numberline {B}Correlation plots}{39}{appendix.B}
+\contentsline {section}{\numberline {C}Reweighting plots}{61}{appendix.C}

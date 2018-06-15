@@ -76,7 +76,12 @@
 %\addpart{Abstract}
 
 \begin{abstract}
- Here comes the abstract
+  The work presented in this thesis consists of three parts, which are all intended to be used in the contents of data analysis of data taken by the LHCb detector, especially to analyze the decay $B \rightarrow K^* \mu \mu$.
+  \begin{enumerate}
+    \item A new fitting routine has been developed as a more transparent and reliable alternative to the broadly used routine Minuit.
+    \item A test of classifiers has been performed. Classifiers are algorithms used to separate signal from background. The test in this thesis was performed to find the best classifiers in order to select events with the decay $B \rightarrow K^* \mu \mu$.
+    \item Third data from the Run II of the LHCb detector was used to reweight the Monte Carlo simulation of events with the decay $B \rightarrow K^* \mu \mu$.
+  \end{enumerate}
 \end{abstract}
 
 \tableofcontents
@@ -85,25 +90,13 @@
 
 \section{Introduction}
 
-% In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
-
-The work presented in this thesis consists of three parts, which are all intended to be used in the contents of data analysis of data taken by the LHCb detector (\ref{sec:LHCb}), especially to analyze the decay $B \rightarrow K^* \mu \mu$.
-\begin{enumerate}
-  \item A new fitting routine has been developed as a more transparent and reliable alternative to the broadly used routine Minuit \cite{bib:Minuit}.
-  \item A test of classifiers has been performed. Classifiers are algorithms used to separate signal from background. The test in this thesis was performed to find the best classifiers in order to select events with the decay $B \rightarrow K^* \mu \mu$.
-  \item Third data from the Run II of the LHCb detector was used to reweight the Monte Carlo simulation of events with the decay $B \rightarrow K^* \mu \mu$.
-\end{enumerate}
-
-
-
-
-
 \subsection{New fitting routine}
 Decay rate distributions in particle physics depend on kinematic variables as the angles between the final state particles and the energies of the particles. In order to determine the angular coefficients of the decay rate the experimentally obtained decay rates are fitted.
 % In particle physics the angular coefficients of a decay rate are obtained, by fitting (expained in section \ref{sec:fit}) the decay rate distribution the experimentally obtained kinematic variabels like angles between final state particles and their energies. \\
 So far this has been done with the MINUIT \cite{bib:Minuit} algorithm. But as explained in detail in section \ref{sec:RooMCMC}, the MINUIT algorithm produces random errors without explanation. Furthermore MINUIT is not transparent: It is not clear, how the fit is performed, and if it really has found the global minimum. \\
 The new algorithm implemented as part of this thesis, is called RooMCMarkovChain. It is based on a Monte Carlo Markov Chain (see section \ref{sec:MCMC}), where a certain link in the chain respresents a point on the negative log-likelihood function of the fit. The chain is designed to follow the global minimum and to jump out of local minima. \\
 RooMCMarkovChain provides two things: A fitting parameter set, for example the angular coefficents of a decay rate, at the global minimum. And one-dimensional projections of the  negative log-likelihood function in the vicinity of the global minimum. They can be used for error estimations and sent along side papers which describe, how the fit has been performed.
+The RooMCMarkovChain will be part of the roofit package of the ROOT Data analysis framework \cite{bib:root}.
 
 \subsection{Test of classifiers}
 Raw data from a particle detector contains all kind possible decays. The first challenge of an anlysis is to distinguish the one decay one wants to analyze from everything else.
@@ -151,11 +144,24 @@ The efficiencies of all detector components have to be taken into account in dat
 \section{RooMCMarkovChain} \label{sec:RooMCMC}
 RooMCMarkovChain is a new class for the ROOT Data Analysis Framework \cite{bib:root}. You can find the install-instructions at \cite{bib:root}. It works best on a unix based operation system.
 
- RooMCMarkovChain uses a metropolis algorithm as a minimizer for the negative log likelihood function. The metropolis algorithm is based on a Monte Carlo Markov Chain and can therfore easily be scaled to multidimensional parameter space and moreover, such kind of algorithms can easily be parallelized.
+ ooMCMarkovChain uses a metropolis algorithm as a minimizer for the negative log likelihood function. The metropolis algorithm is based on a Monte Carlo Markov Chain and can therfore easily be scaled to multidimensional parameter space and moreover, such kind of algorithms can easily be parallelized.
 
 \subsection{Monte Carlo Markov Chain (MCMC)}  \label{sec:MCMC}
-A Markov Chain is a random process which undergoes several states. From each state there is a probability ditribution to change into another state or to stay. Most important is the asumption that every next step just depends on the current state.
-The figure \ref{fig:MCMC} illustrates the behavior of such a Markov Chain.
+A Markov Chain is a sequence of random events $X_1,X_2,...$, where the conditional distribution of $X_{n+1}$ only depends on $X_n$. The space where the $X_i$ take values is called the state space of the Markov chain, written ${x_1,...,x_n}$ If the conditional distribution is independent of $n$ the Markov Chain has stationary transition probabilities.
+The joint distribution of a Markov chain is determined by:
+\begin{itemize}
+ \item The marginal distribution of $X_1$, called the initial distribution
+ \item The conditional distribution of $X_{n+1}$ called the transition distribution.
+\end{itemize}
+If the state space is finite then the initial distribution can be associated with a vector $\lambda = (\lambda_1,...,\lambda_n)$ defined by the following Probability $Pr$:
+\begin{align}
+ Pr(X_i = x_i) = \lambda_i
+\end{align}
+The transition probabilities can be associated with a matrix P having elements $p_{ij}$ defined by:
+\begin{align}
+ Pr(X_{n+1} & = x_j | X_n = x_i) = p_{ij}
+\end{align}
+That only holds if the state space is finite. Most Markov chains of interest in MCMC have an uncountable state space. The initial distribution then becomes an unconditional distribution and the transition probability distribution a conditional probability distribution.
 
 \begin{figure}[H]
   \centering
@@ -168,8 +174,8 @@ The figure \ref{fig:MCMC} illustrates the behavior of such a Markov Chain.
 
 Metropolis Hastings is a so called Monte Carlo updater. It updates the probability distribution when a change of states is proposed. That is very usefull in the cases where the states are not discrete like in figure \ref{fig:MCMC} but continous. Suppose that a specified distribution has unnormalized density $h$. The Metopolis Hastings update does the following:
 \begin{enumerate}
-  \item The current state x is proposed to move to another state y with a conditional probability given x denoted as $q(x,\cdot)$. (more explana)
-  \item The Hastings ratio is calculated:
+  \item The current state x is proposed to move to another state with a conditional probability given x denoted as $q(x,\cdot)$.
+  \item The Hastings ratio to move to y is calculated:
   \begin{align}
     r(x,y) = \frac{h(y) \cdot q(y,x)}{h(x) \cdot q(x,y)} \label{eq:r(x,y)}
   \end{align}
@@ -202,7 +208,8 @@ This principle is used in the RooMCMarkovChain class to minimize the negative lo
   g(x) = \frac{1}{\sqrt{2 \pi \sigma_1^2}} e^{- \frac{(x-\mu_1)^2}{2 \sigma_1^2}} + f \cdot  \frac{1}{\sqrt{2 \pi \sigma_2^2}} e^{- \frac{(x-\mu_2)^2}{2 \sigma_2^2}} \label{eq:gausspdf}
  \end{align}
 
-It is so called double gaus pdf, which is just the sum of two gaussian pdfs with a fractional parameter $f$.
+
+It is so called double gaus pdf, which is just the sum of two gaussian pdfs with a fractional parameter $f$. Where $\mu_1$ and $\mu_2$ are mean1 and mean2 of the two gaus and $\sigma_1$ and $\sigma_2$ the standart derviations.
 The result of the fit is compared with the result of the Minuit algorithm. Therfore 1000 points were simulated fowllowing the distribution \ref{eq:gausspdf}:
 
 \begin{figure}[H]
@@ -217,7 +224,7 @@ The terminal output, for the fit in figure \ref{fig:twogaus}, gives the estimate
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{RooMCMC/terminal_output}
-  \caption{Terminal output of the RooMCMarkovChain fit.}
+  \caption{Terminal output of the RooMCMarkovChain fit. Note that RooMCMarkovChain confused the two means, because for the algorithm the two pdfs are equal.}
   \label{fig:terminal}
 \end{figure}
 This gives a good initial overview of results after the fit has finished. The error calculation can be set to assume gaussian or non-gaussian errors.
@@ -228,7 +235,7 @@ In addition several other properties of the parameters can be obtainded:
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{RooMCMC/walkProfile}
-    \caption{Profile of the negative log lilihood function for $\mu_2$ in equation \ref{eq:gausspdf}. There is a local minimum at the nll value of 2600.}
+    \caption{Profile of the negative log lilihood function for $\mu_2 = mean2$ in equation \ref{eq:gausspdf}. There is a local minimum at the nll value of 2600, because the chain stoped going downwards.}
     \label{fig:profile}
   \end{figure}
   From this plot on can see how the algorithm reached the minimum of the negative log likelihood function and if there are local minima. \\
@@ -238,16 +245,16 @@ In addition several other properties of the parameters can be obtainded:
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{RooMCMC/walkDis}
-    \caption{Walk distribution of $\mu_2$ in equation \ref{eq:gausspdf}. The red points are not considered for the error calculation.}
+    \caption{Walk distribution of $\mu_2 = mean2$ in equation \ref{eq:gausspdf}. The red points are not considered for the error calculation, the number of points beeing cut of is defined by the user.}
     \label{fig:walkDis}
   \end{figure}
-  This plot is very important for handling the RooMCMarkovChain class. Since the error calculation is based on the variance of the walk distribution, cutting of points in the begginning greatly reduces this variance. The user has to choose how many points are cut off. Plotting the walk distribution of all parameters helps choosing the right amount. \\
+  This plot is very important for handling the RooMCMarkovChain class. Since the error calculation is based on the variance of the walk distribution, cutting of points in the begginning greatly reduces this variance. The user has to choose how many points are cut off. Plotting the walk distribution of all parameters helps choosing the right amount. The right amount would be at the point where there is only the oszillation arround the global minimum left. \\
 
   \item The walk distribution of a given parameter as a histogramm.
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{RooMCMC/walkDisHis}
-    \caption{Walk distribution of $\mu_2$ in equation \ref{eq:gausspdf} as a histogramm.}
+    \caption{Walk distribution of $\mu_2 = mean2$ in equation \ref{eq:gausspdf} as a histogramm.}
     \label{fig:walkDisHis}
   \end{figure}
   This plot can be used to check, which error strategy should be used. If the walk distribution histogramm is gaussian, gaussian errors can be assumed. \\
@@ -256,7 +263,7 @@ In addition several other properties of the parameters can be obtainded:
   \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{RooMCMC/scatter}
-    \caption{Scatterplot between $\mu_1$ and $\mu_2$ in equation \ref{eq:gausspdf}.}
+    \caption{Scatterplot between $\mu_1$ and $\mu_2$ in equation \ref{eq:gausspdf}. The round shape states that there is no correlation between the two parameters.}
     \label{fig:scatter}
   \end{figure}
   This plot shows the correlation between two parameters graphically.
@@ -334,7 +341,7 @@ This section describes the motivation to analyze this decay, then the operators 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\linewidth]{KstarFeynman}
-  \caption{Feynman diagrams for decay $B_d$ $\rightarrow$ $\mu^+$ $\mu^-$ at lowest order}
+  \caption{Feynman diagrams for decay $B(\bar{b},d)$ $\rightarrow$ $ K^*(\bar{s},d) l^+$ $\l^-$ at lowest order}
   \label{fig:Feynman}
  \end{figure}
  The kinematics of the decay are defined by the three angels $\theta_K$, $\theta_L$ and $\phi$, shown in figure \ref{fig:angels} and the invariant di-muon mass square $q^2$.
@@ -356,7 +363,8 @@ The differential decay rate for the $B^0$ Meson can be expressed in terms of the
   \end{split}
   \label{eq:diff_decay_rate}
  \end{equation}
- This decay rate is defined as the probability per unit time that the particle will decay. The $I_i$ can be obtained by fitting this decay rate to the kinematic variables obtained by the detector. This fit is usually done by a standart fitting routine called MINUIT \cite{bib:Minuit}. In section \ref{sec:RooMCMC} an alternative is presented.
+ This decay rate is defined as the probability per unit time that the particle will decay. The $I_i$ can be obtained by fitting this decay rate to the kinematic variables obtained by the detector. This fit is usually done by a standart fitting routine called MINUIT \cite{bib:Minuit}. In section \ref{sec:RooMCMC} an alternative is presented. \\
+ For completness the next two sections desribe some of the theory concerning the decay: The operators and wilson coefficients.
 
  \subsection{Operators for $B \rightarrow X_s l^+l^-$ decays}
  In this section all the operators of the decay are derived from the effective Lagrangian. the operators in Quantum field theory are used to create or destroy particles, by applying them to a quantum field. This section should just give an overview if you need more detailed information consider reading \cite{bib:Operators}. \\
@@ -609,14 +617,14 @@ The new weights derived by the difference in data and simulation of these parame
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{Reweighting/nTracksw}
-\caption{This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the weight best to reweight the Monte Carlo data to match the detector data. Thx X achsis show the values for the number of tracks in an event (nTracks). On the Left achsis the fraction of events having so many nTracks is given, for data and Monte Carlo. On the right achsis the magnitude of the weights is shown.}
+\caption{This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the best weights to reweight the Monte Carlo data in order to match the detector data. The x- axes are the values for the number of tracks in an event (nTracks). On the left y-axes the fraction of events having nTracks is plotted. On the right y-axes the magnitude of the weights is shown.}
 \label{fig:nTracksw}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{Reweighting/B0_PTw}
-\caption{Same plot as in figure \ref{fig:nTracksw}, for the transversal momentum of the $B-0$ meson (B0\_PT)}
+\caption{Same plot as in figure \ref{fig:nTracksw}, for the transversal momentum of the $B$ meson (B0\_PT) in MeV.}
 \label{fig:B0_PTw}
 \end{figure}
 
@@ -632,7 +640,9 @@ After applying those weights to the Monte Carlo data, the distributions of all t
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{Reweighting/B0_PT}
-\caption{This plots shows the distribution of the $B$ transversal momentum. The violet points represent the distribution in the detector data. In red is the distribution befor reweighting the Monte Carlo data and in blue is the distribution after reweighting the Monte Carlo data. The X achsis shows the $B$ transversal momentum (B0\_PT)}
+\caption{This plots shows the distribution of the $B$ transversal momentum. The X achsis shows the $B$ transversal momentum (B0\_PT) in MeV. The violet points represent the distribution of (B0\_PT) in the detector data.
+The red line represents the distribution of (B0\_PT) before reweighting the Monte Carlo data.
+The blue line represents the distribution (B0\_PT) after reweighting the Monte Carlo data. }
 \label{fig:B0_PT}
 \end{figure}
 
@@ -640,7 +650,7 @@ After applying those weights to the Monte Carlo data, the distributions of all t
 
 
  \subsection{SPlot}
- In this section the SPlot Technique to sperate two or more merged distributions. It has been used to get the inital weights for the Reweighting in chapter \ref{sec:Reweight}.
+In this section the SPlot Technique is explained. It is used to separate two or more merged distributions and  has been used to get the initial weights for the re-weighting in this chapter.
 
  \subsubsection{Likelihood method}
  Consider an analysis of a data sample, which consists of several types of events. These types represent signal components and background components, for example from different experiments. The log-liklihood of such a data sample is expressed as:
@@ -660,11 +670,11 @@ After applying those weights to the Monte Carlo data, the distributions of all t
  The yields $N_i$ and the free parameters of the PDF are obtained by maximizing the above log-likelihood (eq \ref{eq:L}).
 
  \subsubsection{$_{in} Plot$ technique}
- Consider a varibale x which can be expressed as a function of the dicriminating variables y used in the fit. Furthermore a fit has been performed to determine the yields $N_i$ for all types. From the knowledge of the PDF and the values of $N_i$ a naive weight can be defined as:
+Consider a variable x which can be expressed as a function of the discriminating variables y used in the fit. Furthermore a fit has been performed to determine the yields $N_i$ for all types. From the knowledge of the PDF and the values of Ni a naive weight can be defined as:
  \begin{align}
   P_n(y_i) = \frac{N_n f_n(y_i)}{\sum_{k=1}^{N_s} N_k f_k(y_i)} \label{eq:P_n}
  \end{align}
- which will leed to the x-distribution $\tilde{M}_n$ defined by:
+ Therefore $N_n \tilde{M}_n (\bar{x})$ i sthe x-distribution of the plotted events, using the weights of eq \ref{eq:P_n}.
  \begin{align}
   N_n \tilde{M}_n (\bar{x}) = \sum_{i \subset \delta x} P_n (y_i) \label{eq:Mn}
  \end{align}
@@ -681,13 +691,14 @@ After applying those weights to the Monte Carlo data, the distributions of all t
                                             & = N_n \int dy \delta (x(y) - \bar{x}) f_n (y)                                                                        \\
                                             & = N_n \textbf{M}_n(\bar{x}) \label{eq:N_nM_n}
  \end{align}
- One can see that the sum over enents of the daive weight $P_n$ provides a direct estimate of the x-distribution for the nth type.
- But this procedure has a major drawback, since x is correlated to y, the PDFs of x enter implicity in the definition of the naive weight. Therfor the $\tilde{M}_n$ distributions are a bad estimate for the quality of the fit, since the these distributions are biased in a difficult way, when the PDFs $f_i(y)$ are not accurate. \\
- Consider for example a data sample where one of the types has events on the tail of the x-distribution. Such events require the true ditribution to account for the tail. But since the events are averaged the weights on the tail are going to be very small missing those events in the extimated true distribution. Only the core of the x-distribution can be examined with $_{in} Plots$.
+ One can see that the sum over enents of the naive weight $P_n$ provides a direct estimate of the x-distribution for the nth type.
+ But this procedure has a major drawback. Since x is correlated to y, the PDFs of x enter implicity in the definition of the naive weight. Therefore the $\tilde{M}_n$ distributions are a bad estimate for the quality of the fit.These distributions are biased in a difficult way, when the PDFs $f_i(y)$ are not accurate. \\
+ Consider for example a data sample where one of the types has events on the tail of the x-distribution. Such events require the true distribution to account for the tail. But since the events are averaged the weights on the tail are going to be very small missing those events in the estimated true distribution.
+ Only the core of the x-distribution can be examined with $_{in} Plots$.
 
 
  \subsubsection{$_{S} Plot$ technique}
- In the previous section it was shown that if a variable x belongs to a set y of discriminating varibales, one can reconstruct the expected x distribution.
+ In the previous section it was shown that if a variable x belongs to a set y of discriminating varibales, the expected x distribution can be reconstruct.
  Consider now two sets of variables $x$ and $y$, where x does not belong to y and which are uncorrelated , hence the total PDFs $f_i (x,y)$ all factorize into products $\textbf{M}_i (x) f_i(y)$.
  The equation \ref{eq:N_nM_n} does not hold anymore because, when summing over the events the x-PDFs $\textbf{M}_j(x)$ appear:
 
@@ -734,10 +745,11 @@ After applying those weights to the Monte Carlo data, the distributions of all t
  \begin{align}
   \langle N_n { }_s \tilde{M}_n (x) \rangle = N_n \textbf{M}_n (x)
  \end{align}
- In the case were x is significantly correlated with y, the $_s Plots$ from equation \ref{eq:sPlot2} connt be compared with the pure distributions of the various types. To solve that problem one can perform a Monte Carlo simulation of the procedure and obtain the expected distributions to which the $_s Plots$ should be compared with. \\
- For more information on $_s Plots$ consider reading \cite{bib:sPlot}.
+In the case were x is significantly correlated with y, the sPlots from equation \ref{eq:sPlot2} can not be compared with the pure distributions of the various types. To solve that problem one can perform a Monte Carlo simulation of the procedure and obtain the expected distributions to which the $_s Plots$ should be compared. \\
+More information on $_s Plots$ is given in reference \cite{bib:sPlot}.
 
-
+\section{Outlook}
+The RooMCMarkovChain fitting routine is currently beeing added \cite{bib:pull} to the ROOT Data analysis framework. The best classifier uBoost from the classifers test will be used to find future $B \rightarrow K^* \mu \mu$ decays in the data produced by the LHCb detector. The rewighting done in this thesis will be used for the future analysis of the $B \rightarrow K^* \mu \mu$ in the current LHCb data.
 
 
  \begin{thebibliography}{100}
@@ -796,6 +808,8 @@ After applying those weights to the Monte Carlo data, the distributions of all t
 
    \bibitem{bib:sPlot} sPlot: a statistical tool to unfold data distributions,
    	arXiv:physics/0402083 [physics.data-an]
+
+    \bibitem{bib:pull} https://github.com/root-project/root/pull/1422
 
 
 
