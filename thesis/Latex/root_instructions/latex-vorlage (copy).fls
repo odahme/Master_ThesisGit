@@ -19,9 +19,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty

@@ -5,8 +5,8 @@
 \usepackage[utf8x]{inputenc}
 
 %% Sprachdatei für Trennregeln, Datum-Format und ähnliches festlegen
-\usepackage[german]{babel}  % nötig für Umlaute
-% \usepackage[english]{babel}
+%\usepackage[german]{babel}  % nötig für Umlaute
+ \usepackage[english]{babel}
 
 %% optimiert das typographische Erscheinungsbild
 \usepackage{microtype}
@@ -111,17 +111,17 @@
 
 
 \begin{enumerate}
-  \item install git on your computer \cite{bib:git}
-  \item type in your console: \\
-  \begin{itemize}
-    \item git clone http://root.cern.ch/git/root.git (downloads the source code of ROOT)
-    \item cd root (change into ROOTs directory)
-    \item git tag -l (display all available versions)
-    \item git checkout -b v6-11-02 v6-11-02 (select version)
-  \end{itemize}
-  \item install the required packages: \\
-  sudo yum install git cmake gcc-c++ gcc binutils \textbackslash
-libX11-devel libXpm-devel libXft-devel libXext-devel
+ \item install git on your computer \cite{bib:git}
+ \item type in your console: \\
+       \begin{itemize}
+        \item git clone http://root.cern.ch/git/root.git (downloads the source code of ROOT)
+        \item cd root (change into ROOTs directory)
+        \item git tag -l (display all available versions)
+        \item git checkout -b v6-11-02 v6-11-02 (select version)
+       \end{itemize}
+ \item install the required packages: \\
+       sudo yum install git cmake gcc-c++ gcc binutils \textbackslash
+       libX11-devel libXpm-devel libXft-devel libXext-devel
 \end{enumerate}
 
 
@@ -212,8 +212,8 @@ libX11-devel libXpm-devel libXft-devel libXext-devel
 % Es ist sehr umfangreich und enthält viele nützliche Tipps.
 
 \begin{thebibliography}{100}
-\addcontentsline{toc}{section}{Bibliography}
-\bibitem{bib:git} Install instruction for the program Git, \url{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}
+ \addcontentsline{toc}{section}{Bibliography}
+ \bibitem{bib:git} Install instruction for the program Git, \url{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}
 \end{thebibliography}
 
 \end{document}

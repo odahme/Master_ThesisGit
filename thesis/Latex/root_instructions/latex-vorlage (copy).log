@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  9 JUN 2018 09:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  13 JUN 2018 14:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -40,18 +40,17 @@ File: uni-global.def 2013/05/13 UCS: Unicode global data
 \uc@temptokena=\toks18
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/02/24 3.9q The Babel package
- (/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
-Language: german 2014/10/10 v2.7b German support for babel (traditional orthography)
- (/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
-Language: germanb 2014/10/10 v2.7b German support for babel (traditional orthography)
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
  (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-\l@austrian = a dialect from \language\l@german 
-Package babel Info: Making " an active character on input line 110.
-))) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
@@ -81,8 +80,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enitdp@description=\count91
 ) (/usr/share/texlive/texmf-dist/tex/latex/ctable/ctable.sty
 Package: ctable 2015/10/17 v1.31 ctable package for flexible typesetting of table and figure floats using key/value directives
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 ) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
@@ -159,12 +157,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 95.
@@ -884,52 +882,32 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 213.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 213.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 213.
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
-[]\OT1/cmr/m/n/10 (+20) Install in-struc-ti-on for the pro-gram Git, [][]$\OT1/cmtt/m/n/10 https : / / git-[]scm . com / book / en / v2 /
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+[]\OT1/cmr/m/n/10 (+20) Install in-struc-tion for the pro-gram Git, [][]$\OT1/cmtt/m/n/10 https : / / git-[]scm . com / book / en / v2 /
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 217.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 217.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 217.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 217.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 217.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 217.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
 [1
 
 {/home/oliver/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
- (/home/oliver/Master_ThesisGit/thesis/Latex/root_instructions/latex-vorlage (copy).aux
-Package cleveref Info: loaded `german language definitions on input line 23.
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
+ (/home/oliver/Master_ThesisGit/thesis/Latex/root_instructions/latex-vorlage (copy).aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `"latex-vorlage (copy)".out' has not changed.
 (rerunfilecheck)             Checksum: 3D59741E52033D19FB114A3C8CEBA4E5;48.
  ) 
 Here is how much of TeX's memory you used:
- 22291 strings out of 493029
- 419042 string characters out of 6136234
- 544175 words of memory out of 5000000
- 25553 multiletter control sequences out of 15000+600000
- 14700 words of font info for 68 fonts, out of 8000000 for 9000
+ 22187 strings out of 493029
+ 417288 string characters out of 6136234
+ 542866 words of memory out of 5000000
+ 25450 multiletter control sequences out of 15000+600000
+ 14751 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,96p,10382b,783s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,6n,96p,10382b,776s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "/home/oliver/Master_ThesisGit/thesis/Latex/root_instructions/latex-vorlage (copy).pdf" (1 page, 60071 bytes).
+Output written on "/home/oliver/Master_ThesisGit/thesis/Latex/root_instructions/latex-vorlage (copy).pdf" (1 page, 61567 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  40 compressed objects within 1 object stream

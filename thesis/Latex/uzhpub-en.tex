@@ -61,7 +61,7 @@
 
 %% Titelei
 %\title{Masterthesis: analysis of $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
-\title{Masterhesis: Development of an improved fitting routine. Classification and Reweighting of the $B \rightarrow K^* \mu \mu$ decay}
+\title{Masterhesis: Development of an improved Fitting Routine, the Classifiers Test and Reweighting of the $B \rightarrow K^* \mu \mu$ decay}
 \subtitle{Supervisors: Prof. Dr. Nicola Serra, Dr. Marcin Chzsaszcz}
 
 \author{Author: Oliver Dahme}
@@ -85,31 +85,39 @@
 
 \section{Introduction}
 
-% In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B_0$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
+% In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
+
+The work presented in this thesis consists of three parts, which are all intended to be used in the contents of data analysis of data taken by the LHCb detector (\ref{sec:LHCb}), especially to analyze the decay $B \rightarrow K^* \mu \mu$.
+\begin{enumerate}
+  \item A new fitting routine has been developed as a more transparent and reliable alternative to the broadly used routine Minuit \cite{bib:Minuit}.
+  \item A test of classifiers has been performed. Classifiers are algorithms used to separate signal from background. The test in this thesis was performed to find the best classifiers in order to select events with the decay $B \rightarrow K^* \mu \mu$.
+  \item Third data from the Run II of the LHCb detector was used to reweight the Monte Carlo simulation of events with the decay $B \rightarrow K^* \mu \mu$.
+\end{enumerate}
 
 
-The work presented in this thesis consits of three independant parts: \\
-First a new fitting routine has been implemnted, as a more transperent alternative to the broadly used routine Minuit \cite{bib:Minuit}. \\
-Second a test of classifiers has been performed. Classifiers are a type of algorithm used to seperate signal from background. The test was performed to find the best classifier, for the analysis of the $B_0 \rightarrow K^* \mu^+ \mu^-$ decay. \\
-Third data from the Run II of the LHCb detector was used to reweight the Monte Carlo simulation of the $B_0 \rightarrow K^* \mu^+ \mu^-$ decay.
-The reasons for choosing this decay are explained in section \ref{sec:Motivation}
+
 
 
 \subsection{New fitting routine}
-In particle physics the decay rate distributions depend on kinematic variables, the angles between the final state particles and their energies. To get the angular coefficients of the decay rate the experimentally obtained decay rates are fitted.
+Decay rate distributions in particle physics depend on kinematic variables as the angles between the final state particles and the energies of the particles. In order to determine the angular coefficients of the decay rate the experimentally obtained decay rates are fitted.
 % In particle physics the angular coefficients of a decay rate are obtained, by fitting (expained in section \ref{sec:fit}) the decay rate distribution the experimentally obtained kinematic variabels like angles between final state particles and their energies. \\
-So far this has been done with the broadly used algorithm MINUIT \cite{bib:Minuit}. But like explained in section \ref{sec:RooMCMC} MINUIT can make random fatal errors while fitting, without any obvious explanation. The second problem with MINUIT is the intransperency: One can not comprehend how the fit is performed or if it really has found the global minimum. \\
-The new algorithm implemented as part of this thesis, is called RooMCMarkovChain. It is based on a Monte Carlo Markov Chain (see section \ref{sec:MCMC}), where one link in the chain respresents a point on the log-likelihood function of the fit. The chain is designed to follow the global minimum and to jump out of local minima. This provides two things: A fitting parameter set, for example the angular coefficents of a decay rate, at the global minimum. And a scan of the log-likelihood function in the vicinity of the global minimum, which can be used for the error estimation and can be send along side papers containing fits to make it transperent for the reader how the fit performed.
+So far this has been done with the MINUIT \cite{bib:Minuit} algorithm. But as explained in detail in section \ref{sec:RooMCMC}, the MINUIT algorithm produces random errors without explanation. Furthermore MINUIT is not transparent: It is not clear, how the fit is performed, and if it really has found the global minimum. \\
+The new algorithm implemented as part of this thesis, is called RooMCMarkovChain. It is based on a Monte Carlo Markov Chain (see section \ref{sec:MCMC}), where a certain link in the chain respresents a point on the negative log-likelihood function of the fit. The chain is designed to follow the global minimum and to jump out of local minima. \\
+RooMCMarkovChain provides two things: A fitting parameter set, for example the angular coefficents of a decay rate, at the global minimum. And one-dimensional projections of the  negative log-likelihood function in the vicinity of the global minimum. They can be used for error estimations and sent along side papers which describe, how the fit has been performed.
 
 \subsection{Test of classifiers}
-Raw data from a particle detector contains all kind possible decays. The first challenge of an anlysis is to distinguish the one decay one wants to analyse from all the others.
-The common prcedure to reach that goal in our days the usage of Machine Learning algorithms called Classifiers. The need two things befor performing the analysis: A training dataset where signal and background is labeld accordingly. And a list of parameters that could be different in signal and background. While training the algorithm will adapt thresholds on these parameters. With these thresholds the algorithm is able to distinguish signal from background in unlabeled data. \\
-The test of classifiers presented in section \ref{sec:clas} has the goal to find the best classifier to distinguish $B_0 \rightarrow K^* \mu^+ \mu^-$ decays in the raw data of the LHCb detector.
+Raw data from a particle detector contains all kind possible decays. The first challenge of an anlysis is to distinguish the one decay one wants to analyze from everything else.
+The common prcedure to reach that goal in our days the usage of Machine Learning algorithms called Classifiers. The algorithm need two things to perform the analysis: A training dataset where signal and background is labeld accordingly, and a list of parameters that are different in signal and background. While training the algorithm will adapt thresholds on these parameters. Then, using these thresholds the algorithm is able to distinguish signal from background in unlabeled data. \\
+The test of classifiers presented in section \ref{sec:clas} has the goal to find the best classifier to select $B \rightarrow K^* \mu \mu$ decays in the raw data of the LHCb detector.
 
 \subsection{Reweighting}
-In data analysis on has to take into account the efficiencies of all the detector components.Those efficiencies can be obtained by Monte Carlo simulations. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data. As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The parameters used to reweight the MC samples are applied in the following order: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
+The efficiencies of all detector components have to be taken into account in data analysis. These efficiencies may be obtained by Monte Carlo simulations. Finally, Monte Carlo data and real data must match to get the correct results. SRe-simulating every time everything with different parameters until the data distributions match would take too much resources. Therefore the Monte Carlo data is reweighted. Reweighting means that a weight is applied to each Monte Carlo. The weights are choosed in a way that afterwards the simulation matches the data.
+
+
+
+
 % Reweighting is a technique used to learn about quantities that can not be measured but only simulated. For example detector efficiencies can be very preciesly simulated be Monte Carlo simulations but can not be measured.
-% To archive that goal the Monte Carlo data is uniformly binned as is the real data. Then each MC bin gets compared with each data bin. Then a weight for each Monte Carlo event is choosen in a way that the bins get equal. Three parameters had been choosen to reweight the $B_0 \rightarrow K^* \mu^+ \mu^-$ Monte Carlo events:
+% To archive that goal the Monte Carlo data is uniformly binned as is the real data. Then each MC bin gets compared with each data bin. Then a weight for each Monte Carlo event is choosen in a way that the bins get equal. Three parameters had been choosen to reweight the $B \rightarrow K^* \mu^+ \mu^-$ Monte Carlo events:
 
 
 
@@ -135,8 +143,8 @@ In data analysis on has to take into account the efficiencies of all the detecto
 
 %
 % 1. SM sagt vorraus das BR(K* mu mu )(K* e e ) muestte eins sein experimentelle (Referenz)
-% 2. alte LHCb Analyse
-% 3. Aufgabe, erneute Analyse mit neuen daten und neue Methoden (neue classifier)
+% 2. alte LHCb analyze
+% 3. Aufgabe, erneute analyze mit neuen daten und neue Methoden (neue classifier)
 % 4. mit viel mehr Daten
 
 
@@ -146,7 +154,7 @@ RooMCMarkovChain is a new class for the ROOT Data Analysis Framework \cite{bib:r
  RooMCMarkovChain uses a metropolis algorithm as a minimizer for the negative log likelihood function. The metropolis algorithm is based on a Monte Carlo Markov Chain and can therfore easily be scaled to multidimensional parameter space and moreover, such kind of algorithms can easily be parallelized.
 
 \subsection{Monte Carlo Markov Chain (MCMC)}  \label{sec:MCMC}
-A Markov Chain is a random process which undergoes several states. From each state there is a probability ditribution to change into another state or to stay. Most important i the asumption that every next step just depends on the current state.
+A Markov Chain is a random process which undergoes several states. From each state there is a probability ditribution to change into another state or to stay. Most important is the asumption that every next step just depends on the current state.
 The figure \ref{fig:MCMC} illustrates the behavior of such a Markov Chain.
 
 \begin{figure}[H]
@@ -156,12 +164,11 @@ The figure \ref{fig:MCMC} illustrates the behavior of such a Markov Chain.
   \label{fig:MCMC}
 \end{figure}
 
-\subsection{Metropolis Hastings}
+\subsection{Metropolis Hastings algorithm}
 
-
-Metropolis Hastings is a so called Monte Carlo updater. It updates the probabilitydistribution when a change of states is proposed. That is very usefull in the cases where the states are not discrete like in figure \ref{fig:MCMC} but continous. Suppose that a specified distribution has unnormalized density $h$. The Metopolis Hastings update does the following:
+Metropolis Hastings is a so called Monte Carlo updater. It updates the probability distribution when a change of states is proposed. That is very usefull in the cases where the states are not discrete like in figure \ref{fig:MCMC} but continous. Suppose that a specified distribution has unnormalized density $h$. The Metopolis Hastings update does the following:
 \begin{enumerate}
-  \item The current state x is proposed to move to another state y with a conditional probability given x denoted as $q(x,\cdot)$.
+  \item The current state x is proposed to move to another state y with a conditional probability given x denoted as $q(x,\cdot)$. (more explana)
   \item The Hastings ratio is calculated:
   \begin{align}
     r(x,y) = \frac{h(y) \cdot q(y,x)}{h(x) \cdot q(x,y)} \label{eq:r(x,y)}
@@ -176,15 +183,15 @@ This principle is used in the RooMCMarkovChain class to minimize the negative lo
 \begin{enumerate}
   \item  Compute next proposed state $Y_n$ as a random change from the current state $X_{n-1}$:
   \begin{align*}   Y_n &\equiv X_{n-1} + S_{n-1} U_n    \end{align*}
-  , where $U_n$ is an independent random vector.
+  , where $U_n$ is an independent random vector and $S_{n-1}$ a matrix satisfying equation \ref{eq:matrix}
   \item With the probability $\alpha_n$ the proposal is accepted and $X_n = Y_n$. Otherwise the proposal is rejected and $X_n = X_{n-1}$
   \begin{align*}  \alpha_n &\equiv min\{ 1, r(X_{n-1},Y_n) \} \end{align*}
   , where $r$ is the hastings ratio see equation \ref{eq:r(x,y)}.
   \item compute the lower-diagonal matrix $S_n$ with positive diagonal elements satisfying the equation:
   \begin{align}
-    S_n S_n^T = S_{n-1} \left( I + \eta_n(\alpha_n - \alpha_*) \frac{U_n Y_n^T}{||U_n||^2} \right) S_{n-1}^T
+    S_n S_n^T = S_{n-1} \left( I + \eta_n(\alpha_n - \alpha_*) \frac{U_n Y_n^T}{||U_n||^2} \right) S_{n-1}^T \label{eq:matrix}
   \end{align}
-  ,where $I \in R^{dxd}$ is the identity matrix.
+  ,where $I \in R^{dxd}$ is the identity matrix and $\alpha^*$ is the forced acceptance rate.
 \end{enumerate}
 
 
@@ -194,16 +201,17 @@ This principle is used in the RooMCMarkovChain class to minimize the negative lo
 \begin{align}
   g(x) = \frac{1}{\sqrt{2 \pi \sigma_1^2}} e^{- \frac{(x-\mu_1)^2}{2 \sigma_1^2}} + f \cdot  \frac{1}{\sqrt{2 \pi \sigma_2^2}} e^{- \frac{(x-\mu_2)^2}{2 \sigma_2^2}} \label{eq:gausspdf}
  \end{align}
+
 It is so called double gaus pdf, which is just the sum of two gaussian pdfs with a fractional parameter $f$.
 The result of the fit is compared with the result of the Minuit algorithm. Therfore 1000 points were simulated fowllowing the distribution \ref{eq:gausspdf}:
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{RooMCMC/twogausfit}
-  \caption{Fit of double gaus pdf (see equation \ref{eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu_1 = 4$, $\sigma_1 = 1$, $\mu_2 = -2$, $\sigma_2 = 1.5$ and the fraction $f = 0.5$. The Minuit fit fails, because of a random error. The fits gets right if the starting parameters are changed.}
+  \caption{Fit of double gaus pdf (see equation \ref{eq:gausspdf}) with RooMCMCarkovchain and with Minuit. The true pdf has the follwing values: $\mu_1 = 4$, $\sigma_1 = 1$, $\mu_2 = -2$, $\sigma_2 = 1.5$ and the fraction $f = 0.5$. The Minuit fit fails, because of a random error. The fits gets right if the starting values for the parameters are changed.}
   \label{fig:twogaus}
 \end{figure}
-As one can see in figure \ref{fig:twogaus} the Minuit routine fails to fit the distribution. The reasons are unknwon, but the fit gets right if the starting parameters are changed. Intensive testing prooved RooMCMCarkovChain less sensitive to starting parameters. But in high parameters space test (up to 20) revealed that Minuit and RooMCMarkovChain are equal in performace. One should do another performace analysis with the number of parameters usually used in particle physics, with up to 50 parameters. \\
+Figure \ref{fig:twogaus} shows that the Minuit routine fails to fit the distribution. The reasons are unknwon, but the fit gets right if the starting values of the parameters are changed. Intensive testing prooved RooMCMCarkovChain less sensitive to starting values. But one should analysis with the number of parameters usually used in particle physics, with up to 50 parameters. \\
 The terminal output, for the fit in figure \ref{fig:twogaus}, gives the estimated parameters with error interval and correlation coefficents of each parameter pair.
 
 \begin{figure}[H]
@@ -257,7 +265,7 @@ In addition several other properties of the parameters can be obtainded:
 
 
 
-\section{The LHCb Experiment}
+\section{The LHCb Experiment} \label{sec:LHCb}
 In this section the experimental setup of the detector is presented, which recorded the data used in this thesis.
 The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based at the CERN laboratory near Geneva in Switzerland. It is part of the Large Hadron Collider (LHC), a proton-proton accelerator and collider located in a vast unterground tunnel with 26.7 km circumference beneath the Swiss-French countryside.
 The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefor very large detectors. ALICE investigates quark-gluon plasma and therefor needs geavy ion collisions, instead of proton collisions. \\
@@ -301,11 +309,11 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
 
  \section{The $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
 
-This section describes the motivation to analyse this decay, then the operators needed to calculate the different couplings are derived and in the last section the effetive Wilson coefficients are derived. This section is mostly theoretical and should give an overview over the decay.
+This section describes the motivation to analyze this decay, then the operators needed to calculate the different couplings are derived and in the last section the effetive Wilson coefficients are derived. This section is mostly theoretical and should give an overview over the decay.
 
- \subsection{Motivation to analyse $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays} \label{sec:Motivation}
+ \subsection{Motivation to analyze $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays} \label{sec:Motivation}
 
- In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B_0$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
+ In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
  \begin{equation}
    \begin{split}
    R_{K*0} &= \left. \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} \mu^+ \mu^-)}{\mathcal{B}(B^0 \rightarrow K^{*0} J/\psi(\rightarrow \mu^+ \mu^-))} \middle/   \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} e^+ e^-)}{\mathcal{B} ( B^0 \rightarrow K^{*0} J/\psi(\rightarrow e^+ e^-))}  \right. , \\
@@ -526,7 +534,7 @@ In the following the correlation between the probability to be signal assigned b
  % \begin{figure}[H]
  %  \centering
  %  \includegraphics[width=0.5\textwidth]{plots/AdaBoost_plot_bdt_vs_B0_M}
- %  \caption{This plot shows the correltation between the bdt decision of the AdaBoost classifier and the $B_0$ mass. There is clearly a correlation starting from the second bin from the left.}
+ %  \caption{This plot shows the correltation between the bdt decision of the AdaBoost classifier and the $B$ mass. There is clearly a correlation starting from the second bin from the left.}
  %  \label{fig:AdaB0M}
  % \end{figure}
 
@@ -587,10 +595,16 @@ In the following the correlation between the probability to be signal assigned b
 
  % The infomation needed in an analysis is not all contained inside the data. For example efficiencies can not be recorded by a detector. But they can be simulated by a Monte Carlo simulation of the particle decay. The problem is that the simulation has to be the same as data to get the correct answers. Since resimulating everything with different parameters until one hits the data distribution would take too much resources. One can simply reweight the simulation to match the data.
 
- Reweighting is method to matchh the Monte Carlo data to the real detector data, to extract quantities not measurable by the detector like efficiencies. The match is done by applying weights to the Monte Carlo events. \\
-As an initial weight the sWeights see equation \ref{eq:sWeight} are used. The weights are calculated by comparing the the following parameters: 'nTracks', '$B_0$ $p_T$' and the quality of the $K \pi \mu \mu$ vertex. The new weights derived by the difference in data and simulation of these parameters are used to weight all the MC samples. For this analysis the MC and Data of the $K^* \rightarrow J/ \Psi K^{*0}$ are used, because it is a very clean channel.
+Reweighting is method to matchh the Monte Carlo data to the real detector data, to extract quantities not measurable by the detector like efficiencies. The match is done by applying weights to the Monte Carlo events. \\
+As an initial weight the sWeights see equation \ref{eq:sWeight} are used. he parameters used for reweighting are applied in the following order:
+\begin{itemize}
+  \item number of tracks: 'nTracks'
+  \item transversal momentum of the $B$ Meson: '$B$ $p_T$'
+  \item quality of the $K \pi \mu \mu$ vertex.
+\end{itemize}
+The new weights derived by the difference in data and simulation of these parameters for the very clean channel $K^* \rightarrow J/ \Psi K^{*}$ \cite{bib:JPsi}, are used to reweight the $B \rightarrow K^* \mu \mu$ Monte Carlo sample.
 
-\subsection{Reweighting the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ Monte Carlo data}
+\subsection{Results of the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ reweighting}
 
 \begin{figure}[H]
 \centering
@@ -618,7 +632,7 @@ After applying those weights to the Monte Carlo data, the distributions of all t
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{Reweighting/B0_PT}
-\caption{This plots shows the distribution of the $B_0$ transversal momentum. The violet points represent the distribution in the detector data. In red is the distribution befor reweighting the Monte Carlo data and in blue is the distribution after reweighting the Monte Carlo data. The X achsis shows the $B_0$ transversal momentum (B0\_PT)}
+\caption{This plots shows the distribution of the $B$ transversal momentum. The violet points represent the distribution in the detector data. In red is the distribution befor reweighting the Monte Carlo data and in blue is the distribution after reweighting the Monte Carlo data. The X achsis shows the $B$ transversal momentum (B0\_PT)}
 \label{fig:B0_PT}
 \end{figure}
 
@@ -776,6 +790,8 @@ After applying those weights to the Monte Carlo data, the distributions of all t
    \bibitem{bib:bdtg} Gradient Boosting classifier from the sk\_learn python package \url{http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html}
 
    \bibitem{bib:bdt} A vaiation of the AdaBoost classifier called AdaBoost-SAMME \url{http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html}
+
+   \bibitem{bib:JPsi} https://arxiv.org/pdf/1103.0423.pdf
 
 
    \bibitem{bib:sPlot} sPlot: a statistical tool to unfold data distributions,
