@@ -1,0 +1,26 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Fitting Routine}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Likelihood principle}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Minuit}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Monte Carlo Markov Chain (MCMC)}{7}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Theory}{7}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Implementation}{8}{subsubsection.1.3.2}
+\contentsline {subsection}{\numberline {1.4}Monte Carlo Markov Chain fitter}{9}{subsection.1.4}
+\contentsline {section}{\numberline {2}Analysis of the $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ decay}{13}{section.2}
+\contentsline {subsection}{\numberline {2.1}Motivation}{13}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Kinematics}{14}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Operators for $B \rightarrow X_s l^+l^-$ decays}{15}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Wilson coefficients}{16}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}The LHCb Experiment}{18}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}The LHCb Detector}{19}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}The LHCb trigger system}{21}{subsubsection.2.5.2}
+\contentsline {subsection}{\numberline {2.6}Selection}{22}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Inroduction on bdts (to write)}{22}{subsubsection.2.6.1}
+\contentsline {subsection}{\numberline {2.7}Reweighting}{26}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}Results of the $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ reweighting}{27}{subsubsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.2}SPlot}{29}{subsubsection.2.7.2}
+\contentsline {section}{\numberline {3}Summary}{32}{section.3}
+\contentsline {section}{Bibliography}{32}{section*.35}
+\contentsline {section}{\numberline {A}ROC curves}{33}{appendix.A}
+\contentsline {section}{\numberline {B}Correlation plots}{44}{appendix.B}
+\contentsline {section}{\numberline {C}Reweighting plots}{66}{appendix.C}
