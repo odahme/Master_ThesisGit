@@ -14,12 +14,13 @@
 \BOOKMARK [3][-]{subsubsection.2.5.1}{The LHCb Detector}{subsection.2.5}% 14
 \BOOKMARK [3][-]{subsubsection.2.5.2}{The LHCb trigger system}{subsection.2.5}% 15
 \BOOKMARK [2][-]{subsection.2.6}{Selection}{section.2}% 16
-\BOOKMARK [3][-]{subsubsection.2.6.1}{Inroduction on bdts \(to write\)}{subsection.2.6}% 17
-\BOOKMARK [2][-]{subsection.2.7}{Reweighting}{section.2}% 18
-\BOOKMARK [3][-]{subsubsection.2.7.1}{Results of the B \040K* \040 reweighting}{subsection.2.7}% 19
-\BOOKMARK [3][-]{subsubsection.2.7.2}{SPlot}{subsection.2.7}% 20
-\BOOKMARK [1][-]{section.3}{Summary}{}% 21
-\BOOKMARK [1][-]{section*.35}{Bibliography}{}% 22
-\BOOKMARK [1][-]{appendix.A}{ROC curves}{}% 23
-\BOOKMARK [1][-]{appendix.B}{Correlation plots}{}% 24
-\BOOKMARK [1][-]{appendix.C}{Reweighting plots}{}% 25
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Inroduction to decision tree learning}{subsection.2.6}% 17
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Test of different boost decision trees}{subsection.2.6}% 18
+\BOOKMARK [2][-]{subsection.2.7}{Reweighting}{section.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Results of the B \040K* \040 reweighting}{subsection.2.7}% 20
+\BOOKMARK [3][-]{subsubsection.2.7.2}{SPlot}{subsection.2.7}% 21
+\BOOKMARK [1][-]{section.3}{Summary}{}% 22
+\BOOKMARK [1][-]{section*.36}{Bibliography}{}% 23
+\BOOKMARK [1][-]{appendix.A}{ROC curves}{}% 24
+\BOOKMARK [1][-]{appendix.B}{Correlation plots}{}% 25
+\BOOKMARK [1][-]{appendix.C}{Reweighting plots}{}% 26

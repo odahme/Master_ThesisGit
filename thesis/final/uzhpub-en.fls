@@ -454,8 +454,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -468,6 +466,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/KstarFeynman.png
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/KstarFeynman.png
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/KstarFeynman.png
@@ -525,6 +525,9 @@ INPUT /home/oliver/Master_ThesisGit/thesis/final/img/LHC_default.jpg
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/lhcb_detector.jpg
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/lhcb_detector.jpg
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/lhcb_detector.jpg
+INPUT /home/oliver/Master_ThesisGit/thesis/final/img/decision_tree.png
+INPUT /home/oliver/Master_ThesisGit/thesis/final/img/decision_tree.png
+INPUT /home/oliver/Master_ThesisGit/thesis/final/img/decision_tree.png
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/roc/fold_0_roc.pdf
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/roc/fold_0_roc.pdf
 INPUT /home/oliver/Master_ThesisGit/thesis/final/img/roc/fold_0_roc.pdf

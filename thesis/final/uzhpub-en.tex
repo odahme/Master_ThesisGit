@@ -83,11 +83,10 @@ Implementation of Monte Carlo fitter and Selection of $B \rightarrow K^* \mu \mu
 %\addpart{Abstract}
 
 \begin{abstract}
-  The work presented in this thesis consists of three parts, which are all intended to be used in the contents of data analysis of data taken by the LHCb detector, especially to analyse the decay $B \rightarrow K^* \mu \mu$.
+  The work presented in this thesis consists of two parts, which are all intended to be used in the contents of data analysis of data taken by the LHCb detector, especially to analyse the decay $B \rightarrow K^* \mu \mu$.
   \begin{enumerate}
     \item A new fitting routine has been developed as a more transparent and reliable alternative to the broadly used routine Minuit.
-    \item A test of classifiers has been performed. Classifiers are algorithms used to separate signal from background. The test in this thesis was performed to find the best classifiers in order to select events with the decay $B \rightarrow K^* \mu \mu$.
-    \item Third data from the Run II of the LHCb detector was used to reweight the Monte Carlo simulation of events with the decay $B \rightarrow K^* \mu \mu$.
+    \item A test of boost decision tree algorithms has been performed. boost decision trees are algorithms used to separate signal from background. The test in this thesis was performed to find the best boost decision tree algorithm in order to select events with the decay $B \rightarrow K^* \mu \mu$. In addition data from the Run II of the LHCb detector was used to reweight the Monte Carlo simulation of events with the decay $B \rightarrow K^* \mu \mu$.
   \end{enumerate}
 \end{abstract}
 
@@ -429,8 +428,25 @@ In addition several other properties of the parameters can be obtainded:
 This section describes the motivation to analyse this decay, then the operators needed to calculate the different couplings are derived and in the last section the effetive Wilson coefficients are derived. This section is mostly theoretical and should give an overview over the decay.
 
 \subsection{Motivation} \label{sec:Motivation}
+According to the Standard Model the three leptons electron ($e$), muon ($\mu$), and  tau ($\tau$),  differ only in their masses. Therefore, in high energy regions (> 1 TeV) where masses become negligible, these leptons should behave the same. This phenomena is called lepton universality.
 
-In the Standart Model of particle physics the different leptons, Electron, Muon and Taoun only differ in there masses. Therfore if these leptons have a high energy (TeV) where the mass becomes negligible the leptons all behave the same. This phenomen is called lepton universality. For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
+Recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality:
+They analysed the decay of the B meson  with a Kaon and 2 muons in the final state, and the decay of the B with a Kaon and 2 electrons in the final state.
+
+The B0 is a pseudoscalar meson made of an anti-b and a d-quark. $K^{*}_0$ (892)  is a vector meson made of an anti-s and a d-quark which promptly decays to a charged kaon and a pion.
+
+The LHCb collaboration measured the fractions of four B0 decays with a b to s quark transition and two leptons in the final state:
+\begin{itemize}
+  \item $B_0 \rightarrow K^*_0 \mu^+ \mu^-$
+  \item $B_0 \rightarrow K^*_0 J/\psi ( \rightarrow \mu^+ \mu^-)$
+  \item $B_0 \rightarrow K^*_0 e^+ e^-$
+  \item $B_0 \rightarrow K^*_0 J/\psi(\rightarrow e^+ e^-)$
+\end{itemize}
+
+ % For a long time it was one of the ground pillars of the Standart Model. But recent experimental results of the LHCb collaboration \cite{bib:LU} suggest a violation of the lepton universality. They measured the branching fraction of four $B$ deacys with a $b$ quark to $s$ quark transistion and two leptons in the final state. To reduce systematic uncertainties the following double ratio of these branching fractions has been considered a well defined test of lepton universaility. Since leptons at high energies should behave the same, this double ratio is expected to be equal to one.
+
+The following double ratio of these branching fractions are considered as a well defined test of lepton universaility and reduce systematic uncertainties.
+
 \begin{equation}
   \begin{split}
   R_{K*0} &= \left. \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} \mu^+ \mu^-)}{\mathcal{B}(B^0 \rightarrow K^{*0} J/\psi(\rightarrow \mu^+ \mu^-))} \middle/   \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} e^+ e^-)}{\mathcal{B} ( B^0 \rightarrow K^{*0} J/\psi(\rightarrow e^+ e^-))}  \right. , \\
@@ -440,8 +456,10 @@ In the Standart Model of particle physics the different leptons, Electron, Muon 
 \end{cases}
 \end{split}
 \end{equation}
-The mesurement shows a 2.1-2.3 and 2.4-2.5 $\sigma$ deviation from the Standart Modell in the two $q^2$ regions, respectively.
-To investigate further the same measurment is performed with new data from the LHCb detector. The goal of this thesis is to contribute to this new measuremnt.
+Where $q^2$ is square of the invariant di-muon mass.
+The Standard Model predicts this ratio $R_{K*0}$ to be one. But LHCb found values for $R_{K*0}$ below one, implying that decays into electrons are favored with respect to decays into muons.
+The mesurement shows a 2.1-2.3 and 2.4-2.5 $\sigma$ deviation in the two $q^2$ regions, respectively.
+To investigate further the same measurment is performed with new data from the LHCb detector. The goal of this thesis is to contribute to this analysis.
 
 
 \subsection{Kinematics} \label{sec:Kinematics}
@@ -454,7 +472,7 @@ The $K^+$ and $\pi^-$ from the $K^{*}$ decay and two leptons from the loop or bo
  \caption{Feynman diagrams for decay $B(\bar{b},d)$ $\rightarrow$ $ K^*(\bar{s},d) l^+$ $l^-$ at lowest order}
  \label{fig:Feynman}
 \end{figure}
-The kinematics of the decay are defined by the three angels $\theta_K$, $\theta_L$ and $\phi$, shown in figure \ref{fig:angels} and the invariant di-muon mass square $q^2$.
+The kinematics and directions of the final state particles from the decay are defined by the three angels $\theta_K$, $\theta_L$ and $\phi$, shown in figure \ref{fig:angels} and the invariant di-muon mass square $q^2$.
 \begin{figure}[H]
  \centering
  \includegraphics[width=0.6\linewidth]{angels}
@@ -657,7 +675,34 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
 
  \subsubsection{Inroduction to decision tree learning}
 
-In particle physics the first step of each analysis is to clean up the data. That means to subtract the background from the signal. Signal means for example a type of decay like the $B \rightarrow K^* \mu \mu$ decay. To find this decay in the raw data of a detector which contains all kind of decays one needs thresholds on experimental parameters which are different or in the best case unique to the decay. That can be all kind of parameters like vertex locations, momentas or angles between trajectories. For the $B \rightarrow K^* \mu \mu$ decay these parameters would be:
+The selection of events out of the raw detector data is done by boost decision trees. A decision tree takes a set of input features and splits input data recursively based on those features. Each split at a node is chosen to maximize information gain or minimize entropy. The infromation gained by the split is the difference in entropy befora and after the split. Entropy is maximal for a 50:50 split in minimal for a 1:0 split.
+The splits are created recursively and splitting continues until some stop condition is met, like a certain depth of the tree or if no more information is gained. An example of a decision tree is given in figure \ref{fig:tree}.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.5\textwidth]{img/decision_tree}
+ \caption{Example of a decision tree. It is structured in Nodes (length, angle, charge) which represent the input features and in Leaves, which can be seen as terminal nodes. They represent a class label or probability to be signal for example.}
+ \label{fig:tree}
+\end{figure}
+
+The technique used in this thesis is called tree boosting. It is an advancement of the decision tree method explained above. Tree boosting combines many week tees into a strong boost decision tree. For that matter each tree is created iteratively and the tree's output ($h(x)$) is given in a weicht ($w$) relative to its accuracy. Th output of a boost decision tree is a weighted sum:
+\begin{equation}
+  \hat{y} (x) = \sum_t w_t h_t (x)
+\end{equation}
+After each iteration each data sample is given a weight based on its misclassification. Misclassification means that the decision tree found the wrong answer. For example it gets the atributes of a muon as input und decides that it is an electron. The more often a data sample is misclassifed, the more important it becomes since the weights accumulate. The goal of tree bossting is the minimization the objective function:
+\begin{equation}
+  O(x) = \sum_i l(\hat{y}_i,y_i) + \sum_t \Omega(f_t)
+\end{equation}
+where $l(\hat{y}_i,y_i)$ is the loss function, it represents the distance between truth and prediction of the $i$ th data sample. $\Omega(f_t)$ is the regulariization function, it penalizes the complexity of the $t$ th tree. \\
+There are many different ways to archive boosting, or in other words to iteratively adding trees together to minimize the loss function. The ones used in this thesis are described in the following references: Ada Boost \cite{bib:AdaBoost}, uBoost \cite{bib:uBoost}, xgb \cite{bib:xgb}, sk\_bdtg \cite{bib:bdtg}, sk\_bdt \cite{bib:bdt}.
+
+
+
+ \subsubsection{Test of different boost decision trees}
+
+The first step of analysis in particle physics is to is to distinguish the one decay one wants to analyze from everything else. Here the signal produced by the decay $B \rightarrow K^* \mu \mu$ shall be separated from everything else detected and recorded in the experiment.
+In order to find this decay in the raw data of a detector, one needs thresholds on experimental parameters. These parameters shall be different or in the best case unique to the decay. They can be all kind of parameters like vertex locations, momenta  or angles between trajectories.
+For the $B \rightarrow K^* \mu \mu$ decay these parameters would be:
 \begin{itemize}
  \item Decay vertex location for reconstructed particles (ENDVERTEX)
  \item Primary vertex location (OWNPV)
@@ -666,13 +711,15 @@ In particle physics the first step of each analysis is to clean up the data. Tha
  \item The cosine of the angle between primary vertex and decay vertex and recorded momentum (DIRA\_OWNPV)
 \end{itemize}
 The names in the bracets are the labels given to these parameters in the data structure of the ROOT Data Anlysis Framework \cite{bib:root}.
-Now one needs thresholds on these parameters, which define the signal-region. For example the flight distance has to be between 0.2 milimeters and 2 centimeters. But how do you obtain these thresholds? Thats were Classifiers are usefull. Classifiers are a type of algorithm from the Machine Learning area. They can be trained to distinguish different types of data. In this case signal and background. Each event in the data gets a probability to be signal assigend to it. So after the classification one can just take all the events with a probability over lets say 80\%. One has now eliminated 80\% of the background and can continue cleaning up the signal but thats not a part of this thesis. The goal of this part was to find the best classifier to be used in the  $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay analysis. \\
-Seven different classifiers were tested. A test means that the classifier is given a training set consisting of Monte Carlo simulated events containing only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays and randomly choosen real detector data, containing all kind of decays. In a training set the data is labeled. The Monte Carlo events are labeld with $1$ for signal and the real data with $0$ for background. The classifier will now train, that means the algorithm tries to label the data into signal and background by choosing different thresholds on the parameters mentioned above. After the training the thresholds get fixed. Now one has to test the classifer to check if everything worked fine. To do so a second set of data is prepared similar to the training set, just that the labels are now hidden from the classifier. Since the classifiers are not perfect, they do not assign $0$ and $1$ to each event but rather a probability to be signal between 0 and 1. A good classifier will now label the signal events with a high probability and background with a low probabillity. A bad classifier will assign 0.5 probability to each event.
-With a 0.5 probability no information was gained by classification, because having a 50:50 chance is as good as guessing. This probability assignements can now be used as a threshold themselves to subtract the background. \\
-Another property of classifiers is, that the data used in the training, can no longer be used in the analysis, because the classifier knows the training set too well and a bias is introduced if one reuses the training data in the actual analysis. That would mean that the part of the real detector data which is needed to train the classifiers would be lost for further analysis. To avoid such a waste of data a technique called k-folding is used. \\
-K-folding means that the no training set is created. But the data Monte Carlo Mix with signal events labeled with 1 and background events labeled with 0 is split into k equal parts. Now to classify one part all the other parts are used for training, while the labels of the one part are of course hidden. After iterating over all parts, one has classified all the data without loosing any. The only disadvantage are the addidtional computer resources needed, since the classifier has now to be trained k times instead of one time.
+Then the thresholds on these parameters must be defined, which define the signal-region. For example the flight distance has to be between 0.2 milimeters and 2 centimeters.
+To obtain these thresholds, boost decision trees are used. Boost decision trees are a type of algorithm from the Machine Learning area. They can be trained to distinguish different types of data. In this case signal data and background data.
+Finally, each event in the data gets a probability assigned to belong to the signal events. So after the selection one can just take all the events with a probability over lets say 80\%. One has now eliminated 80\% of the background and can continue cleaning up the signal but thats not a part of this thesis. The goal of this part was to find the best boost decision tree to be used in the  $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay analysis. \\
+Seven different boost decision trees were tested. The boost decision tree is given a training set consisting of Monte Carlo simulated events containing only $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decays and randomly choosen real detector data, containing all kinds of decays. In a training set the data is labeled. The Monte Carlo events are labeld with $1$ for signal and the real data with $0$ for background. The boost decision tree will now train, that means the algorithm tries to label the data into signal and background by choosing different thresholds on the parameters mentioned above. After the training the thresholds get fixed. Now one has to test the boost decision tree to check if everything worked fine. To do so a second set of data is prepared similar to the training set, just that the labels are now hidden from the tree. Since boost decision trees are not perfect, they do not assign $0$ and $1$ to each event but rather a probability to be signal between 0 and 1. A good boost decision tree will now label the signal events with a high probability and background with a low probabillity. A bad boost decision tree will assign 0.5 probability to each event.
+With a 0.5 probability no information was gained by the selection, because having a 50:50 chance is as good as guessing. In case of succesfull selection this probability assignements can be used as a threshold themselves to subtract the background. \\
+Another property of boost decision trees is, that the data used in the training, can no longer be used in the analysis, because the boost decision tree knows the training set too well and a bias is introduced if one reuses the training data in the actual analysis. That would mean that the part of the real detector data which is needed to train the boost decision tree would be lost for further analysis. To avoid such a waste of data a technique called k-folding is used. \\
+K-folding means that the no training set is created. But the data Monte Carlo Mix with signal events labeled with 1 and background events labeled with 0 is split into k equal parts, containing randomly choosen events. Now to perform the selection in one part all the other parts are used for training, while the labels of the one part are of course hidden. After iterating over all parts, one has performed a selection on all the data without loosing any. The only disadvantage are the addidtional computer resources needed, since the boost decision tree has now to be trained k times instead of one time.
 
- The following list of classifers where tested and compared in terms of perfomance:
+ The following list of boost decsision trees where tested and compared in terms of perfomance:
  \begin{itemize}
   \item Ada Boost \cite{bib:AdaBoost}
   \item uGB \cite{bib:ugb} + knnAda (k-nearest neghbor AdaBoost)
@@ -683,18 +730,17 @@ K-folding means that the no training set is created. But the data Monte Carlo Mi
   \item sk\_bdt \cite{bib:bdt}
  \end{itemize}
  The test was performed with 30000 events from the 2016 LHCb $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data and 10000 events from the Monte Carlo simulation.
-
-To compare classifiers the so called ROC (receiver operating charactertic) curves are used. The ROC curve shows the true positive rate against the false positive rate. The true positive rate is the rate of signal events that have been classified correctly as signal events, while the false postive rate ist the rate of background events classified as signal events. On figure \ref{fig:roc} a ROC curves of the classifiers above is displayed.
-The sample of 40000 events to test the classifiers was cut into ten equal parts, also called folds. In figure \ref{fig:roc} the ROC curve of one of these folds is displayed, the other nine can be found in the appendix \ref{app:roc}. \\
- It turns out that all the classifiers classify the data mostly correctly with just some minor variances. The ROC curve is in that case not a good tool to compare the different classifiers.
+To compare boost decision trees the so called ROC (receiver operating charactertic) curves are used. The ROC curve shows the true positive rate against the false positive rate. The true positive rate is the rate of signal events that have been selected correctly as signal events, while the false postive rate ist the rate of background events selected as signal events. On figure \ref{fig:roc} a ROC curves of the boost decision trees above is displayed.
+The sample of 40000 events to test the boost decision trees was cut into ten equal parts, also called folds. In figure \ref{fig:roc} the ROC curve of one of these folds is displayed, the other nine can be found in the appendix \ref{app:roc}. \\
+ It turns out that all the boosted decision trees selected the data mostly correctly with just some minor variances. The ROC curve is in that case not a good tool to compare the different boost decsison trees.
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{roc/fold_0_roc.pdf}
-  \caption{ROC curve of the first fold. One can see that all the classifiers are competetive in terms of classifing correctly}
+  \caption{ROC curve of the first fold. One can see that all the boost decision trees are competetive in terms of selecting signal events correctly}
   \label{fig:roc}
  \end{figure}
- The next step is to check for correlations between the assigned probabilities and the kinematic variables. The kinematic variabels as explained in section \ref{sec:Kinematics} are used to obtain the angular coefficients of the decay rate. If there is a correlation between the assigned probabilities from the classifier and these variables, a peak is artificialy added into the distribution of these variables. Imagine a positive correlation between the $B$ mass in the range 5000 to 6000 GeV and the probability to be signal from the classifier. After cutting at lets say 0.8 probability there will be a peak in the B mass distribution between 5000 and 6000 GeV. Normally such a peak suggest a new particle in this range. This is to avoid at all cost since it will compremise the whole analysis later on. \\
-In the following the correlation between the probability to be signal assigned by the classifier and the $B$ mass are shown. The correlation plots for the other kinematic variables can be found in appendix \ref{app:corr}.
+ The next step is to check for correlations between the assigned probabilities and the kinematic variables and the angels between trajectories. The kinematic variabels and angels as explained in section \ref{sec:Kinematics} are used to obtain the angular coefficients of the decay rate. If there is a correlation between the assigned probabilities from the boost decision tree and these variables, a peak is artificialy added into the distribution of these variables. Imagine a positive correlation between the $B$ mass in the range 5000 to 6000 GeV and the probability to be signal from the boost decision tree. After cutting at lets say 0.8 probability there will be a peak in the B mass distribution between 5000 and 6000 GeV. Normally such a peak suggest a new particle in this range. This is to avoid at all cost since it will compremise the whole analysis later on. \\
+In the following the correlation between the probability to be signal assigned by the boost decision tree and the $B$ mass are shown. The correlation plots for the different angles can be found in appendix \ref{app:corr}.
 
 
  % \begin{figure}[H]
@@ -707,53 +753,53 @@ In the following the correlation between the probability to be signal assigned b
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/AdaBoost_plot_bdt_vs_B0_M}
-  \caption{This plot showes the probabilities assign by the classifier as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the classifiers probabilities and the $B$ mass for the AdaBoost classifier. There is an obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot showes the probabilities assign by the boost decision tree as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the boost decision tree probabilities and the $B$ mass for the AdaBoost algorithm. There is an obvius correlation from the second bin to the fourth bin.}
   \label{fig:AdaB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/sk_bdt_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt classifier and the $B$ mass in MeV. There is no correlation.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt algorithm and the $B$ mass in MeV. There is no correlation.}
   \label{fig:skbdtB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/sk_bdtg_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg classifier and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg algorithm and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:skbdtgB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uBoost_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uBoost classifier and the $B$ mass in MeV. There is just a very small correlation compared to other classifiers.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uBoost algorithm and the $B$ mass in MeV. There is just a very small correlation compared to the other algorithms.}
   \label{fig:uBoostB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uGB+FL_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL classifier and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL algorithm and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.}
   \label{fig:uGB+FLB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/uGB+knnAda_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda classifier and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda algorithm and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.}
   \label{fig:uGB+knnAdaB0M}
  \end{figure}
 
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/xgb_plot_bdt_vs_B0_M}
-  \caption{This plot shows the correlations between the probabilities to be signal assigned by the xgb classifier and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot shows the correlations between the probabilities to be signal assigned by the xgb algorithm and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.}
   \label{fig:xgbB0M}
  \end{figure}
 
- The two classifers with the least correlation are the sk\_bdt and the uBoost classifers. Therfore they could be used to do seperate between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data. But the uBoost classifer is a little bit better in the ROC curve (figure \ref{fig:roc}).
+ \textbf{Result:} The two algorithm with the least correlation are the sk\_bdt and the uBoost algorithms. Therfore they most suitable to seperate between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data. But the uBoost algorithm is a little bit better in the ROC curve (figure \ref{fig:roc}).
 
 
 
@@ -907,7 +953,7 @@ In the case were x is significantly correlated with y, the sPlots from equation 
 More information on $_s Plots$ is given in reference \cite{bib:sPlot}.
 
 \section{Summary}
-The RooMCMarkovChain fitting routine is currently beeing added \cite{bib:pull} to the ROOT Data analysis framework. The best classifier uBoost from the classifers test will be used to find future $B \rightarrow K^* \mu \mu$ decays in the data produced by the LHCb detector. The rewighting done in this thesis will be used for the future analysis of the $B \rightarrow K^* \mu \mu$ in the current LHCb data.
+The RooMCMarkovChain fitting routine is currently beeing added \cite{bib:pull} to the ROOT Data analysis framework. The best algorithm uBoost from the boost decision tree test will be used to find future $B \rightarrow K^* \mu \mu$ decays in the data produced by the LHCb detector. The rewighting done in this thesis will be used for the future analysis of the $B \rightarrow K^* \mu \mu$ in the current LHCb data.
 %more physics
 
  \begin{thebibliography}{100}

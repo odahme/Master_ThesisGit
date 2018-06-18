@@ -110,10 +110,18 @@
 \newlabel{fig:lhcb_detector}{{13}{20}{Basic layout of the LHCb detector \cite {bib:lhcb_detector}. The interaction point is inside the vertrex detector and the beam pipe passes through the center. The different subdetectors are the two Ring Imaging Cherenkov Detectors (RICH1 and RICH2), the tracking stations (TT and T1 to T3), the scintillator pad detector (SPD), the preshower electromagnetic calorimeter (ECAL), the hadronic calorimeter (HCAL) and the muon stations (M1-M5). \relax }{figure.caption.19}{}}
 \citation{bib:JPsi}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}The LHCb trigger system}{21}{subsubsection.2.5.2}}
-\citation{bib:root}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Selection}{22}{subsection.2.6}}
 \newlabel{sec:clas}{{2.6}{22}{Selection}{subsection.2.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Inroduction on bdts (to write)}{22}{subsubsection.2.6.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Inroduction to decision tree learning}{22}{subsubsection.2.6.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Example of a decision tree. It is structured in Nodes (length, angle, charge) which represent the input features and in Leaves, which can be seen as terminal nodes. They represent a class label or probability to be signal for example.\relax }}{22}{figure.caption.20}}
+\newlabel{fig:tree}{{14}{22}{Example of a decision tree. It is structured in Nodes (length, angle, charge) which represent the input features and in Leaves, which can be seen as terminal nodes. They represent a class label or probability to be signal for example.\relax }{figure.caption.20}{}}
+\citation{bib:AdaBoost}
+\citation{bib:uBoost}
+\citation{bib:xgb}
+\citation{bib:bdtg}
+\citation{bib:bdt}
+\citation{bib:root}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}Test of different boost decision trees}{23}{subsubsection.2.6.2}}
 \citation{bib:AdaBoost}
 \citation{bib:ugb}
 \citation{bib:uBoost}
@@ -121,45 +129,43 @@
 \citation{bib:xgb}
 \citation{bib:bdtg}
 \citation{bib:bdt}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces ROC curve of the first fold. One can see that all the classifiers are competetive in terms of classifing correctly\relax }}{23}{figure.caption.20}}
-\newlabel{fig:roc}{{14}{23}{ROC curve of the first fold. One can see that all the classifiers are competetive in terms of classifing correctly\relax }{figure.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces This plot showes the probabilities assign by the classifier as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the classifiers probabilities and the $B$ mass for the AdaBoost classifier. There is an obvius correlation from the second bin to the fourth bin.\relax }}{24}{figure.caption.21}}
-\newlabel{fig:AdaB0M}{{15}{24}{This plot showes the probabilities assign by the classifier as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the classifiers probabilities and the $B$ mass for the AdaBoost classifier. There is an obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt classifier and the $B$ mass in MeV. There is no correlation.\relax }}{24}{figure.caption.22}}
-\newlabel{fig:skbdtB0M}{{16}{24}{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt classifier and the $B$ mass in MeV. There is no correlation.\relax }{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg classifier and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.\relax }}{25}{figure.caption.23}}
-\newlabel{fig:skbdtgB0M}{{17}{25}{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg classifier and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the uBoost classifier and the $B$ mass in MeV. There is just a very small correlation compared to other classifiers.\relax }}{25}{figure.caption.24}}
-\newlabel{fig:uBoostB0M}{{18}{25}{This plot shows the correlations between the probabilities to be signal assigned by the uBoost classifier and the $B$ mass in MeV. There is just a very small correlation compared to other classifiers.\relax }{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL classifier and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.\relax }}{25}{figure.caption.25}}
-\newlabel{fig:uGB+FLB0M}{{19}{25}{This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL classifier and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces ROC curve of the first fold. One can see that all the boost decision trees are competetive in terms of selecting signal events correctly\relax }}{25}{figure.caption.21}}
+\newlabel{fig:roc}{{15}{25}{ROC curve of the first fold. One can see that all the boost decision trees are competetive in terms of selecting signal events correctly\relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces This plot showes the probabilities assign by the boost decision tree as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the boost decision tree probabilities and the $B$ mass for the AdaBoost algorithm. There is an obvius correlation from the second bin to the fourth bin.\relax }}{25}{figure.caption.22}}
+\newlabel{fig:AdaB0M}{{16}{25}{This plot showes the probabilities assign by the boost decision tree as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the boost decision tree probabilities and the $B$ mass for the AdaBoost algorithm. There is an obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt algorithm and the $B$ mass in MeV. There is no correlation.\relax }}{26}{figure.caption.23}}
+\newlabel{fig:skbdtB0M}{{17}{26}{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdt algorithm and the $B$ mass in MeV. There is no correlation.\relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg algorithm and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.\relax }}{26}{figure.caption.24}}
+\newlabel{fig:skbdtgB0M}{{18}{26}{This plot shows the correlations between the probabilities to be signal assigned by the sk\_bdtg algorithm and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the uBoost algorithm and the $B$ mass in MeV. There is just a very small correlation compared to the other algorithms.\relax }}{26}{figure.caption.25}}
+\newlabel{fig:uBoostB0M}{{19}{26}{This plot shows the correlations between the probabilities to be signal assigned by the uBoost algorithm and the $B$ mass in MeV. There is just a very small correlation compared to the other algorithms.\relax }{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL algorithm and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.\relax }}{27}{figure.caption.26}}
+\newlabel{fig:uGB+FLB0M}{{20}{27}{This plot shows the correlations between the probabilities to be signal assigned by the uGB+FL algorithm and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda algorithm and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.\relax }}{27}{figure.caption.27}}
+\newlabel{fig:uGB+knnAdaB0M}{{21}{27}{This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda algorithm and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the xgb algorithm and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.\relax }}{27}{figure.caption.28}}
+\newlabel{fig:xgbB0M}{{22}{27}{This plot shows the correlations between the probabilities to be signal assigned by the xgb algorithm and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.28}{}}
 \citation{bib:JPsi}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda classifier and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.\relax }}{26}{figure.caption.26}}
-\newlabel{fig:uGB+knnAdaB0M}{{20}{26}{This plot shows the correlations between the probabilities to be signal assigned by the ugb+knnAda classifier and the $B$ mass in MeV. There is a obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces This plot shows the correlations between the probabilities to be signal assigned by the xgb classifier and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.\relax }}{26}{figure.caption.27}}
-\newlabel{fig:xgbB0M}{{21}{26}{This plot shows the correlations between the probabilities to be signal assigned by the xgb classifier and the $B$ mass in MeV. There is an obvius correlation from the second bin to the fourth bin.\relax }{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Reweighting}{26}{subsection.2.7}}
-\newlabel{sec:Reweight}{{2.7}{26}{Reweighting}{subsection.2.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.1}Results of the $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ reweighting}{27}{subsubsection.2.7.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the best weights to reweight the Monte Carlo data in order to match the detector data. The x- axes are the values for the number of tracks in an event (nTracks). On the left y-axes the fraction of events having nTracks is plotted. On the right y-axes the magnitude of the weights is shown.\relax }}{27}{figure.caption.28}}
-\newlabel{fig:nTracksw}{{22}{27}{This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the best weights to reweight the Monte Carlo data in order to match the detector data. The x- axes are the values for the number of tracks in an event (nTracks). On the left y-axes the fraction of events having nTracks is plotted. On the right y-axes the magnitude of the weights is shown.\relax }{figure.caption.28}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Same plot as in figure \ref  {fig:nTracksw}, for the transversal momentum of the $B$ meson (B0\_PT) in MeV.\relax }}{27}{figure.caption.29}}
-\newlabel{fig:B0_PTw}{{23}{27}{Same plot as in figure \ref {fig:nTracksw}, for the transversal momentum of the $B$ meson (B0\_PT) in MeV.\relax }{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Same plot as in figure \ref  {fig:nTracksw}, for the quality of the $K \pi \mu \mu $ vertex (B0\_ENDVERTEX\_CHI2).\relax }}{28}{figure.caption.30}}
-\newlabel{fig:B0_ENDVERTEX_CHI2w}{{24}{28}{Same plot as in figure \ref {fig:nTracksw}, for the quality of the $K \pi \mu \mu $ vertex (B0\_ENDVERTEX\_CHI2).\relax }{figure.caption.30}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces This plots shows the distribution of the $B$ transversal momentum. The X achsis shows the $B$ transversal momentum (B0\_PT) in MeV. The violet points represent the distribution of (B0\_PT) in the detector data. The red line represents the distribution of (B0\_PT) before reweighting the Monte Carlo data. The blue line represents the distribution (B0\_PT) after reweighting the Monte Carlo data. \relax }}{28}{figure.caption.31}}
-\newlabel{fig:B0_PT}{{25}{28}{This plots shows the distribution of the $B$ transversal momentum. The X achsis shows the $B$ transversal momentum (B0\_PT) in MeV. The violet points represent the distribution of (B0\_PT) in the detector data. The red line represents the distribution of (B0\_PT) before reweighting the Monte Carlo data. The blue line represents the distribution (B0\_PT) after reweighting the Monte Carlo data. \relax }{figure.caption.31}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.2}SPlot}{29}{subsubsection.2.7.2}}
-\newlabel{eq:L}{{28}{29}{Likelihood method}{equation.2.28}{}}
-\newlabel{eq:P_n}{{29}{29}{$_{in} Plot$ technique}{equation.2.29}{}}
-\newlabel{eq:Mn}{{30}{29}{$_{in} Plot$ technique}{equation.2.30}{}}
-\newlabel{eq:average}{{31}{30}{$_{in} Plot$ technique}{equation.2.31}{}}
-\newlabel{eq:N_nM_n}{{35}{30}{$_{in} Plot$ technique}{equation.2.35}{}}
-\newlabel{eq:M_nX}{{36}{30}{$_{S} Plot$ technique}{equation.2.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Reweighting}{28}{subsection.2.7}}
+\newlabel{sec:Reweight}{{2.7}{28}{Reweighting}{subsection.2.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.1}Results of the $B$ $\rightarrow $ $K^{*}$ $\mu $ $\mu $ reweighting}{28}{subsubsection.2.7.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the best weights to reweight the Monte Carlo data in order to match the detector data. The x- axes are the values for the number of tracks in an event (nTracks). On the left y-axes the fraction of events having nTracks is plotted. On the right y-axes the magnitude of the weights is shown.\relax }}{28}{figure.caption.29}}
+\newlabel{fig:nTracksw}{{23}{28}{This plot shows the Monte Carlo Simulated data in blue, the detector data in red and in green the best weights to reweight the Monte Carlo data in order to match the detector data. The x- axes are the values for the number of tracks in an event (nTracks). On the left y-axes the fraction of events having nTracks is plotted. On the right y-axes the magnitude of the weights is shown.\relax }{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Same plot as in figure \ref  {fig:nTracksw}, for the transversal momentum of the $B$ meson (B0\_PT) in MeV.\relax }}{29}{figure.caption.30}}
+\newlabel{fig:B0_PTw}{{24}{29}{Same plot as in figure \ref {fig:nTracksw}, for the transversal momentum of the $B$ meson (B0\_PT) in MeV.\relax }{figure.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Same plot as in figure \ref  {fig:nTracksw}, for the quality of the $K \pi \mu \mu $ vertex (B0\_ENDVERTEX\_CHI2).\relax }}{29}{figure.caption.31}}
+\newlabel{fig:B0_ENDVERTEX_CHI2w}{{25}{29}{Same plot as in figure \ref {fig:nTracksw}, for the quality of the $K \pi \mu \mu $ vertex (B0\_ENDVERTEX\_CHI2).\relax }{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces This plots shows the distribution of the $B$ transversal momentum. The X achsis shows the $B$ transversal momentum (B0\_PT) in MeV. The violet points represent the distribution of (B0\_PT) in the detector data. The red line represents the distribution of (B0\_PT) before reweighting the Monte Carlo data. The blue line represents the distribution (B0\_PT) after reweighting the Monte Carlo data. \relax }}{30}{figure.caption.32}}
+\newlabel{fig:B0_PT}{{26}{30}{This plots shows the distribution of the $B$ transversal momentum. The X achsis shows the $B$ transversal momentum (B0\_PT) in MeV. The violet points represent the distribution of (B0\_PT) in the detector data. The red line represents the distribution of (B0\_PT) before reweighting the Monte Carlo data. The blue line represents the distribution (B0\_PT) after reweighting the Monte Carlo data. \relax }{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.2}SPlot}{30}{subsubsection.2.7.2}}
+\newlabel{eq:L}{{30}{30}{Likelihood method}{equation.2.30}{}}
+\newlabel{eq:P_n}{{31}{31}{$_{in} Plot$ technique}{equation.2.31}{}}
+\newlabel{eq:Mn}{{32}{31}{$_{in} Plot$ technique}{equation.2.32}{}}
+\newlabel{eq:average}{{33}{31}{$_{in} Plot$ technique}{equation.2.33}{}}
+\newlabel{eq:N_nM_n}{{37}{31}{$_{in} Plot$ technique}{equation.2.37}{}}
+\newlabel{eq:M_nX}{{38}{32}{$_{S} Plot$ technique}{equation.2.38}{}}
 \citation{bib:sPlot}
 \citation{bib:pull}
-\newlabel{eq:sWeight}{{47}{31}{$_{S} Plot$ technique}{equation.2.47}{}}
-\newlabel{eq:sPlot2}{{48}{31}{$_{S} Plot$ technique}{equation.2.48}{}}
 \bibcite{bib:Likelihood}{1}
 \bibcite{bib:MinuitRM}{2}
 \bibcite{bib:root}{3}
@@ -169,6 +175,10 @@
 \bibcite{bib:Wilson}{7}
 \bibcite{bib:lhc_img}{8}
 \bibcite{bib:lhcb_detector}{9}
+\newlabel{eq:sWeight}{{49}{33}{$_{S} Plot$ technique}{equation.2.49}{}}
+\newlabel{eq:sPlot2}{{50}{33}{$_{S} Plot$ technique}{equation.2.50}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Summary}{33}{section.3}}
+\@writefile{toc}{\contentsline {section}{Bibliography}{33}{section*.36}}
 \bibcite{bib:velo}{10}
 \bibcite{bib:rich}{11}
 \bibcite{bib:mag}{12}
@@ -180,16 +190,14 @@
 \bibcite{bib:uBoost}{18}
 \bibcite{bib:xgb}{19}
 \bibcite{bib:bdtg}{20}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Summary}{32}{section.3}}
-\@writefile{toc}{\contentsline {section}{Bibliography}{32}{section*.35}}
 \bibcite{bib:bdt}{21}
 \bibcite{bib:JPsi}{22}
 \bibcite{bib:sPlot}{23}
 \bibcite{bib:pull}{24}
-\@writefile{toc}{\contentsline {section}{\numberline {A}ROC curves}{33}{appendix.A}}
-\newlabel{app:roc}{{A}{33}{ROC curves}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Correlation plots}{44}{appendix.B}}
-\newlabel{app:corr}{{B}{44}{Correlation plots}{appendix.B}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}Reweighting plots}{66}{appendix.C}}
-\newlabel{app:re}{{C}{66}{Reweighting plots}{appendix.C}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}ROC curves}{34}{appendix.A}}
+\newlabel{app:roc}{{A}{34}{ROC curves}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Correlation plots}{45}{appendix.B}}
+\newlabel{app:corr}{{B}{45}{Correlation plots}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Reweighting plots}{67}{appendix.C}}
+\newlabel{app:re}{{C}{67}{Reweighting plots}{appendix.C}{}}
 \global\@altsecnumformattrue
