@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  19 JUN 2018 19:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  19 JUN 2018 19:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1417,85 +1417,6 @@ Package pdftex.def Info: img/lhcb_detector.jpg used on input line 628.
 Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
  [19 </home/oliver/Master_ThesisGit/thesis/final/img/LHC_default.jpg>]
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:634: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.634 ...etime spent close to the beam. The VELOâ€
-                                                  ™s silicon detector elemen...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:634: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.634 ...time spent close to the beam. The VELOâ€™
-                                                  s silicon detector element...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:635: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.635 ... the light cone depends on the particleâ€
-                                                  ™s velocity, enabling the ...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:635: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.635 ...the light cone depends on the particleâ€™
-                                                  s velocity, enabling the d...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:637: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.637 ...bf{Trackers \cite{bib:trac} :} The LHCbâ€
-                                                  ™s tracking system consist...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:637: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.637 ...f{Trackers \cite{bib:trac} :} The LHCbâ€™
-                                                  s tracking system consists...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
 Overfull \hbox (10.3559pt too wide) in paragraph at lines 634--640
 \T1/ppl/b/n/10 Ring Imag-ing Cherenkov (RICH) de-tec-tors [[]] : \T1/ppl/m/n/10 The RICH de-tec-tors mea-sure the emis-sion of Cherenkov
  []
@@ -1504,59 +1425,6 @@ Overfull \hbox (10.3559pt too wide) in paragraph at lines 634--640
 Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
  [20 </home/oliver/Master_ThesisGit/thesis/final/img/lhcb_detector.jpg>]
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:643: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.643 ...orded. The LHCb trigger system aims to â€
-                                                  ™fillâ€™ this 2 kHz with i...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:643: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.643 ...rded. The LHCb trigger system aims to â€™
-                                                  fillâ€™ this 2 kHz with in...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:643: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.643 ...The LHCb trigger system aims to â€™fillâ€
-                                                  ™ this 2 kHz with interest...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-/home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.tex:643: Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin9'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.643 ...he LHCb trigger system aims to â€™fillâ€™
-                                                   this 2 kHz with interesti...
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
 Overfull \vbox (2.59337pt too high) has occurred while \output is active []
 
  [21] <img/decision_tree.png, id=600, 444.91219pt x 528.47438pt>
@@ -2554,7 +2422,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  67i,23n,108p,10369b,1014s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on /home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.pdf (88 pages, 6774717 bytes).
+Output written on /home/oliver/Master_ThesisGit/thesis/final/uzhpub-en.pdf (88 pages, 6774636 bytes).
 PDF statistics:
  3733 PDF objects out of 4296 (max. 8388607)
  1864 compressed objects within 19 object streams
