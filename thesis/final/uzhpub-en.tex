@@ -423,7 +423,7 @@ In addition several other properties of the parameters can be obtainded:
 
 %------------------------------------------------------------------------------
 
-\section{Analysis of the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
+\section{The $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ decay}
 
 This section describes the motivation to analyse this decay, then the operators needed to calculate the different couplings are derived and in the last section the effetive Wilson coefficients are derived. This section is mostly theoretical and should give an overview over the decay.
 
@@ -476,7 +476,7 @@ The kinematics and directions of the final state particles from the decay are de
 \begin{figure}[H]
  \centering
  \includegraphics[width=0.6\linewidth]{angels}
- \caption{kinematic variables of the decay $B^0$ $\rightarrow$ $K^{*0}$ $\mu$ $\mu$}
+ \caption{Angels defining the decay $B^0$ $\rightarrow$ $K^{*0}$ $\mu$ $\mu$}
  \label{fig:angels}
 \end{figure}
 The differential decay rate for the $B^0$ Meson can be expressed in terms of these variables:
@@ -495,7 +495,8 @@ This decay rate is defined as the probability per unit time that the particle wi
 For completness the next two sections desribe some of the theory concerning the decay: The operators and wilson coefficients.
 
 \subsection{Operators for $B \rightarrow X_s l^+l^-$ decays}
-In this section all the operators of the decay are derived from the effective Lagrangian. the operators in Quantum field theory are used to create or destroy particles, by applying them to a quantum field. This section should just give an overview if you need more detailed information consider reading reference \cite{bib:Operators}. \\
+In this section all the operators of the B0 decay into a Meson containing a strange quark $X_s$ and two charged leptons $l^+$, $l^-$ are derived from the effective Lagrangian. These operators  are used to describe the creation or destruction of particles  by applying them to a quantum field.
+This section is supposed to give an overview. More detailed information can be found in ref \cite{bib:Operators}. \\
 The effective Lagrangian for $B \rightarrow X_s l^+l^-$ decays has the form:
 \begin{align}
  \mathcal{L}_{eff} & = \mathcal{L}_{QCD,QED}(u,d,s,c,b,e,\mu,\tau) \notag                                                                                           \\
@@ -587,7 +588,7 @@ $C_7$ and $C_9$ always appear in a particular combination with other Wilson coef
   &+ \frac{4}{3} C_3 + \frac{64}{9} C_5 + \frac{64}{27} C_6 .
  \end{split}env
 \end{equation}
-The function $h(q^2,m_q)$ comes from the fermion loop and for completness is presented in equation \ref{eq:h(q2,m)} below. If you need more details consider reading reference \cite{bib:Wilson}.
+The function $h(q^2,m_q)$ comes from the fermion loop and for completness is presented in equation \ref{eq:h(q2,m)} below. More details are explained in reference  \cite{bib:Wilson}.
 \begin{align}
  h(q^2,m_q)                                            & = - \frac{4}{9} \left(\ln{\frac{m_q^2}{\mu^2}} - \frac{2}{3} - z \right) - \frac{4}{9}(2+z) \sqrt{|z-1|}  \cdot  \begin{cases}
  \arctan{\frac{1}{\sqrt{z-1}}}                         & z > 1                                                                                                                          \\
@@ -599,45 +600,50 @@ The function $h(q^2,m_q)$ comes from the fermion loop and for completness is pre
 
 
 \subsection{The LHCb Experiment} \label{sec:LHCb}
+% In this section the experimental setup of the detector is presented, which recorded the data used in this thesis.
+% The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based at the CERN laboratory near Geneva in Switzerland. It is part of the Large Hadron Collider (LHC), a proton-proton accelerator and collider located in a vast unterground tunnel with 26.7 km circumference beneath the Swiss-French countryside.
+% The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefore very large detectors. ALICE investigates quark-gluon plasma and therefore needs heavy ion collisions, instead of proton collisions. \\
+% The protons in the LHC have a kinetic energy of 7 TeV, which allows a collision energy, in the LHCb detector, of 13 TeV.
+The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based
+at the CERN laboratory near Geneva in Switzerland.
 In this section the experimental setup of the detector is presented, which recorded the data used in this thesis.
-The Large Hadron Collider beauty experiment (LHCb) is one of four large experiments based at the CERN laboratory near Geneva in Switzerland. It is part of the Large Hadron Collider (LHC), a proton-proton accelerator and collider located in a vast unterground tunnel with 26.7 km circumference beneath the Swiss-French countryside.
-The other three experiments are CMS and ATLAS which are dedicated to a wide range of physics and have therefore very large detectors. ALICE investigates quark-gluon plasma and therefore needs heavy ion collisions, instead of proton collisions. \\
-The protons in the LHC have a kinetic energy of 7 TeV, which allows a collision energy, in the LHCb detector, of 13 TeV. In the year 2016 the LHCb had a recorded luminosity of $\SI{1906}{pb^{-1}}$. For this thesis 1'575'210 potential $B \rightarrow K^* \mu \mu$ events are used and refered as raw LHCb data.
-LHCb is dedicated to falvour physics. It therefore investigates rare decays and CP violation in beauty and charm hadrons.
+The LHCb Experiment is situated at the Large Hadron Collider (LHC). The LHC consists of a 27-kilometre ring of superconducting magnets and is located in an underground tunnel at CERN.
+The protons in the LHC are accelerated to have a kinetic energy of 7 TeV, which allows a collision energy in the LHCb detector of 13 TeV.
+In the year 2016 the LHCb had a recorded luminosity of $\SI{1906}{pb^{-1}}$. For this thesis 1'575'210 potential $B \rightarrow K^* \mu \mu$ events are used and refered as raw LHCb data.
+LHCb is dedicated to flavor physics. It investigates rare decays and CP violation in beauty and charm hadrons.
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=1.0\textwidth]{{{LHC_default}}}
- \caption{CERN's Accelerator Complex \cite{bib:lhc_img}: The protons get injected in the lineare accelerator LINAC2. Then they get pre-accelerated in 3 synchrotons (BOOSTER,PS,SPS) where the protons reach a kinetic energy of 450 GeV. That is the entering energy of the LHC which accelerates them futher up to 7 TeV, before they collide at the four detectors: CMS, ATLAS, LHCb and ALICE.}
+ \caption{CERN's Accelerator Complex \cite{bib:lhc_img}: he protons are injected in the linear accelerator LINAC2. Then they are pre-accelerated in 3 synchrotons (BOOSTER,PS,SPS), where the protons reach a kinetic energy of 450 GeV. This is their entering energy of the LHC which accelerates them further up to 7 TeV. They collide inside the four detectors: CMS, ATLAS, LHCb and ALICE.}
  \label{fig:lhc}
 \end{figure}
 
 
 
 \subsubsection{The LHCb Detector}
-The LHCb Detector has a fix target geometry, because beauty hadrons are manily produced at small angeles with respect to the beam pipe.
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=1.0\textwidth]{{{lhcb_detector}}}
- \caption{Basic layout of the LHCb detector \cite{bib:lhcb_detector}. The interaction point is inside the vertrex detector and the beam pipe passes through the center. The different subdetectors are the two Ring Imaging Cherenkov Detectors (RICH1 and RICH2), the tracking stations (TT and T1 to T3), the scintillator pad detector (SPD), the preshower electromagnetic calorimeter (ECAL), the hadronic calorimeter (HCAL) and the muon stations (M1-M5). }
+ \caption{Basic layout of the LHCb detector \cite{bib:lhcb_detector}. The interaction point is inside the vertex detector and the beam pipe passes through the center. The different sub-detectors are the two Ring Imaging Cherenkov Detectors (RICH1 and RICH2), the tracking stations (TT and T1 to T3), the Scintillator Pad Detector (SPD), the pre-shower Electromagnetic CALorimeter (ECAL), the Hadronic CALorimeter (HCAL) and the Muon stations (M1-M5).}
  \label{fig:lhcb_detector}
 \end{figure}
 
 
-\textbf{VErtex LOcator (VELO) \cite{bib:velo} :} Velo picks out B mesons from the multitude of other particles produced. This is a complex task since B mesons have very short livetimes spent colse to the beam. The VELO's silicon detecor elements must be placed at a distance of just five milimetres to the interaction point. To prevent damage to the detector during beam injection and stabilization it is mechanically moved to a safe distance. Velo measures B mesons indirectly be detecting its decay particles, nevertheless it has a resolution of $\SI{10}{microns}$.\\
-\textbf{Ring Imaging Cherenkov (RICH) detectors \cite{bib:rich} :} The RICH detectors meeasure the emission of Cherenkov radiation, which happens when a charged particle passes through a medium faster than light does. It is a similar effect like the sonic boom a aircraft produces by breaking the sound barrier. The shape of the light cone depends on the particle's velocity, enabling the detector to determine the speed of a charged particle.  \\
-\textbf{Magnet \cite{bib:mag} :} The big magnet of the LHCb experiment weights 27 tonnes and is mounted inside a 1,450 tonne steel frame. This powerful magnet forces all charged particels to change there trajectory. By examining the curvature of the path one can calculate the momentum of the particle.  \\
-\textbf{Trackers \cite{bib:trac} :} The LHCb's tracking system consists of a series of four large rectangular stations, each covering an area of $\SI{40}{m^2}$. While flying through this area charged particles will leave a trace, therefor one can estimate the trajectory of a particle. The trajectory is used to link the signals left in other detecor elements to the corresponding particle. In LHCb two different tracker technologies are used: The silicon tracker placed close to the beam pipe, uses silicon microstripes. If a charged particle passes such a stripe it collides with the silicon atoms, liverating electrons and creating an electric current, which is then recorded. The outer tracker situated further from the beam pipe consists of gas-filled tubes. The gas ionizes when a charged particle hits a gas molecules, producing electrons. These reach an anode wire situated in the centre of each tube. The position of the track is found by timing how long it takes electrons to reach it. \\
-\textbf{Calorimeters \cite{bib:calo} :} Calorimeters stop particles as they pass through, measuring the amount of energy lost. In LHCb there are two different types: The elctromagnetic calorimeter responsible for light particles like electrons and photons and the hadronic calorimeter responsible for heavier particles containing quarks. Both have a sandwich-like structure, with alternating layers of metal and plastic plates. If a particles hits a metal plate it produces a shower of secondary particles. These will excite polystyrenne molecules in the plastic plates, which then emit ultraviolet light. The energy lost by the particle in the metal plate is proportional to the amount of UV light produced in the plastic plates. \\
-\textbf{Muon System \cite{bib:muonSys} :} The muon system consistes of 5 rectangular stations, which cover an area of $\SI{435}{m^2}$. Each station has chambers filled with three gases: carbon dioxide, argon and tetrafluoromethane. Passing muons react with the gas mixture and electrodes detect the result.
+\textbf{VErtex LOcator (VELO) \cite{bib:velo} :} picks out B mesons from the multitude of other particles produced. This is a complex task since B mesons have a very short lifetime spent close to the beam. The VELO’s silicon detector elements must be placed at a distance of just five millimeters to the interaction point. To prevent damage to the detector during beam injection, it is mechanically moved to a safe distance. VELO measures B mesons indirectly by detecting its decay particles.It has a resolution of $\SI{10}{microns}$.\\
+\textbf{Ring Imaging Cherenkov (RICH) detectors \cite{bib:rich} :} The RICH detectors measure the emission of Cherenkov radiation, which happens when a charged particle passes through a medium faster than light does. The shape of the light cone depends on the particle’s velocity, enabling the detector to determine its speed.  \\
+\textbf{Magnet \cite{bib:mag} :} The big magnet of the LHCb experiment weights 27 tons and is mounted inside a 1,450 tons steel frame. This powerful magnet forces the charged particles to change their trajectory. From the curvature of their paths, their momentum is calculated.  \\
+\textbf{Trackers \cite{bib:trac} :} The LHCb’s tracking system consists of a series of four large rectangular stations, each covering an area of  $\SI{40}{m^2}$. While flying through this area charged particles will leave signals, which are used to estimate their trajectory. The trajectory is used to link the signals left in other detector elements to the corresponding particle. In the LHCb experiment two different tracker technologies are used:  The silicon tracker placed close to the beam pipe uses silicon micro-stripes. If a charged particle passes such a stripe, it collides with the silicon atoms, liberating electrons and creating an electric current, which is then recorded. The outer tracker situated further from the beam pipe consists of gas-filled tubes. The gas is ionized when a charged particle hits the gas molecules, producing electrons. They reach an anode wire situated in the centre of each tube. The position of the track is found by timing: how long electrons need to reach it. \\
+\textbf{Calorimeters \cite{bib:calo} :} Calorimeters stop particles as they pass through, measuring the amount of energy lost. In LHCb there are two different types: The elctromagnetic calorimeter responsible for light particles like electrons and photons and the hadronic calorimeter responsible for heavier particles containing quarks. Both have a sandwich-like structure with alternating layers of metal and plastic plates. If a particles hits a metal plate it produces a shower of secondary particles. These will excite polystyrene molecules in the plastic plates, which then emit ultraviolet light. The energy lost by the particle in the metal plate is proportional to the amount of UV light produced in the plastic plates. \\
+\textbf{Muon System \cite{bib:muonSys} :} The Muon System consists of 5 rectangular stations, which cover an area of $\SI{435}{m^2}$.  Each station has chambers filled with three gases: carbon dioxide, argon and tetrafluoromethane. Passing muons react with the mixture, and electrodes detect the result.
 
 
 \subsubsection{The LHCb trigger system}
-The rate of events at the LHCb interaction point is $\SI{40}{MHz}$. But the rate to have a B meson contained in the detector is $\SI{15}{kHz}$. The offline computing power just allows $\SI{2}{kHz}$ to be recorded. The LHCb trigger system aims to 'fill' this $\SI{2}{kHz}$ with intresting B decays and important control decays like $J/ \psi$ decays \cite{bib:JPsi}. The trigger has two levels: \\
-The \textbf{Level Zero (L0)} trigger reduces the beginning $\SI{40}{MHz}$ to $\SI{1}{MHz}$. To get this high rate it can only rely on fast sub-detectors as the calorimeters and the muon system. The L0 trigger looks for events with high transverse momentum with respect to the patrticle beam axis (pT), because particles from a B decay have this attribute, since B Mesons are always produced almost parallel to the beam axis.
-In addition the L0 trigger performs a simplified vertex reconstruction with the signal of two silicon layers of the VELO to identifie events with multple proton-proton collisions. They are rejected because for this kind of events its much more difiicult to reconstruct B meson decays, since it is harder to distinguish primary and secondary vertex of the B decay. \\
-The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 1000 16-core computers. It has two stages: HLT1 which reduces the event rate to a few tens of kHz and HLT2 which reduces the rate to the $\SI{2}{kHz}$ which are recorded. HLT1 gets all the candidates of the L0 trigger and uses the full detector information on them to search for particles with a high impact parameter with respect the proton-proton collision. These particles are most likly decay products from B mesons, because of its relatively long life-time. They typically fly 1 cm away from the collision before decaying resulting in a high impact parameter for the decay products. HLT2 does a complete reconstruction of the events. It starts with the track of the VELO and connects them to the tracks in the other sub-detectors. Most important are displaced vertices, since they are strong indicator for B decays. The selection is devided into two parts. The inclusive selection searches for resonance decays like $D^*$ or $J/ \psi$. The exclusive selection is desigened to provide the highest possible efficiency to fully reconstruct B decays of interest. It therfor uses all information available such as mass and vertex quality and intermediate resonances.
+The rate of events at the LHCb interaction point is 40 MHz;  the rate to have a B meson contained in the detector is only 15 kHz. But the offline computing power just allows 2 kHz to be recorded. The LHCb trigger system aims to ’fill’ this 2 kHz with interesting B decays and important control decays like J/y decays.  \cite{bib:JPsi}. The trigger has two levels: \\
+The \textbf{Level Zero (L0)} trigger reduces the beginning 40MHz to 1 MHz. To get this high rate it can only rely on fast sub-detectors as the calorimeters and the muon system. The L0 trigger looks for events with high transverse momentum with respect to the particle beam axis (pT),. Particles from a B decay have this attribute, since B Mesons are always produced almost parallel to the beam axis.
+In addition the L0 trigger performs a simplified vertex reconstruction using the signals of two silicon layers of the VELO in order to identify events with multiple proton-proton collisions. They are rejected because for this kind of events it is much more difficult to reconstruct B meson decays.  \\
+The \textbf{High Level Trigger (HTL)} s an algorithm that runs on a farm of 1000 16-core computers. It has two stages: HLT1 which reduces the event rate to a few tens of kHz and HLT2 which reduces the rate to the 2 kHz which are recorded. HLT1 gets all the candidates of the L0 trigger and uses the full detector information on them to search for particles with a high impact parameter with respect to the proton-proton collisions. These particles are most likely decay products from B mesons, because of its relatively long life-time. They typically fly 1 cm away from the collision point before decaying resulting in a high impact parameter for the decay products. HLT2 does a complete reconstruction of the events. It starts with the track of the VELO and connects them to the tracks in the other sub-detectors. Most important are displaced vertices, since they are strong indicator for B decays. The selection is divided into two parts. The inclusive selection searches for resonance decays like $D^*$ or $J/\psi$. The exclusive selection is designed to provide the highest possible efficiency to fully reconstruct B decays of interest. It uses all information available such as mass and vertex quality and intermediate resonances.
 
 
 
@@ -675,13 +681,13 @@ The \textbf{High Level Trigger (HTL)} is an algorithm that runs on a farm of 100
 
  \subsubsection{Inroduction to decision tree learning}
 
-The selection of events out of the raw detector data is done by boost decision trees. A decision tree takes a set of input features and splits input data recursively based on those features. Each split at a node is chosen to maximize information gain or minimize entropy. The infromation gained by the split is the difference in entropy befora and after the split. Entropy is maximal for a 50:50 split in minimal for a 1:0 split.
+The selection of events out of the raw detector data is done by boost decision trees. A decision tree takes a set of input features and splits input data recursively based on those features. Each split at a node is chosen to maximize information gain or minimize entropy. The infromation gained by the split is the difference in entropy befor a and after the split. Entropy is maximal for a 50:50 split in minimal for a 1:0 split.
 The splits are created recursively and splitting continues until some stop condition is met, like a certain depth of the tree or if no more information is gained. An example of a decision tree is given in figure \ref{fig:tree}.
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=0.5\textwidth]{img/decision_tree}
- \caption{Example of a decision tree. It is structured in Nodes (length, angle, charge) which represent the input features and in Leaves, which can be seen as terminal nodes. They represent a class label or probability to be signal for example.}
+ \caption{Example of a decision tree. It is structured in Nodes (length, angle, charge) which represent the input features and in Leaves, which can be seen as terminal nodes. They represent a class label, a probability to be signal for example.}
  \label{fig:tree}
 \end{figure}
 
@@ -731,7 +737,7 @@ K-folding means that the no training set is created. But the data Monte Carlo Mi
  \end{itemize}
  The test was performed with 30000 events from the 2016 LHCb $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data and 10000 events from the Monte Carlo simulation.
 To compare boost decision trees the so called ROC (receiver operating charactertic) curves are used. The ROC curve shows the true positive rate against the false positive rate. The true positive rate is the rate of signal events that have been selected correctly as signal events, while the false postive rate ist the rate of background events selected as signal events. On figure \ref{fig:roc} a ROC curves of the boost decision trees above is displayed.
-The sample of 40000 events to test the boost decision trees was cut into ten equal parts, also called folds. In figure \ref{fig:roc} the ROC curve of one of these folds is displayed, the other nine can be found in the appendix \ref{app:roc}. \\
+The data used for training the boost decsison tree algorithms can not be reused in the analysis, because the algorithm knows the data to well. To avoid a waste of data the sample of 40000 events to test the boost decision trees was cut into ten equal parts, also called folds. Then to perform the selection in one fold, the oder nine folds were used for training. In figure \ref{fig:roc} the ROC curve of one of these folds is displayed, the other nine can be found in the appendix \ref{app:roc}. \\
  It turns out that all the boosted decision trees selected the data mostly correctly with just some minor variances. The ROC curve is in that case not a good tool to compare the different boost decsison trees.
  \begin{figure}[H]
   \centering
@@ -739,7 +745,7 @@ The sample of 40000 events to test the boost decision trees was cut into ten equ
   \caption{ROC curve of the first fold. One can see that all the boost decision trees are competetive in terms of selecting signal events correctly}
   \label{fig:roc}
  \end{figure}
- The next step is to check for correlations between the assigned probabilities and the kinematic variables and the angels between trajectories. The kinematic variabels and angels as explained in section \ref{sec:Kinematics} are used to obtain the angular coefficients of the decay rate. If there is a correlation between the assigned probabilities from the boost decision tree and these variables, a peak is artificialy added into the distribution of these variables. Imagine a positive correlation between the $B$ mass in the range 5000 to 6000 GeV and the probability to be signal from the boost decision tree. After cutting at lets say 0.8 probability there will be a peak in the B mass distribution between 5000 and 6000 GeV. Normally such a peak suggest a new particle in this range. This is to avoid at all cost since it will compremise the whole analysis later on. \\
+ The next step is to check for correlations between the assigned probabilities and the kinematic variables and the angels between trajectories. The kinematic variabels and angels as explained in section \ref{sec:Kinematics} are used to obtain the angular coefficients of the decay rate. If there is a correlation between the assigned probabilities from the boost decision tree and these variables, a peak is artificialy added into the distribution of these variables. Imagine a positive correlation between the $B$ mass in the range 5000 to 6000 GeV and the probability to be signal from the boost decision tree. After cutting away the background there will be an artificial peak in the B mass distribution between 5000 and 6000 GeV. Normally such a peak suggest a new particle in this range. This is to avoid at all cost since it will compremise the whole analysis later on. \\
 In the following the correlation between the probability to be signal assigned by the boost decision tree and the $B$ mass are shown. The correlation plots for the different angles can be found in appendix \ref{app:corr}.
 
 
@@ -753,7 +759,7 @@ In the following the correlation between the probability to be signal assigned b
  \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{plots/AdaBoost_plot_bdt_vs_B0_M}
-  \caption{This plot showes the probabilities assign by the boost decision tree as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV. The X - errorbars indicate the length of each bin, while the Y errorbars represent the standart derivation on the probabilities. One can see in this plot the correlation between the boost decision tree probabilities and the $B$ mass for the AdaBoost algorithm. There is an obvius correlation from the second bin to the fourth bin.}
+  \caption{This plot showes the probabilities assign by the boost decision tree as explained in the above paragraph, labeld with bdt on the Y achsis. On the X achsis the values for the $B$ mass are shown in MeV.W The horizontal errorbars indicate the length of each bin, while the vertical errorbars represent the standart derivation of the probabilities. One can see in this plot the correlation between the boost decision tree probabilities and the $B$ mass for the AdaBoost algorithm. There is an obvius correlation from the second bin to the fourth bin.}
   \label{fig:AdaB0M}
  \end{figure}
 
@@ -799,7 +805,7 @@ In the following the correlation between the probability to be signal assigned b
   \label{fig:xgbB0M}
  \end{figure}
 
- \textbf{Result:} The two algorithm with the least correlation are the sk\_bdt and the uBoost algorithms. Therfore they most suitable to seperate between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data. But the uBoost algorithm is a little bit better in the ROC curve (figure \ref{fig:roc}).
+ \textbf{Result:} The two algorithm with the least correlation are the sk\_bdt and the uBoost algorithms. Therfore they most suitable to seperate between signal and background in the $B$ $\rightarrow$ $K^{*}$ $\mu$ $\mu$ data. But the uBoost algorithm is a little bit better in the ROC curve (figure \ref{fig:roc}). Therefore it was choosen to perform the selection.
 
 
 

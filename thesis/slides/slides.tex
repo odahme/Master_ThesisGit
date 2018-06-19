@@ -67,7 +67,7 @@
 %\usecolortheme{rose}
 %\usecolortheme{seagull}
 %\usecolortheme{seahorse}
-%\usecolortheme{whale}
+\usecolortheme{whale}
 %\usecolortheme{wolverine}
 
 %\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
@@ -87,7 +87,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Master Thesis]{Development of an improved fitting routine. Classification and Reweighting of the $B \rightarrow K^* \mu \mu$ decay} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Master Thesis]{Implementation of Monte Carlo fitter and Selection of $B \rightarrow K^* \mu \mu$ decays in LHCb Run2 data.} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Oliver Dahme} % Your name
 \institute[UZH] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -102,7 +102,7 @@ University of Zurich \\ % Your institution for the title page
 
 \begin{frame}
  \titlepage % Print the title page as the first slide
- \centering Supervisors: Prof. Dr. Nicola Serra, Dr. Marcin Chzsaszcz
+ \centering Supervisors: Prof. Dr. Nicola Serra, Prof. Dr. Marcin Chrzs\k{a}szcz
 \end{frame}
 
 \begin{frame}
@@ -150,28 +150,106 @@ University of Zurich \\ % Your institution for the title page
 
 \begin{frame}
   \frametitle{Motivation}
+
+Recent experimental results of the LHCb collaboration [JHEP08 (2017) 055] suggest a violation of the lepton universality:
+
   \begin{equation}
 \begin{split}
 R_{K*0} &= \left. \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} \mu^+ \mu^-)}{\mathcal{B}(B^0 \rightarrow K^{*0} J/\psi(\rightarrow \mu^+ \mu^-))} \middle/   \dfrac{\mathcal{B}(B^0 \rightarrow K^{*0} e^+ e^-)}{\mathcal{B} ( B^0 \rightarrow K^{*0} J/\psi(\rightarrow e^+ e^-))}  \right. , \\
 R_{K*0} &=   \begin{cases}
-  0.66^{+0.11}_{-0.07} (\text{stat}) \pm 0.03 (\text{syst}) \text{for} 0.045 < q^2 < 1.1 \text{ GeV}^2/c^4, \\
-  0.69^{+0.11}_{-0.07} (\text{stat}) \pm 0.05 (\text{syst}) \text{for} 1.1 < q^2 < 6.0 \text{ GeV}^2/c^4.
+  0.66^{+0.11}_{-0.07} (\text{stat}) \pm 0.03 (\text{syst}) \text{ for } 0.045 < q^2 < 1.1 \text{ GeV}^2/c^4, \\
+  0.69^{+0.11}_{-0.07} (\text{stat}) \pm 0.05 (\text{syst}) \text{ for } 1.1 < q^2 < 6.0 \text{ GeV}^2/c^4.
 \end{cases}
 \end{split}
 \end{equation}
+
 \end{frame}
 
 \begin{frame}
-  \frametitle{Kinematics}
+  \frametitle{Variables defining the decay}
+
+The kinematics and directions of the final state particles from the decay are defined by the three angels $\theta_K$, $\theta_L$ and $\phi$ and the invariant di-muon mass square $q^2$.
+
+  \begin{figure}
+   \includegraphics[width= 0.8\linewidth]{figures/angels}
+   \caption{Angels defining the decay $B^0$ $\rightarrow$ $K^{*0}$ $\mu$ $\mu$}
+  \end{figure}
 
 \end{frame}
 
 %------------------------------------------------------------------------------
 
-\section{Test of Classifiers}
+\section{Selection of $B_0 \rightarrow K^* \mu^+ \mu^-$ decays}
+
+
 
 \begin{frame}
-  \frametitle{Test of Classifiers}
+  \frametitle{Decision tree}
+
+Decision trees are structured in Nodes, which represent the input features and in Leaves, which can be seen as terminal nodes.
+
+  \begin{figure}
+   \includegraphics[width=0.5\textwidth]{figures/decision_tree}
+   \caption{Example of a decision tree.}
+   \label{fig:tree}
+  \end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Selection of $B_0 \rightarrow K^* \mu^+ \mu^-$ decays}
+
+To select the decay from the raw Run2 data, boost decision trees and the K-folding technique were used. To find the best boost decision tree algorithm, the following were tested:
+
+\begin{itemize}
+ \item Ada Boost
+ \item uGB  + knnAda (k-nearest neghbor AdaBoost)
+ \item uBoost
+ \item uGB  + Fl (flatness loss)
+ \item xgb
+ \item sk\_bdtg
+ \item sk\_bdt
+\end{itemize}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Selection of $B_0 \rightarrow K^* \mu^+ \mu^-$ decays}
+
+  \begin{figure}
+   \includegraphics[width= 1.0\linewidth]{figures/roc}
+   \caption{ROC (receiver operating charactertic) curve}
+  \end{figure}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Selection of $B_0 \rightarrow K^* \mu^+ \mu^-$ decays}
+
+  \begin{figure}
+   \includegraphics[width=0.8\linewidth]{figures/cor_AdaBoost}
+   \caption{Correlation plot between $B$ mass in Mev and the response of the AdaBoost algorithm.}
+  \end{figure}
+
+\end{frame}
+
+
+%------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Selection of $B_0 \rightarrow K^* \mu^+ \mu^-$ decays}
+
+  \begin{figure}
+   \includegraphics[width=0.8\linewidth]{figures/cor_uBoost}
+   \caption{Correlation plot between $B$ mass in Mev and the response of the uBoost algorithm.}
+  \end{figure}
 
 \end{frame}
 
@@ -181,7 +259,70 @@ R_{K*0} &=   \begin{cases}
 \section{Reweighting}
 
 \begin{frame}
-  \frametitle{Test of Classifiers}
+  \frametitle{Reweighting}
+
+    \begin{itemize}
+      \item procedure to match Monte Carlo simulation to data
+      \item get detector efficiencies
+      \item done by applying weights to the MC events
+      \item choosen be comparing MC and data
+    \end{itemize}
+compare parameters:
+\begin{itemize}
+  \item number of Tracks
+  \item the quality of the $K \pi \mu \mu$ vertex
+  \item transversal momentum of the $B$ meson
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reweighting}
+
+  \begin{figure}
+   \includegraphics[width=0.8\linewidth]{figures/nTracksw}
+   \caption{Reweighting result for the number of tracks}
+  \end{figure}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Reweighting}
+
+  \begin{figure}
+   \includegraphics[width=0.8\linewidth]{figures/B0_ENDVERTEX_CHI2w}
+   \caption{Reweighting result for the quality of the $K \pi \mu \mu$ vertex (B0\_ENDVERTEX\_CHI2)}
+  \end{figure}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Reweighting}
+
+  \begin{figure}
+   \includegraphics[width=0.8\linewidth]{figures/B0_PTw}
+   \caption{Reweighting result for the transversal momentum of the $B$ meson (B0\_PT) in MeV.}
+  \end{figure}
+
+
+\end{frame}
+
+%------------------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Reweighting}
+
+  \begin{figure}
+   \includegraphics[width=0.8\linewidth]{figures/B0_PT}
+   \caption{Result after applieng the weights for the transversal momentum of the $B$ meson (B0\_PT) in MeV.}
+  \end{figure}
+
 
 \end{frame}
 
@@ -373,6 +514,15 @@ R_{K*0} &=   \begin{cases}
    \centering Pull Request: https://github.com/root-project/root/pull/1422 \\
     --------------------------------------------------------------------- \\
    \centering E-mail: o.dahme@cern.ch
+
+\end{frame}
+
+\begin{frame}
+ \frametitle{Summary}
+
+The RooMCMarkovChain fitting routine is currently beeing added to the ROOT Data analysis framework. \\
+ The best algorithm uBoost from the boost decision tree test will be used to find future $B \rightarrow K^* \mu \mu$ decays. \\
+ The rewighting done in this thesis will be used for the future analysis of the $B \rightarrow K^* \mu \mu$ in the current LHCb data.
 
 \end{frame}
 
