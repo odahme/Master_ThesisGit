@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  19 JUN 2018 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  20 JUN 2018 09:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -893,63 +893,63 @@ Package pdftex.def Info: figures/KstarFeynman.png used on input line 149.
 (pdftex.def)             Requested size: 273.83728pt x 146.59857pt.
  [4
 
- </home/oliver/Master_ThesisGit/thesis/slides/figures/KstarFeynman.png>] [5
-
-] <figures/angels.png, id=103, 277.63129pt x 196.0592pt>
+ </home/oliver/Master_ThesisGit/thesis/slides/figures/KstarFeynman.png>] <figures/angels.png, id=96, 277.63129pt x 196.0592pt>
 File: figures/angels.png Graphic file (type png)
  <use figures/angels.png>
-Package pdftex.def Info: figures/angels.png used on input line 178.
+Package pdftex.def Info: figures/angels.png used on input line 161.
 (pdftex.def)             Requested size: 273.83728pt x 193.38121pt.
 
-Overfull \vbox (38.33923pt too high) detected at line 178
+Overfull \vbox (38.33923pt too high) detected at line 161
  []
 
-[6
+[5
 
- </home/oliver/Master_ThesisGit/thesis/slides/figures/angels.png>]
+ </home/oliver/Master_ThesisGit/thesis/slides/figures/angels.png>] [6
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 182.
-
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 182.
+(hyperref)                removing `math shift' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rightarrow' on input line 182.
+(hyperref)                removing `subscript' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 182.
+(hyperref)                removing `\rightarrow' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 182.
+(hyperref)                removing `superscript' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 182.
+(hyperref)                removing `\mu' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mu' on input line 182.
+(hyperref)                removing `superscript' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 182.
+(hyperref)                removing `\mu' on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 182.
+(hyperref)                removing `superscript' on input line 185.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 185.
 
 <figures/decision_tree.png, id=110, 444.91219pt x 528.47438pt>
 File: figures/decision_tree.png Graphic file (type png)
  <use figures/decision_tree.png>
-Package pdftex.def Info: figures/decision_tree.png used on input line 196.
+Package pdftex.def Info: figures/decision_tree.png used on input line 199.
 (pdftex.def)             Requested size: 171.14764pt x 203.28989pt.
 
-Overfull \vbox (33.89275pt too high) detected at line 196
+Overfull \vbox (33.89275pt too high) detected at line 199
  []
 
 [7
@@ -959,21 +959,21 @@ Overfull \vbox (33.89275pt too high) detected at line 196
 ] <figures/roc.pdf, id=126, 569.12625pt x 292.09125pt>
 File: figures/roc.pdf Graphic file (type pdf)
  <use figures/roc.pdf>
-Package pdftex.def Info: figures/roc.pdf used on input line 228.
+Package pdftex.def Info: figures/roc.pdf used on input line 231.
 (pdftex.def)             Requested size: 342.2953pt x 175.68394pt.
  [9
 
  </home/oliver/Master_ThesisGit/thesis/slides/figures/roc.pdf, page is rotated 90 degrees>] <figures/cor_AdaBoost.pdf, id=176, 569.12625pt x 312.16624pt>
 File: figures/cor_AdaBoost.pdf Graphic file (type pdf)
  <use figures/cor_AdaBoost.pdf>
-Package pdftex.def Info: figures/cor_AdaBoost.pdf used on input line 241.
+Package pdftex.def Info: figures/cor_AdaBoost.pdf used on input line 244.
 (pdftex.def)             Requested size: 273.83728pt x 150.20486pt.
  [10
 
  </home/oliver/Master_ThesisGit/thesis/slides/figures/cor_AdaBoost.pdf, page is rotated 90 degrees>] <figures/cor_uBoost.pdf, id=227, 569.12625pt x 312.16624pt>
 File: figures/cor_uBoost.pdf Graphic file (type pdf)
  <use figures/cor_uBoost.pdf>
-Package pdftex.def Info: figures/cor_uBoost.pdf used on input line 254.
+Package pdftex.def Info: figures/cor_uBoost.pdf used on input line 257.
 (pdftex.def)             Requested size: 273.83728pt x 150.20486pt.
  [11
 
@@ -982,14 +982,14 @@ Package pdftex.def Info: figures/cor_uBoost.pdf used on input line 254.
 ] <figures/nTracksw.png, id=282, 600.2425pt x 372.39125pt>
 File: figures/nTracksw.png Graphic file (type png)
  <use figures/nTracksw.png>
-Package pdftex.def Info: figures/nTracksw.png used on input line 288.
+Package pdftex.def Info: figures/nTracksw.png used on input line 291.
 (pdftex.def)             Requested size: 273.83728pt x 169.89285pt.
  [13
 
  </home/oliver/Master_ThesisGit/thesis/slides/figures/nTracksw.png>] <figures/B0_ENDVERTEX_CHI2w.png, id=290, 600.2425pt x 372.39125pt>
 File: figures/B0_ENDVERTEX_CHI2w.png Graphic file (type png)
  <use figures/B0_ENDVERTEX_CHI2w.png>
-Package pdftex.def Info: figures/B0_ENDVERTEX_CHI2w.png used on input line 301.
+Package pdftex.def Info: figures/B0_ENDVERTEX_CHI2w.png used on input line 304.
 (pdftex.def)             Requested size: 273.83728pt x 169.89285pt.
  [14
 
@@ -997,21 +997,21 @@ Package pdftex.def Info: figures/B0_ENDVERTEX_CHI2w.png used on input line 301.
 <figures/B0_PTw.png, id=297, 600.2425pt x 372.39125pt>
 File: figures/B0_PTw.png Graphic file (type png)
  <use figures/B0_PTw.png>
-Package pdftex.def Info: figures/B0_PTw.png used on input line 314.
+Package pdftex.def Info: figures/B0_PTw.png used on input line 317.
 (pdftex.def)             Requested size: 273.83728pt x 169.89285pt.
  [15
 
  </home/oliver/Master_ThesisGit/thesis/slides/figures/B0_PTw.png>] <figures/B0_PT.pdf, id=304, 569.12625pt x 312.16624pt>
 File: figures/B0_PT.pdf Graphic file (type pdf)
  <use figures/B0_PT.pdf>
-Package pdftex.def Info: figures/B0_PT.pdf used on input line 327.
+Package pdftex.def Info: figures/B0_PT.pdf used on input line 330.
 (pdftex.def)             Requested size: 273.83728pt x 150.20486pt.
  [16
 
  </home/oliver/Master_ThesisGit/thesis/slides/figures/B0_PT.pdf, page is rotated 90 degrees>] <figures/MCMC_Chain.png, id=354, 1003.75pt x 1003.75pt>
 File: figures/MCMC_Chain.png Graphic file (type png)
  <use figures/MCMC_Chain.png>
-Package pdftex.def Info: figures/MCMC_Chain.png used on input line 347.
+Package pdftex.def Info: figures/MCMC_Chain.png used on input line 350.
 (pdftex.def)             Requested size: 102.68962pt x 102.67827pt.
  [17
 
@@ -1020,7 +1020,7 @@ Package pdftex.def Info: figures/MCMC_Chain.png used on input line 347.
 ] <figures/Metropolis.png, id=369, 558.26918pt x 182.00105pt>
 File: figures/Metropolis.png Graphic file (type png)
  <use figures/Metropolis.png>
-Package pdftex.def Info: figures/Metropolis.png used on input line 385.
+Package pdftex.def Info: figures/Metropolis.png used on input line 388.
 (pdftex.def)             Requested size: 342.2953pt x 111.59254pt.
  [19
 
@@ -1029,7 +1029,7 @@ Package pdftex.def Info: figures/Metropolis.png used on input line 385.
 ] <figures/twogausFit.pdf, id=385, 569.12625pt x 312.16624pt>
 File: figures/twogausFit.pdf Graphic file (type pdf)
  <use figures/twogausFit.pdf>
-Package pdftex.def Info: figures/twogausFit.pdf used on input line 405.
+Package pdftex.def Info: figures/twogausFit.pdf used on input line 408.
 (pdftex.def)             Requested size: 342.2953pt x 187.75845pt.
  [21
 
@@ -1038,10 +1038,10 @@ Package pdftex.def Info: figures/twogausFit.pdf used on input line 405.
 ] <figures/profile_mean2.pdf, id=442, 569.12625pt x 312.16624pt>
 File: figures/profile_mean2.pdf Graphic file (type pdf)
  <use figures/profile_mean2.pdf>
-Package pdftex.def Info: figures/profile_mean2.pdf used on input line 438.
+Package pdftex.def Info: figures/profile_mean2.pdf used on input line 441.
 (pdftex.def)             Requested size: 273.83728pt x 150.20486pt.
 
-Overfull \vbox (0.16235pt too high) detected at line 438
+Overfull \vbox (0.16235pt too high) detected at line 441
  []
 
 [23
@@ -1049,10 +1049,10 @@ Overfull \vbox (0.16235pt too high) detected at line 438
  </home/oliver/Master_ThesisGit/thesis/slides/figures/profile_mean2.pdf, page is rotated 90 degrees>] <figures/walkdis_mean2.pdf, id=492, 569.12625pt x 312.16624pt>
 File: figures/walkdis_mean2.pdf Graphic file (type pdf)
  <use figures/walkdis_mean2.pdf>
-Package pdftex.def Info: figures/walkdis_mean2.pdf used on input line 453.
+Package pdftex.def Info: figures/walkdis_mean2.pdf used on input line 456.
 (pdftex.def)             Requested size: 273.83728pt x 150.20486pt.
 
-Overfull \vbox (0.77061pt too high) detected at line 453
+Overfull \vbox (0.77061pt too high) detected at line 456
  []
 
 [24
@@ -1060,10 +1060,10 @@ Overfull \vbox (0.77061pt too high) detected at line 453
  </home/oliver/Master_ThesisGit/thesis/slides/figures/walkdis_mean2.pdf, page is rotated 90 degrees>] <figures/walkdishis_mean2.pdf, id=542, 569.12625pt x 312.16624pt>
 File: figures/walkdishis_mean2.pdf Graphic file (type pdf)
  <use figures/walkdishis_mean2.pdf>
-Package pdftex.def Info: figures/walkdishis_mean2.pdf used on input line 467.
+Package pdftex.def Info: figures/walkdishis_mean2.pdf used on input line 470.
 (pdftex.def)             Requested size: 273.83728pt x 150.20486pt.
 
-Overfull \vbox (14.37062pt too high) detected at line 467
+Overfull \vbox (14.37062pt too high) detected at line 470
  []
 
 [25
@@ -1071,10 +1071,10 @@ Overfull \vbox (14.37062pt too high) detected at line 467
  </home/oliver/Master_ThesisGit/thesis/slides/figures/walkdishis_mean2.pdf, page is rotated 90 degrees>] <figures/corner_mean1_mean2.pdf, id=593, 569.12625pt x 312.16624pt>
 File: figures/corner_mean1_mean2.pdf Graphic file (type pdf)
  <use figures/corner_mean1_mean2.pdf>
-Package pdftex.def Info: figures/corner_mean1_mean2.pdf used on input line 481.
+Package pdftex.def Info: figures/corner_mean1_mean2.pdf used on input line 484.
 (pdftex.def)             Requested size: 273.83728pt x 150.20486pt.
 
-Overfull \vbox (14.37062pt too high) detected at line 481
+Overfull \vbox (14.37062pt too high) detected at line 484
  []
 
 [26
@@ -1084,10 +1084,10 @@ Overfull \vbox (14.37062pt too high) detected at line 481
 ] <figures/twogausCorner.pdf, id=650, 569.12625pt x 423.5825pt>
 File: figures/twogausCorner.pdf Graphic file (type pdf)
  <use figures/twogausCorner.pdf>
-Package pdftex.def Info: figures/twogausCorner.pdf used on input line 508.
+Package pdftex.def Info: figures/twogausCorner.pdf used on input line 511.
 (pdftex.def)             Requested size: 273.83728pt x 203.81496pt.
 
-Overfull \vbox (5.8438pt too high) detected at line 508
+Overfull \vbox (5.8438pt too high) detected at line 511
  []
 
 [28
@@ -1106,11 +1106,11 @@ Overfull \vbox (5.8438pt too high) detected at line 508
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 602.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 602.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 605.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 605.
  (/home/oliver/Master_ThesisGit/thesis/slides/slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 602.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 602.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 605.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 605.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: C7B9EC4E2034A44C2A99E36C187DBB6A;264.
 
@@ -1118,7 +1118,7 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 602.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 605.
  ) 
 Here is how much of TeX's memory you used:
  18464 strings out of 493029
@@ -1130,7 +1130,7 @@ Here is how much of TeX's memory you used:
  56i,25n,60p,386b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on /home/oliver/Master_ThesisGit/thesis/slides/slides.pdf (30 pages, 1605102 bytes).
+Output written on /home/oliver/Master_ThesisGit/thesis/slides/slides.pdf (30 pages, 1605093 bytes).
 PDF statistics:
  793 PDF objects out of 1000 (max. 8388607)
  454 compressed objects within 5 object streams
