@@ -3,4 +3,4 @@
 \beamer@sectionintoc {2}{LHCb Detector}{15}{0}{2}
 \beamer@sectionintoc {3}{The $B_0 \rightarrow K^* \mu ^+ \mu ^-$ decay }{16}{0}{3}
 \beamer@sectionintoc {4}{Selection of $B_0 \rightarrow K^* \mu ^+ \mu ^-$ decays}{19}{0}{4}
-\beamer@sectionintoc {5}{Reweighting}{24}{0}{5}
+\beamer@sectionintoc {5}{Reweighting of Monte Carlo}{24}{0}{5}
